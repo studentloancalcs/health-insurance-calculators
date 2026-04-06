@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSA vs FSA Calculator 2026 - Which Tax-Advantaged Account Saves You More?</title>
+
+    <meta name="description" content="Compare HSA vs FSA vs traditional plans. Calculate tax savings for 2026 and see HSA investment growth projections.">
+    <meta name="keywords" content="HSA vs FSA calculator, HSA calculator 2026, tax-advantaged account, HDHP, triple tax advantage, healthcare savings">
+    <meta name="author" content="HealthCalc Hub">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HSA vs FSA Calculator 2026">
+    <meta property="og:description" content="Compare HSA and FSA savings and tax benefits. Calculate which account saves you the most money.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HSA vs FSA Calculator",
+      "url": "https://studentloancalcs.github.io/health-insurance-calculators/hsa-fsa-calculator.html",
+      "applicationCategory": "FinanceApplication"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between HSA and FSA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HSAs and FSAs are both tax-advantaged accounts for medical expenses, but with key differences. HSAs are only available to those with High-Deductible Health Plans (HDHPs), are portable (you own them after leaving your job), allow investment growth, and carry over unused funds indefinitely. FSAs are employer-controlled, work with any insurance plan, don't allow investment growth, and have a use-it-or-lose-it rule (though up to $620 can carry over). HSAs have higher contribution limits ($4,400 individual/$8,750 family in 2026) versus FSAs ($3,300 in 2026). If you qualify for an HSA, it's generally superior due to tax-free growth and portability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 2026 HSA contribution limits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For 2026, HSA contribution limits are $4,400 for self-only coverage and $8,750 for family coverage. These limits include both employee and employer contributions combined. If you're age 55 or older, you can contribute an additional $1,000 catch-up contribution. You must have an HDHP (minimum deductible $1,700 self-only or $3,400 family) to be eligible. Contributions can be made until April 15 of the following year for the prior tax year. Contributions reduce your taxable income, providing immediate tax savings plus tax-free growth if invested."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I invest my HSA funds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, HSA funds can be invested in stocks, bonds, mutual funds, and ETFs once your account balance exceeds a certain threshold (typically $2,000-2,500 depending on your provider). Earnings grow tax-free. However, unlike retirement accounts, you can withdraw money for qualified medical expenses at any time without penalty or taxes. Many people keep a portion in cash for immediate medical needs and invest the remainder for long-term growth. This dual nature makes HSAs extremely powerful retirement savings vehicles - at age 65, unused HSA balances can be withdrawn for any purpose (though non-medical withdrawals are taxed like traditional IRAs)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the HSA triple tax advantage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The HSA triple tax advantage consists of: (1) Tax-deductible contributions that reduce your current taxable income and lower your tax bill (saving 20-24% in federal taxes), (2) Tax-free growth when HSA funds are invested and earn returns that aren't taxed, and (3) Tax-free withdrawals for qualified medical expenses. This three-part benefit is unique and incredibly powerful. After age 65, the first two benefits remain, but non-medical withdrawals become subject to income tax (though no penalty). Over decades, this compounding effect can turn HSA savings into substantial wealth for retirement healthcare costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to unused FSA money?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FSAs are subject to a use-it-or-lose-it rule: any unused funds at year-end are forfeited to your employer. However, employers can offer a grace period (up to 2.5 months into the new year) to use remaining funds, or allow up to $620 to carry over into the next year. Check your plan documents to see which option your employer offers. To avoid losing money, estimate conservatively how much you'll spend on eligible medical expenses (copays, deductibles, prescriptions, vision/dental). You can change your FSA election during open enrollment or after qualifying life events like marriage or birth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is my data protected in this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your data is completely protected and private. This calculator runs entirely in your browser and performs all calculations locally on your device without transmitting any information to external servers. We do not collect, store, or share your income, tax information, or financial data. No tracking cookies are used. Your calculations remain on your device only. For actual HSA/FSA account management, use your employer's or financial institution's secure website. This is an educational tool only - consult a tax professional for personalized tax planning advice."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        input, select { border: 1px solid #e5e7eb; }
+        input:focus, select:focus { outline: none; border-color: #0D9488; box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">$</span>
+                    </div>
+                    <span class="text-xl font-bold text-teal-dark">HealthCalc</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-teal-primary">Home</a>
+                    <a href="hsa-fsa-calculator.html" class="text-teal-primary font-semibold">HSA vs FSA</a>
+                    <a href="plan-cost-calculator.html" class="text-gray-600 hover:text-teal-primary">Plan Cost</a>
+                    <a href="procedure-cost.html" class="text-gray-600 hover:text-teal-primary">Procedures</a>
+                    <a href="drug-cost-finder.html" class="text-gray-600 hover:text-teal-primary">Drugs</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-teal-primary">Blog</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Home</a>
+                <a href="hsa-fsa-calculator.html" class="block px-3 py-2 text-base font-medium text-teal-primary font-semibold">HSA/FSA</a>
+                <a href="plan-cost-calculator.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Plan Cost</a>
+                <a href="procedure-cost.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Procedures</a>
+                <a href="drug-cost-finder.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Drugs</a>
+                <a href="blog.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <a href="index.html" class="text-teal-primary hover:underline">Home</a>
+            <span class="text-gray-500 mx-2">/</span>
+            <span class="text-gray-700 font-semibold">HSA vs FSA Calculator</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <section class="text-white py-12" style="background: linear-gradient(to right, #0D9488, #134E4A);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">HSA vs FSA Calculator 2026</h1>
+            <p class="text-lg" style="color: #CCFBF1;">Compare tax-advantaged accounts and calculate your savings</p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- How It Works -->
+        <details class="bg-white rounded-lg shadow-md p-6 mb-8 cursor-pointer">
+            <summary class="font-bold text-lg flex items-center">
+                <span class="text-teal-primary mr-2">ℹ️</span>
+                How This Calculator Works
+                <span class="ml-auto">▼</span>
+            </summary>
+            <div class="mt-4 text-gray-700 space-y-3">
+                <p><strong>2026 Limits:</strong></p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>HSA Self-only: $4,400</li>
+                    <li>HSA Family: $8,750</li>
+                    <li>FSA: $3,400 (employer-sponsored)</li>
+                    <li>HDHP Minimum Deductible: $1,700 (self) / $3,400 (family)</li>
+                    <li>HDHP Out-of-Pocket Max: $8,500 (self) / $17,000 (family)</li>
+                </ul>
+                <p><strong>Key Differences:</strong></p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>HSA: Portable, investment growth, no "use it or lose it"</li>
+                    <li>FSA: Employer-controlled, use it or lose it, no investment growth</li>
+                    <li>HSA requires HDHP enrollment; FSA works with any plan</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Input Section -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Information</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Annual Gross Income ($)</label>
+                    <input type="number" id="gross-income" min="0" step="5000" class="w-full px-4 py-2 rounded-lg" value="75000">
+                    <p class="text-xs text-gray-500 mt-1">For tax bracket estimation</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Tax Filing Status</label>
+                    <select id="filing-status" class="w-full px-4 py-2 rounded-lg">
+                        <option value="single" selected>Single</option>
+                        <option value="married">Married Filing Jointly</option>
+                        <option value="hoh">Head of Household</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Coverage Type</label>
+                    <select id="coverage-type" class="w-full px-4 py-2 rounded-lg">
+                        <option value="self" selected>Self-only</option>
+                        <option value="family">Family</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Expected Annual Medical Expenses ($)</label>
+                    <input type="number" id="medical-expenses" min="0" step="500" class="w-full px-4 py-2 rounded-lg" value="3000">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Current Age</label>
+                    <input type="number" id="age" min="18" max="120" step="1" class="w-full px-4 py-2 rounded-lg" value="35">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Estimated State Tax Rate (%)</label>
+                    <input type="number" id="state-tax" min="0" max="15" step="0.1" class="w-full px-4 py-2 rounded-lg" value="6">
+                </div>
+            </div>
+
+            <button onclick="calculateComparison()" class="w-full bg-teal-primary text-white font-bold py-3 rounded-lg mt-8 hover:bg-teal-dark transition text-lg">
+                Calculate My Savings
+            </button>
+        </div>
+
+        <!-- AdSense Placeholder -->
+        <!-- AdSense -->
+
+        <!-- Results Section -->
+        <div id="results" class="hidden space-y-8 mb-8">
+            <!-- Annual Comparison -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+                    <p class="text-gray-600 text-sm mb-2">HDHP + HSA</p>
+                    <p class="text-3xl font-bold text-teal-primary" id="hsa-annual-cost">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">Annual net cost</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+                    <p class="text-gray-600 text-sm mb-2">Traditional + FSA</p>
+                    <p class="text-3xl font-bold text-teal-primary" id="fsa-annual-cost">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">Annual net cost</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+                    <p class="text-gray-600 text-sm mb-2">Traditional Plan</p>
+                    <p class="text-3xl font-bold text-teal-primary" id="traditional-annual-cost">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">Annual net cost</p>
+                </div>
+            </div>
+
+            <!-- Tax Savings Breakdown -->
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Annual Tax Savings Breakdown</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
+                        <span class="font-semibold text-gray-900">HSA Tax Savings (Federal + FICA + State)</span>
+                        <span class="font-bold text-teal-primary text-lg" id="hsa-tax-savings">$0</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
+                        <span class="font-semibold text-gray-900">FSA Tax Savings (Federal + FICA + State)</span>
+                        <span class="font-bold text-teal-primary text-lg" id="fsa-tax-savings">$0</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
+                        <span class="font-semibold text-gray-900">HSA Advantage Over Traditional</span>
+                        <span class="font-bold text-green-600 text-lg" id="hsa-advantage">$0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HSA Investment Growth -->
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">HSA Growth Potential (7% annual return)</h3>
+                <p class="text-gray-600 mb-4">If you invest your HSA contributions and let them grow:</p>
+                <div class="space-y-2 text-gray-700">
+                    <div class="flex justify-between py-2">
+                        <span>After 10 years:</span>
+                        <span class="font-bold" id="hsa-10-year">$0</span>
+                    </div>
+                    <div class="flex justify-between py-2">
+                        <span>After 20 years:</span>
+                        <span class="font-bold" id="hsa-20-year">$0</span>
+                    </div>
+                    <div class="flex justify-between py-2">
+                        <span>After 30 years:</span>
+                        <span class="font-bold" id="hsa-30-year">$0</span>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-4">This assumes annual maximum HSA contributions and 7% investment return</p>
+            </div>
+
+            <!-- Growth Chart -->
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">HSA Growth Over Time</h3>
+                <div style="position: relative; height: 400px;">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+
+            <!-- AdSense Placeholder -->
+            <!-- AdSense -->
+        </div>
+
+        <!-- HSA Triple Tax Advantage -->
+        <div class="bg-teal-light rounded-lg p-8 my-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">HSA Triple Tax Advantage</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-3xl font-bold text-teal-primary mb-2">1️⃣</div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Tax-Deductible Contributions</h3>
+                    <p class="text-gray-700">Contributions reduce your taxable income. Save 22-24% on federal taxes alone.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-3xl font-bold text-teal-primary mb-2">2️⃣</div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Tax-Free Growth</h3>
+                    <p class="text-gray-700">Invest your HSA and earn tax-free returns. Watch it grow over decades.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-3xl font-bold text-teal-primary mb-2">3️⃣</div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Tax-Free Withdrawals</h3>
+                    <p class="text-gray-700">Use money for qualified medical expenses with no taxes owed.</p>
+                </div>
+            </div>
+            <p class="text-gray-700 mt-6 text-center"><strong>Bonus:</strong> After age 65, use HSA like a traditional IRA (with taxes) for any expense. It's a powerful retirement savings tool.</p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">HSA vs FSA vs Traditional Plan Comparison</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-teal-light border-b border-gray-300">
+                        <tr>
+                            <th class="text-left py-3 px-3 font-bold text-gray-900">Feature</th>
+                            <th class="text-center py-3 px-3 font-bold text-gray-900">HDHP + HSA</th>
+                            <th class="text-center py-3 px-3 font-bold text-gray-900">Traditional + FSA</th>
+                            <th class="text-center py-3 px-3 font-bold text-gray-900">Traditional Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-3">2026 Contribution Limit</td>
+                            <td class="text-center py-3 px-3">$4,400 (self) / $8,750 (fam)</td>
+                            <td class="text-center py-3 px-3">$3,300</td>
+                            <td class="text-center py-3 px-3">None</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 bg-gray-50">
+                            <td class="py-3 px-3">Investment Growth</td>
+                            <td class="text-center py-3 px-3">✓ Yes</td>
+                            <td class="text-center py-3 px-3">✗ No</td>
+                            <td class="text-center py-3 px-3">✗ No</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-3">Use It or Lose It</td>
+                            <td class="text-center py-3 px-3">✗ No (carry over)</td>
+                            <td class="text-center py-3 px-3">✓ Yes ($680 carryover)</td>
+                            <td class="text-center py-3 px-3">N/A</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 bg-gray-50">
+                            <td class="py-3 px-3">Portable (after job change)</td>
+                            <td class="text-center py-3 px-3">✓ Yes</td>
+                            <td class="text-center py-3 px-3">✗ No</td>
+                            <td class="text-center py-3 px-3">N/A</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-3">Requires HDHP</td>
+                            <td class="text-center py-3 px-3">✓ Yes</td>
+                            <td class="text-center py-3 px-3">✗ No</td>
+                            <td class="text-center py-3 px-3">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mt-12 mb-12">
+            <h2 class="text-3xl font-bold mb-8" style="color: #134E4A;">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is the difference between HSA and FSA?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>HSAs and FSAs are both tax-advantaged accounts for medical expenses, but with key differences. HSAs are only available to those with High-Deductible Health Plans (HDHPs), are portable (you own them after leaving your job), allow investment growth, and carry over unused funds indefinitely. FSAs are employer-controlled, work with any insurance plan, don't allow investment growth, and have a use-it-or-lose-it rule (though up to $620 can carry over). HSAs have higher contribution limits ($4,400 individual/$8,750 family in 2026) versus FSAs ($3,300 in 2026). If you qualify for an HSA, it's generally superior due to tax-free growth and portability.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What are the 2026 HSA contribution limits?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>For 2026, HSA contribution limits are $4,400 for self-only coverage and $8,750 for family coverage. These limits include both employee and employer contributions combined. If you're age 55 or older, you can contribute an additional $1,000 catch-up contribution. You must have an HDHP (minimum deductible $1,700 self-only or $3,400 family) to be eligible. Contributions can be made until April 15 of the following year for the prior tax year. Contributions reduce your taxable income, providing immediate tax savings plus tax-free growth if invested.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>Can I invest my HSA funds?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Yes, HSA funds can be invested in stocks, bonds, mutual funds, and ETFs once your account balance exceeds a certain threshold (typically $2,000-2,500 depending on your provider). Earnings grow tax-free. However, unlike retirement accounts, you can withdraw money for qualified medical expenses at any time without penalty or taxes. Many people keep a portion in cash for immediate medical needs and invest the remainder for long-term growth. This dual nature makes HSAs extremely powerful retirement savings vehicles - at age 65, unused HSA balances can be withdrawn for any purpose (though non-medical withdrawals are taxed like traditional IRAs).</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is the HSA triple tax advantage?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>The HSA triple tax advantage consists of: (1) Tax-deductible contributions that reduce your current taxable income and lower your tax bill (saving 20-24% in federal taxes), (2) Tax-free growth when HSA funds are invested and earn returns that aren't taxed, and (3) Tax-free withdrawals for qualified medical expenses. This three-part benefit is unique and incredibly powerful. After age 65, the first two benefits remain, but non-medical withdrawals become subject to income tax (though no penalty). Over decades, this compounding effect can turn HSA savings into substantial wealth for retirement healthcare costs.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What happens to unused FSA money?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>FSAs are subject to a use-it-or-lose-it rule: any unused funds at year-end are forfeited to your employer. However, employers can offer a grace period (up to 2.5 months into the new year) to use remaining funds, or allow up to $620 to carry over into the next year. Check your plan documents to see which option your employer offers. To avoid losing money, estimate conservatively how much you'll spend on eligible medical expenses (copays, deductibles, prescriptions, vision/dental). You can change your FSA election during open enrollment or after qualifying life events like marriage or birth.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>How is my data protected in this calculator?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Your data is completely protected and private. This calculator runs entirely in your browser and performs all calculations locally on your device without transmitting any information to external servers. We do not collect, store, or share your income, tax information, or financial data. No tracking cookies are used. Your calculations remain on your device only. For actual HSA/FSA account management, use your employer's or financial institution's secure website. This is an educational tool only - consult a tax professional for personalized tax planning advice.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <div class="bg-gray-100 rounded-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="plan-cost-calculator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <span class="font-semibold text-teal-primary">→ Plan Cost Calculator</span>
+                    <p class="text-sm text-gray-600">Compare total costs across multiple plans</p>
+                </a>
+                <a href="aca-subsidy-calculator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <span class="font-semibold text-teal-primary">→ ACA Subsidy Calculator</span>
+                    <p class="text-sm text-gray-600">Estimate your ACA subsidies</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-white mb-4">HealthCalc Hub</h4>
+                    <p class="text-sm">Free, unbiased healthcare cost calculators. All calculations private, no data collection.</p>
+                </div>
+                <div></div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Disclaimer</h4>
+                    <p class="text-xs text-gray-400">These are estimates. Consult a tax professional for personalized tax advice.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 HealthCalc Hub. Last Updated: April 6, 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let growthChart = null;
+
+        function calculateComparison() {
+            const grossIncome = parseFloat(document.getElementById('gross-income').value) || 0;
+            const filingStatus = document.getElementById('filing-status').value;
+            const coverageType = document.getElementById('coverage-type').value;
+            const medicalExpenses = parseFloat(document.getElementById('medical-expenses').value) || 0;
+            const age = parseInt(document.getElementById('age').value);
+            const stateTax = parseFloat(document.getElementById('state-tax').value) / 100;
+
+            // Get tax bracket
+            const brackets = {
+                'single': {
+                    10: 11600,
+                    12: 47150,
+                    22: 100525,
+                    24: 191950
+                },
+                'married': {
+                    10: 23200,
+                    12: 94300,
+                    22: 201050,
+                    24: 383900
+                },
+                'hoh': {
+                    10: 16550,
+                    12: 63100,
+                    22: 100500,
+                    24: 191950
+                }
+            };
+
+            let federalTaxRate = 0.22;
+            if (grossIncome <= 11600) federalTaxRate = 0.10;
+            else if (grossIncome <= 47150) federalTaxRate = 0.12;
+            else if (grossIncome <= 100525) federalTaxRate = 0.22;
+
+            const ficaTax = 0.0765; // Social Security + Medicare
+            const totalTaxRate = federalTaxRate + ficaTax + stateTax;
+
+            // HSA scenario
+            const hsaLimit = coverageType === 'self' ? 4400 : 8750;
+            const hsaContribution = Math.min(hsaLimit, medicalExpenses);
+            const hsaTaxSavings = hsaContribution * totalTaxRate;
+            const hdhpPremium = coverageType === 'self' ? 200 : 400; // Estimated HDHP premium
+            const hsaOutOfPocket = Math.max(0, medicalExpenses - hsaContribution);
+            const hsaAnnualCost = hdhpPremium - hsaTaxSavings + hsaOutOfPocket;
+
+            // FSA scenario
+            const fsaLimit = 3400;
+            const fsaContribution = Math.min(fsaLimit, medicalExpenses);
+            const fsaTaxSavings = fsaContribution * totalTaxRate;
+            const tradPremium = coverageType === 'self' ? 350 : 600; // Higher traditional plan premium
+            const fsaOutOfPocket = Math.max(0, medicalExpenses - fsaContribution);
+            const fsaAnnualCost = tradPremium - fsaTaxSavings + fsaOutOfPocket;
+
+            // Traditional scenario
+            const traditionalOutOfPocket = medicalExpenses;
+            const traditionalAnnualCost = tradPremium + traditionalOutOfPocket;
+
+            // Display results
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('hsa-annual-cost').textContent = '$' + hsaAnnualCost.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('fsa-annual-cost').textContent = '$' + fsaAnnualCost.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('traditional-annual-cost').textContent = '$' + traditionalAnnualCost.toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            document.getElementById('hsa-tax-savings').textContent = '$' + hsaTaxSavings.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('fsa-tax-savings').textContent = '$' + fsaTaxSavings.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('hsa-advantage').textContent = '$' + (traditionalAnnualCost - hsaAnnualCost).toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            // HSA growth projections
+            const projections = calculateHSAGrowth(hsaContribution, age);
+            document.getElementById('hsa-10-year').textContent = '$' + projections.year10.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('hsa-20-year').textContent = '$' + projections.year20.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('hsa-30-year').textContent = '$' + projections.year30.toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            // Create growth chart
+            createGrowthChart(hsaContribution);
+        }
+
+        function calculateHSAGrowth(annualContribution, currentAge) {
+            const rate = 0.07; // 7% annual return
+            let balance = 0;
+            let year10 = 0, year20 = 0, year30 = 0;
+
+            for (let year = 1; year <= 30; year++) {
+                balance = (balance + annualContribution) * (1 + rate);
+                if (year === 10) year10 = balance;
+                if (year === 20) year20 = balance;
+                if (year === 30) year30 = balance;
+            }
+
+            return { year10, year20, year30 };
+        }
+
+        function createGrowthChart(annualContribution) {
+            const rate = 0.07;
+            const years = [];
+            const balances = [];
+            const contributions = [];
+
+            let balance = 0;
+            for (let year = 0; year <= 30; year++) {
+                years.push(year);
+                contributions.push(annualContribution * year);
+                if (year > 0) {
+                    balance = (balance + annualContribution) * (1 + rate);
+                }
+                balances.push(balance);
+            }
+
+            if (growthChart) {
+                growthChart.destroy();
+            }
+
+            const ctx = document.getElementById('growthChart');
+            growthChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: years,
+                    datasets: [
+                        {
+                            label: 'Total HSA Balance (with 7% growth)',
+                            data: balances,
+                            borderColor: '#0D9488',
+                            backgroundColor: 'rgba(13, 148, 136, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'Total Contributions',
+                            data: contributions,
+                            borderColor: '#9CA3AF',
+                            borderDash: [5, 5],
+                            borderWidth: 2,
+                            fill: false,
+                            tension: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + (value / 1000).toFixed(0) + 'k';
+                                }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Years'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Calculate on load
+        window.addEventListener('load', calculateComparison);
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

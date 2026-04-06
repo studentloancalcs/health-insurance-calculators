@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Health Insurance Works - Deductibles, Copays, Coinsurance Explained</title>
+
+    <meta name="description" content="Interactive visual guide to understanding health insurance deductibles, copays, coinsurance, and out-of-pocket maximums.">
+    <meta name="keywords" content="how deductibles work, coinsurance vs copay, out-of-pocket maximum explained, health insurance explained, insurance basics">
+    <meta name="author" content="HealthCalc Hub">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="How Health Insurance Works - Interactive Guide">
+    <meta property="og:description" content="Understand deductibles, copays, coinsurance, and OOP maximums with interactive visuals.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "How Health Insurance Works",
+      "url": "https://studentloancalcs.github.io/health-insurance-calculators/deductible-explainer.html",
+      "description": "Interactive visual guide to understanding health insurance cost-sharing"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a health insurance deductible and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A deductible is the amount of money you must pay out-of-pocket for covered healthcare services before your insurance company begins to share costs with you. For example, if your deductible is $1,500 and you visit your doctor for a $200 office visit, you pay the full $200. After you accumulate $1,500 in covered medical expenses throughout the year, your insurance starts helping pay. Deductibles reset every January 1st. Some services like preventive care (annual checkups, vaccinations) don't require meeting your deductible first. Individual plans typically have deductibles ranging from $0-$3,000, while family plans range $0-$6,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between copay and coinsurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A copay is a fixed dollar amount you pay for specific services, such as $40 for a doctor visit or $15 for a prescription, regardless of the actual cost. Coinsurance is a percentage of the cost you pay after meeting your deductible. For example, if you have 20% coinsurance for a $1,000 procedure, you pay $200 while insurance pays $800. Copays typically don't count toward your deductible but do count toward your out-of-pocket maximum. Coinsurance applies after the deductible is met. Most plans use a combination: copays for routine visits and prescription drugs, coinsurance for major services like surgeries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does my insurance start paying for healthcare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your insurance starts paying after you meet your deductible for the year, with an important exception: preventive care services. Under the Affordable Care Act, certain preventive services like annual physical exams, cancer screenings, vaccinations, and preventive care visits are fully covered by insurance with no deductible. After you've paid your deductible on other covered services, your insurance begins sharing costs through copays (fixed amounts) and coinsurance (percentage amounts). Prescription drug copays often start immediately without waiting for the deductible. Different plans may have different deductibles for different services (like a separate prescription drug deductible)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts toward my deductible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most covered healthcare services count toward your deductible, including doctor visits, hospital stays, surgeries, diagnostic tests, imaging, and emergency room visits. However, preventive services typically don't count. Copays for doctor visits and prescriptions usually don't count toward the deductible - you pay both the copay and the deductible amount. Out-of-network care may count differently depending on your plan. Premiums never count toward your deductible. Check your plan's Summary of Benefits and Coverage document or call your insurance company to understand exactly which services count. Keeping track of what you've paid helps you know when you'll meet your deductible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an out-of-pocket maximum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The out-of-pocket maximum is the most money you'll spend on covered healthcare in a calendar year. Once you reach this limit, your insurance covers 100% of additional covered services for the rest of the year. This limit includes your deductible, copays, and coinsurance, but typically excludes premiums. For 2026, individual plans have maximum OOP limits around $8,500-9,100 and family plans around $17,000-18,200. However, preventive care doesn't count toward the limit. Out-of-pocket maximums protect you from catastrophic costs - if you have a major illness or injury, insurance ensures you won't face unlimited expenses beyond this cap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data private in this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, your data is completely private. This calculator runs entirely in your browser and performs all calculations locally on your device. No personal information, medical data, or financial information is transmitted to external servers. We do not collect, store, or track any data you enter. No cookies are used to identify you or track your usage. Your privacy is completely protected. This is an educational tool to help you understand insurance concepts - use it freely without privacy concerns. For actual insurance enrollment or claims, your insurance company's website uses secure encryption to protect your personal information."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        input, select { border: 1px solid #e5e7eb; }
+        input:focus, select:focus { outline: none; border-color: #0D9488; box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1); }
+        .phase { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">$</span>
+                    </div>
+                    <span class="text-xl font-bold text-teal-dark">HealthCalc</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-teal-primary">Home</a>
+                    <a href="deductible-explainer.html" class="text-teal-primary font-semibold">Insurance Explained</a>
+                    <a href="plan-cost-calculator.html" class="text-gray-600 hover:text-teal-primary">Plan Cost</a>
+                    <a href="procedure-cost.html" class="text-gray-600 hover:text-teal-primary">Procedures</a>
+                    <a href="drug-cost-finder.html" class="text-gray-600 hover:text-teal-primary">Drugs</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-teal-primary">Blog</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Home</a>
+                <a href="deductible-explainer.html" class="block px-3 py-2 text-base font-medium text-teal-primary font-semibold">Insurance Explained</a>
+                <a href="plan-cost-calculator.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Plan Cost</a>
+                <a href="procedure-cost.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Procedures</a>
+                <a href="drug-cost-finder.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Drugs</a>
+                <a href="blog.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <a href="index.html" class="text-teal-primary hover:underline">Home</a>
+            <span class="text-gray-500 mx-2">/</span>
+            <span class="text-gray-700 font-semibold">Insurance Basics</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <section class="text-white py-12" style="background: linear-gradient(to right, #0D9488, #134E4A);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">How Health Insurance Works</h1>
+            <p class="text-lg" style="color: #CCFBF1;">Interactive visual guide to deductibles, copays, coinsurance, and out-of-pocket maximums</p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Input Section -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Enter Your Plan Details</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Annual Deductible ($)</label>
+                    <input type="number" id="deductible" min="0" step="500" class="w-full px-4 py-2 rounded-lg" value="1500" onchange="updateVisualization()">
+                    <p class="text-xs text-gray-500 mt-1">Amount you pay before insurance kicks in</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Coinsurance After Deductible (%)</label>
+                    <input type="number" id="coinsurance" min="0" max="100" step="5" class="w-full px-4 py-2 rounded-lg" value="20" onchange="updateVisualization()">
+                    <p class="text-xs text-gray-500 mt-1">Your share of costs after deductible is met</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Out-of-Pocket Maximum ($)</label>
+                    <input type="number" id="oop-max" min="0" step="500" class="w-full px-4 py-2 rounded-lg" value="5000" onchange="updateVisualization()">
+                    <p class="text-xs text-gray-500 mt-1">Maximum you'll pay out-of-pocket per year</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Typical Doctor Visit Cost ($)</label>
+                    <input type="number" id="visit-cost" min="0" step="50" class="w-full px-4 py-2 rounded-lg" value="250" onchange="updateVisualization()">
+                    <p class="text-xs text-gray-500 mt-1">For calculation purposes</p>
+                </div>
+            </div>
+
+            <button onclick="updateVisualization()" class="w-full bg-teal-primary text-white font-bold py-3 rounded-lg hover:bg-teal-dark transition text-lg">
+                Update Visualization
+            </button>
+        </div>
+
+        <!-- AdSense Placeholder -->
+        <!-- AdSense -->
+
+        <!-- Interactive Slider -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Interactive Spending Slider</h2>
+            <p class="text-gray-600 mb-6">Drag the slider to see how your costs change at different spending levels</p>
+
+            <div class="mb-6">
+                <input type="range" id="spending-slider" min="0" max="20000" step="500" value="3000" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer" style="accent-color: #0D9488;" oninput="updateSlider()">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-4 border-l-4 border-teal-primary">
+                    <p class="text-gray-600 text-xs mb-1">Total Service Cost</p>
+                    <p class="text-2xl font-bold text-teal-primary" id="total-service">$3,000</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-coral bg-opacity-10 to-white rounded-lg shadow-md p-4 border-l-4 border-coral">
+                    <p class="text-gray-600 text-xs mb-1">You Pay</p>
+                    <p class="text-2xl font-bold text-coral" id="you-pay">$1,500</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-100 to-white rounded-lg shadow-md p-4 border-l-4 border-blue-600">
+                    <p class="text-gray-600 text-xs mb-1">Insurance Pays</p>
+                    <p class="text-2xl font-bold text-blue-600" id="insurance-pays">$1,500</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-100 to-white rounded-lg shadow-md p-4 border-l-4 border-green-600">
+                    <p class="text-gray-600 text-xs mb-1">Your Deductible Left</p>
+                    <p class="text-2xl font-bold text-green-600" id="deductible-left">$0</p>
+                </div>
+            </div>
+
+            <!-- Visual Breakdown -->
+            <div class="space-y-4">
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-gray-900">Phase 1: Deductible (You Pay 100%)</span>
+                        <span class="text-sm text-gray-600" id="phase1-amount">$0</span>
+                    </div>
+                    <div class="h-6 bg-gray-200 rounded-full overflow-hidden">
+                        <div id="phase1-bar" class="h-6 bg-coral transition-all" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-gray-900">Phase 2: Coinsurance (You Pay %, Insurance Pays %)</span>
+                        <span class="text-sm text-gray-600" id="phase2-amount">$0</span>
+                    </div>
+                    <div class="h-6 bg-gray-200 rounded-full overflow-hidden">
+                        <div id="phase2-bar" class="h-6 bg-orange-400 transition-all" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-gray-900">Phase 3: OOP Max Hit (Insurance Pays 100%)</span>
+                        <span class="text-sm text-gray-600" id="phase3-amount">$0</span>
+                    </div>
+                    <div class="h-6 bg-gray-200 rounded-full overflow-hidden">
+                        <div id="phase3-bar" class="h-6 bg-green-600 transition-all" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AdSense Placeholder -->
+        <!-- AdSense -->
+
+        <!-- Educational Cards -->
+        <div class="bg-teal-light rounded-lg p-8 my-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Understanding Cost-Sharing Terms</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-lg text-teal-primary mb-3">Deductible</h3>
+                    <p class="text-gray-700 mb-3">The amount you must pay out-of-pocket before your insurance starts to help with costs.</p>
+                    <p class="text-sm text-gray-600"><strong>Example:</strong> If your deductible is $1,500 and you have a $200 doctor visit, you pay the full $200. After three similar visits, you've met your deductible.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-lg text-teal-primary mb-3">Coinsurance</h3>
+                    <p class="text-gray-700 mb-3">Your percentage of the cost after the deductible is met. Insurance pays the rest.</p>
+                    <p class="text-sm text-gray-600"><strong>Example:</strong> If you have 20% coinsurance and a $1,000 procedure, you pay $200 and insurance pays $800.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-lg text-teal-primary mb-3">Copay</h3>
+                    <p class="text-gray-700 mb-3">A fixed amount you pay for specific services (like doctor visits or prescriptions).</p>
+                    <p class="text-sm text-gray-600"><strong>Example:</strong> You pay $40 for a doctor visit regardless of the actual cost. Insurance pays the rest.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-lg text-teal-primary mb-3">Out-of-Pocket Maximum</h3>
+                    <p class="text-gray-700 mb-3">The most you'll pay in a year. After hitting this, insurance pays 100% of covered services.</p>
+                    <p class="text-sm text-gray-600"><strong>Example:</strong> If your OOP max is $5,000, once you've paid that, all remaining costs are covered by insurance.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Real-World Scenario -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Real-World Example: Maria's Year</h2>
+            <p class="text-gray-600 mb-6">Let's walk through a full year of healthcare costs to show how cost-sharing works:</p>
+
+            <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-gray-400">
+                    <p class="font-semibold text-gray-900">January - Physical Exam ($300)</p>
+                    <p class="text-sm text-gray-700">Maria hasn't met her $1,500 deductible, so she pays the full $300. Insurance pays $0.</p>
+                    <p class="text-xs text-gray-500 mt-2">Deductible remaining: $1,200</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-gray-400">
+                    <p class="font-semibold text-gray-900">March - Flu (Doctor visit: $250, Meds: $200)</p>
+                    <p class="text-sm text-gray-700">Still working on the deductible. Maria pays the full $450.</p>
+                    <p class="text-xs text-gray-500 mt-2">Deductible remaining: $750</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-gray-400">
+                    <p class="font-semibold text-gray-900">May - Knee Injury & MRI ($2,500)</p>
+                    <p class="text-sm text-gray-700">Deductible is $750 remaining. Maria pays that first, then 20% coinsurance on the rest.</p>
+                    <p class="text-sm text-gray-700 font-semibold mt-1">Maria pays: $750 + ($1,750 × 20%) = $1,100</p>
+                    <p class="text-xs text-gray-500 mt-2">Deductible: MET. Insurance has paid $1,400.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-green-400">
+                    <p class="font-semibold text-gray-900">November - Physical Therapy ($1,500)</p>
+                    <p class="text-sm text-gray-700">Maria has paid $1,100 in coinsurance so far. She's getting close to her $5,000 OOP max.</p>
+                    <p class="text-sm text-gray-700 font-semibold mt-1">Maria pays: $1,500 × 20% = $300 (total out-of-pocket now: $2,500)</p>
+                </div>
+
+                <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-500">
+                    <p class="font-semibold text-gray-900">December - Emergency Surgery ($8,000)</p>
+                    <p class="text-sm text-gray-700">Maria still needs to pay $2,500 more to hit her $5,000 OOP max.</p>
+                    <p class="text-sm text-gray-700 font-semibold mt-1">Maria pays: $2,500 (hits OOP max). Insurance pays: $5,500.</p>
+                    <p class="text-xs text-gray-500 mt-2"><strong>For the rest of the year, insurance pays 100%</strong></p>
+                </div>
+
+                <div class="bg-teal-light rounded-lg p-4 mt-4">
+                    <p class="font-semibold text-gray-900 text-lg">Annual Summary</p>
+                    <p class="text-gray-700 mt-2"><strong>Maria's total out-of-pocket:</strong> $5,000 (her OOP maximum)</p>
+                    <p class="text-gray-700"><strong>Insurance paid:</strong> $12,050</p>
+                    <p class="text-gray-700"><strong>Total healthcare costs:</strong> $17,050</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mt-12 mb-12">
+            <h2 class="text-3xl font-bold mb-8" style="color: #134E4A;">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is a health insurance deductible and how does it work?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>A deductible is the amount of money you must pay out-of-pocket for covered healthcare services before your insurance company begins to share costs with you. For example, if your deductible is $1,500 and you visit your doctor for a $200 office visit, you pay the full $200. After you accumulate $1,500 in covered medical expenses throughout the year, your insurance starts helping pay. Deductibles reset every January 1st. Some services like preventive care (annual checkups, vaccinations) don't require meeting your deductible first. Individual plans typically have deductibles ranging from $0-$3,000, while family plans range $0-$6,000.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is the difference between copay and coinsurance?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>A copay is a fixed dollar amount you pay for specific services, such as $40 for a doctor visit or $15 for a prescription, regardless of the actual cost. Coinsurance is a percentage of the cost you pay after meeting your deductible. For example, if you have 20% coinsurance for a $1,000 procedure, you pay $200 while insurance pays $800. Copays typically don't count toward your deductible but do count toward your out-of-pocket maximum. Coinsurance applies after the deductible is met. Most plans use a combination: copays for routine visits and prescription drugs, coinsurance for major services like surgeries.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>When does my insurance start paying for healthcare?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Your insurance starts paying after you meet your deductible for the year, with an important exception: preventive care services. Under the Affordable Care Act, certain preventive services like annual physical exams, cancer screenings, vaccinations, and preventive care visits are fully covered by insurance with no deductible. After you've paid your deductible on other covered services, your insurance begins sharing costs through copays (fixed amounts) and coinsurance (percentage amounts). Prescription drug copays often start immediately without waiting for the deductible. Different plans may have different deductibles for different services (like a separate prescription drug deductible).</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What counts toward my deductible?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Most covered healthcare services count toward your deductible, including doctor visits, hospital stays, surgeries, diagnostic tests, imaging, and emergency room visits. However, preventive services typically don't count. Copays for doctor visits and prescriptions usually don't count toward the deductible - you pay both the copay and the deductible amount. Out-of-network care may count differently depending on your plan. Premiums never count toward your deductible. Check your plan's Summary of Benefits and Coverage document or call your insurance company to understand exactly which services count. Keeping track of what you've paid helps you know when you'll meet your deductible.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is an out-of-pocket maximum?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>The out-of-pocket maximum is the most money you'll spend on covered healthcare in a calendar year. Once you reach this limit, your insurance covers 100% of additional covered services for the rest of the year. This limit includes your deductible, copays, and coinsurance, but typically excludes premiums. For 2026, individual plans have maximum OOP limits around $8,500-9,100 and family plans around $17,000-18,200. However, preventive care doesn't count toward the limit. Out-of-pocket maximums protect you from catastrophic costs - if you have a major illness or injury, insurance ensures you won't face unlimited expenses beyond this cap.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>Is my data private in this tool?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Yes, your data is completely private. This calculator runs entirely in your browser and performs all calculations locally on your device. No personal information, medical data, or financial information is transmitted to external servers. We do not collect, store, or track any data you enter. No cookies are used to identify you or track your usage. Your privacy is completely protected. This is an educational tool to help you understand insurance concepts - use it freely without privacy concerns. For actual insurance enrollment or claims, your insurance company's website uses secure encryption to protect your personal information.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <div class="bg-gray-100 rounded-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="plan-cost-calculator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <span class="font-semibold text-teal-primary">→ Plan Cost Calculator</span>
+                    <p class="text-sm text-gray-600">Compare total costs across multiple plans</p>
+                </a>
+                <a href="procedure-cost.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <span class="font-semibold text-teal-primary">→ Procedure Cost Estimator</span>
+                    <p class="text-sm text-gray-600">Find costs for medical procedures</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-white mb-4">HealthCalc Hub</h4>
+                    <p class="text-sm">Free, unbiased healthcare cost calculators. All calculations private, no data collection.</p>
+                </div>
+                <div></div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Disclaimer</h4>
+                    <p class="text-xs text-gray-400">These are simplified examples. Actual cost-sharing varies by plan and service type.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 HealthCalc Hub. Last Updated: April 3, 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateVisualization() {
+            const deductible = parseFloat(document.getElementById('deductible').value) || 0;
+            const coinsurance = parseFloat(document.getElementById('coinsurance').value) / 100 || 0.2;
+            const oopMax = parseFloat(document.getElementById('oop-max').value) || 0;
+
+            // Reset slider
+            document.getElementById('spending-slider').max = oopMax * 2;
+            document.getElementById('spending-slider').value = Math.min(3000, oopMax);
+
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const deductible = parseFloat(document.getElementById('deductible').value) || 0;
+            const coinsurance = parseFloat(document.getElementById('coinsurance').value) / 100 || 0.2;
+            const oopMax = parseFloat(document.getElementById('oop-max').value) || 0;
+            const totalServiceCost = parseFloat(document.getElementById('spending-slider').value) || 0;
+
+            // Calculate costs at this spending level
+            let youPay = 0;
+            let insurancePays = 0;
+
+            if (totalServiceCost <= deductible) {
+                // Phase 1: Still paying deductible
+                youPay = totalServiceCost;
+                insurancePays = 0;
+            } else {
+                // Past deductible
+                youPay = deductible;
+                const afterDeductible = totalServiceCost - deductible;
+                const coinsuranceAmount = afterDeductible * coinsurance;
+                youPay += coinsuranceAmount;
+
+                // Cap at OOP maximum
+                if (youPay > oopMax) {
+                    youPay = oopMax;
+                }
+
+                insurancePays = totalServiceCost - youPay;
+            }
+
+            // Calculate phases
+            const phase1 = Math.min(deductible, totalServiceCost);
+            const phase2Start = deductible;
+            const phase2End = oopMax;
+            const phase2Amount = Math.max(0, Math.min(totalServiceCost - phase2Start, phase2End - phase2Start));
+            const phase3Amount = Math.max(0, totalServiceCost - phase2End);
+
+            // Calculate bar widths (as % of total service cost or max possible)
+            const maxCost = Math.max(totalServiceCost, oopMax);
+            const phase1Width = (phase1 / maxCost) * 100;
+            const phase2Width = (phase2Amount / maxCost) * 100;
+            const phase3Width = (phase3Amount / maxCost) * 100;
+
+            // Update display
+            document.getElementById('total-service').textContent = '$' + totalServiceCost.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('you-pay').textContent = '$' + youPay.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('insurance-pays').textContent = '$' + insurancePays.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('deductible-left').textContent = '$' + Math.max(0, deductible - phase1).toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            // Update phase bars
+            document.getElementById('phase1-bar').style.width = phase1Width + '%';
+            document.getElementById('phase1-amount').textContent = '$' + phase1.toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            document.getElementById('phase2-bar').style.width = phase2Width + '%';
+            document.getElementById('phase2-amount').textContent = '$' + phase2Amount.toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            document.getElementById('phase3-bar').style.width = phase3Width + '%';
+            document.getElementById('phase3-amount').textContent = '$' + phase3Amount.toLocaleString('en-US', {maximumFractionDigits: 0});
+        }
+
+        // Initialize on load
+        window.addEventListener('load', updateVisualization);
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

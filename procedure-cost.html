@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Procedure Cost Estimator 2026 - How Much Will It Cost?</title>
+
+    <meta name="description" content="Search average costs for common medical procedures, surgeries, and diagnostic tests. Get estimates for your out-of-pocket costs with insurance.">
+    <meta name="keywords" content="medical procedure cost estimator, surgery costs, healthcare price transparency, procedure cost calculator, medical procedure prices">
+    <meta name="author" content="HealthCalc Hub">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Medical Procedure Cost Estimator 2026">
+    <meta property="og:description" content="Find estimated costs for common medical procedures and surgeries nationwide.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Medical Procedure Cost Estimator",
+      "url": "https://studentloancalcs.github.io/health-insurance-calculators/procedure-cost.html",
+      "applicationCategory": "HealthApplication"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do medical procedures cost different amounts at different hospitals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medical procedure costs vary dramatically due to geographic location, hospital type, provider negotiations, and facility overhead. Rural hospitals may charge less than urban academic medical centers. A knee replacement might cost $30,000 in one location and $60,000 in another, even within the same state. Insurance companies negotiate different 'allowed amounts' with each provider. Hospitals with newer equipment or specialized services charge more. Additionally, some hospitals operate as non-profit while others are for-profit. Using healthcare price transparency tools to compare costs before surgery can save thousands of dollars."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I estimate my out-of-pocket costs for a medical procedure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To estimate out-of-pocket costs, first find the procedure's typical cost using this calculator or hospital price transparency pages. Next, determine how much of your deductible you've met this year. You'll pay the full cost up to your remaining deductible, then your coinsurance percentage (typically 20-30%) on amounts above the deductible. Finally, cap it at your remaining out-of-pocket maximum. For example, if you have a $1,500 deductible remaining and a $3,000 procedure with 20% coinsurance, you'd pay $1,500 (deductible) + $300 (20% of remaining $1,500) = $1,800 total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the hospital price transparency rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Hospital Price Transparency Rule, effective since 2021, requires hospitals to publicly display standard charges (negotiated rates) for common procedures and services. This allows patients to compare prices before scheduling elective procedures. You can typically find price lists on hospital websites, often searchable by procedure. CMS (Centers for Medicare & Medicaid Services) also maintains a database of hospital charges. While these prices show 'negotiated rates' rather than what you'll personally owe, they give a baseline for comparison and help you identify which facilities offer better value for planned procedures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I pay cash or use insurance for medical procedures?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This depends on your specific situation. Use insurance if your deductible is nearly met or you're close to your out-of-pocket maximum, as costs then count toward these limits and may be covered quickly. Pay cash if your deductible is high and far from being met - many providers offer 20-40% discounts for upfront cash payment, making it cheaper than insurance coinsurance. Ask the provider for their cash price upfront. Never use a discount card (like GoodRx) for procedures since those don't go toward your deductible. For major surgeries, always use insurance. For minor procedures, compare the negotiated rate your insurance would pay versus the cash discount offered."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I negotiate my medical bills after a procedure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact the hospital's billing department within 30 days of receiving your bill and request an itemized statement. Review it for errors or duplicate charges. If you received unexpected out-of-network care, you can dispute those charges. Many hospitals have financial assistance programs for low-income patients that can reduce or forgive bills. You can also request a discount for paying upfront or in full. If you received care from an out-of-network provider without consent, you may be protected from balance billing. Some facilities use third-party advocates to negotiate on your behalf. Payment plans with zero interest are often available even after billing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the privacy of this calculator protected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, your privacy is fully protected. This calculator runs entirely in your browser and performs all cost calculations locally on your device. No personal information, medical data, or financial information is sent to our servers or any third party. We do not collect, store, or track any data you enter. No cookies or analytics are used to identify you. Your usage is completely anonymous. This is an educational tool only - for actual medical consultations or billing questions, consult with your healthcare provider or hospital directly."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        input, select { border: 1px solid #e5e7eb; }
+        input:focus, select:focus { outline: none; border-color: #0D9488; box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">$</span>
+                    </div>
+                    <span class="text-xl font-bold text-teal-dark">HealthCalc</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-teal-primary">Home</a>
+                    <a href="procedure-cost.html" class="text-teal-primary font-semibold">Procedures</a>
+                    <a href="plan-cost-calculator.html" class="text-gray-600 hover:text-teal-primary">Plan Cost</a>
+                    <a href="procedure-cost.html" class="text-gray-600 hover:text-teal-primary">Procedures</a>
+                    <a href="drug-cost-finder.html" class="text-gray-600 hover:text-teal-primary">Drugs</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-teal-primary">Blog</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Home</a>
+                <a href="procedure-cost.html" class="block px-3 py-2 text-base font-medium text-teal-primary font-semibold">Procedures</a>
+                <a href="plan-cost-calculator.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Plan Cost</a>
+                <a href="drug-cost-finder.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Drugs</a>
+                <a href="blog.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <a href="index.html" class="text-teal-primary hover:underline">Home</a>
+            <span class="text-gray-500 mx-2">/</span>
+            <span class="text-gray-700 font-semibold">Procedure Cost Estimator</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <section class="text-white py-12" style="background: linear-gradient(to right, #0D9488, #134E4A);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">Medical Procedure Cost Estimator 2026</h1>
+            <p class="text-lg" style="color: #CCFBF1;">Find average costs for common procedures and estimate your out-of-pocket costs</p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- How It Works -->
+        <details class="bg-white rounded-lg shadow-md p-6 mb-8 cursor-pointer">
+            <summary class="font-bold text-lg flex items-center">
+                <span class="text-teal-primary mr-2">ℹ️</span>
+                How This Calculator Works
+                <span class="ml-auto">▼</span>
+            </summary>
+            <div class="mt-4 text-gray-700 space-y-3">
+                <p>This tool shows the national average "allowed amount" for procedures, which is what insurance companies typically negotiate with providers.</p>
+                <p><strong>Key Points:</strong></p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Prices vary significantly by location and provider</li>
+                    <li>If you've met your deductible, you pay the coinsurance % (20%, 30%, etc.)</li>
+                    <li>Once you hit your out-of-pocket maximum, insurance pays 100%</li>
+                    <li>Uninsured cash prices can be 2-3x higher than negotiated rates</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Input Section -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Find Your Procedure Cost</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Select Procedure</label>
+                    <select id="procedure-select" class="w-full px-4 py-2 rounded-lg" onchange="updateProcedure()">
+                        <option value="">-- Choose a procedure --</option>
+                        <option value="office-visit-new">Office Visit (New Patient)</option>
+                        <option value="office-visit-est">Office Visit (Established)</option>
+                        <option value="annual-physical">Annual Physical Exam</option>
+                        <option value="bloodwork">Comprehensive Blood Work</option>
+                        <option value="xray">X-Ray</option>
+                        <option value="mri">MRI Scan</option>
+                        <option value="ct-scan">CT Scan</option>
+                        <option value="ultrasound">Ultrasound</option>
+                        <option value="colonoscopy">Colonoscopy</option>
+                        <option value="mammogram">Mammogram</option>
+                        <option value="er-visit">Emergency Room Visit</option>
+                        <option value="urgent-care">Urgent Care Visit</option>
+                        <option value="physical-therapy">Physical Therapy (per session)</option>
+                        <option value="vaginal-birth">Vaginal Childbirth (uncomplicated)</option>
+                        <option value="c-section">Cesarean Section (C-Section)</option>
+                        <option value="knee-replacement">Knee Replacement</option>
+                        <option value="hip-replacement">Hip Replacement</option>
+                        <option value="appendectomy">Appendectomy</option>
+                        <option value="cataract-surgery">Cataract Surgery</option>
+                        <option value="dental-cleaning">Dental Cleaning</option>
+                        <option value="root-canal">Root Canal</option>
+                        <option value="skin-biopsy">Skin Biopsy</option>
+                        <option value="allergy-testing">Allergy Testing</option>
+                        <option value="sleep-study">Sleep Study</option>
+                        <option value="hearing-test">Hearing Test</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Insurance Status</label>
+                    <select id="insurance-status" class="w-full px-4 py-2 rounded-lg" onchange="updateCalculation()">
+                        <option value="insured">Insured</option>
+                        <option value="uninsured">Uninsured</option>
+                        <option value="medicare">Medicare</option>
+                    </select>
+                </div>
+
+                <div id="deductible-section">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Deductible Status</label>
+                    <select id="deductible-status" class="w-full px-4 py-2 rounded-lg" onchange="updateCalculation()">
+                        <option value="met">Deductible Met</option>
+                        <option value="partial">Partially Met</option>
+                        <option value="not-met">Not Met</option>
+                    </select>
+                </div>
+
+                <div id="coinsurance-section">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Your Coinsurance (%)</label>
+                    <select id="coinsurance" class="w-full px-4 py-2 rounded-lg" onchange="updateCalculation()">
+                        <option value="10">10% coinsurance</option>
+                        <option value="15">15% coinsurance</option>
+                        <option value="20" selected>20% coinsurance</option>
+                        <option value="30">30% coinsurance</option>
+                        <option value="50">50% coinsurance</option>
+                    </select>
+                </div>
+
+                <div id="oop-max-section">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Your OOP Maximum ($)</label>
+                    <input type="number" id="oop-max" min="0" step="100" class="w-full px-4 py-2 rounded-lg" value="6000">
+                </div>
+
+                <div id="remaining-oop-section">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Remaining OOP for Year ($)</label>
+                    <input type="number" id="remaining-oop" min="0" step="100" class="w-full px-4 py-2 rounded-lg" value="6000">
+                </div>
+            </div>
+
+            <button onclick="updateCalculation()" class="w-full bg-teal-primary text-white font-bold py-3 rounded-lg hover:bg-teal-dark transition text-lg">
+                Calculate Cost Estimate
+            </button>
+        </div>
+
+        <!-- AdSense Placeholder -->
+        <!-- AdSense -->
+
+        <!-- Results Section -->
+        <div id="results" class="hidden space-y-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+                    <p class="text-gray-600 text-sm mb-2">Estimated Total Charge</p>
+                    <p class="text-3xl font-bold text-teal-primary" id="total-charge">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">What provider typically charges</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+                    <p class="text-gray-600 text-sm mb-2">Estimated Insurance Payment</p>
+                    <p class="text-3xl font-bold text-teal-primary" id="insurance-payment">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">What insurance covers</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-coral bg-opacity-10 to-white rounded-lg shadow-md p-6 border-l-4 border-coral">
+                    <p class="text-gray-600 text-sm mb-2">Your Out-of-Pocket Cost</p>
+                    <p class="text-3xl font-bold text-coral" id="your-oop">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">What you'll pay</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-100 to-white rounded-lg shadow-md p-6 border-l-4 border-green-600">
+                    <p class="text-gray-600 text-sm mb-2">Cash Pay Discount</p>
+                    <p class="text-3xl font-bold text-green-600" id="cash-discount">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">If paying without insurance</p>
+                </div>
+            </div>
+
+            <!-- Breakdown -->
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Cost Breakdown</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                        <span class="text-gray-700">Total Procedure Charge</span>
+                        <span class="font-bold text-gray-900" id="breakdown-charge">$0</span>
+                    </div>
+                    <div id="breakdown-deductible" class="flex justify-between items-center py-3 border-b border-gray-200">
+                        <span class="text-gray-700">Your Deductible Amount</span>
+                        <span class="font-bold text-gray-900" id="breakdown-deductible-amt">$0</span>
+                    </div>
+                    <div id="breakdown-coinsurance-div" class="flex justify-between items-center py-3 border-b border-gray-200">
+                        <span class="text-gray-700">Your Coinsurance (20%)</span>
+                        <span class="font-bold text-gray-900" id="breakdown-coinsurance-amt">$0</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 bg-teal-light rounded px-3">
+                        <span class="font-semibold text-gray-900">Your Total Out-of-Pocket</span>
+                        <span class="font-bold text-xl text-teal-primary" id="breakdown-oop-total">$0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AdSense Placeholder -->
+            <!-- AdSense -->
+        </div>
+
+        <!-- Educational Section -->
+        <div class="bg-teal-light rounded-lg p-8 my-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Understanding Your Medical Bill</h2>
+            <div class="space-y-4 text-gray-700">
+                <p><strong>Total Charge (Billed Amount):</strong> The price the healthcare provider charges. This is typically much higher than what insurance actually pays.</p>
+                <p><strong>Insurance Payment (Allowed Amount):</strong> The negotiated rate between insurance and the provider. You're protected from balance billing (the difference).</p>
+                <p><strong>Your Out-of-Pocket:</strong> What you pay based on your plan terms (deductible, copay, coinsurance). This counts toward your deductible and out-of-pocket maximum.</p>
+                <p><strong>Uninsured/Cash Pay:</strong> Uninsured patients often negotiate discounts or use payment plans. Many providers will discount 20-40% for cash payment.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mt-12 mb-12">
+            <h2 class="text-3xl font-bold mb-8" style="color: #134E4A;">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>Why do medical procedures cost different amounts at different hospitals?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Medical procedure costs vary dramatically due to geographic location, hospital type, provider negotiations, and facility overhead. Rural hospitals may charge less than urban academic medical centers. A knee replacement might cost $30,000 in one location and $60,000 in another, even within the same state. Insurance companies negotiate different 'allowed amounts' with each provider. Hospitals with newer equipment or specialized services charge more. Additionally, some hospitals operate as non-profit while others are for-profit. Using healthcare price transparency tools to compare costs before surgery can save thousands of dollars.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>How can I estimate my out-of-pocket costs for a medical procedure?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>To estimate out-of-pocket costs, first find the procedure's typical cost using this calculator or hospital price transparency pages. Next, determine how much of your deductible you've met this year. You'll pay the full cost up to your remaining deductible, then your coinsurance percentage (typically 20-30%) on amounts above the deductible. Finally, cap it at your remaining out-of-pocket maximum. For example, if you have a $1,500 deductible remaining and a $3,000 procedure with 20% coinsurance, you'd pay $1,500 (deductible) + $300 (20% of remaining $1,500) = $1,800 total.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is the hospital price transparency rule?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>The Hospital Price Transparency Rule, effective since 2021, requires hospitals to publicly display standard charges (negotiated rates) for common procedures and services. This allows patients to compare prices before scheduling elective procedures. You can typically find price lists on hospital websites, often searchable by procedure. CMS (Centers for Medicare & Medicaid Services) also maintains a database of hospital charges. While these prices show 'negotiated rates' rather than what you'll personally owe, they give a baseline for comparison and help you identify which facilities offer better value for planned procedures.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>Should I pay cash or use insurance for medical procedures?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>This depends on your specific situation. Use insurance if your deductible is nearly met or you're close to your out-of-pocket maximum, as costs then count toward these limits and may be covered quickly. Pay cash if your deductible is high and far from being met - many providers offer 20-40% discounts for upfront cash payment, making it cheaper than insurance coinsurance. Ask the provider for their cash price upfront. Never use a discount card (like GoodRx) for procedures since those don't go toward your deductible. For major surgeries, always use insurance. For minor procedures, compare the negotiated rate your insurance would pay versus the cash discount offered.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>How can I negotiate my medical bills after a procedure?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Contact the hospital's billing department within 30 days of receiving your bill and request an itemized statement. Review it for errors or duplicate charges. If you received unexpected out-of-network care, you can dispute those charges. Many hospitals have financial assistance programs for low-income patients that can reduce or forgive bills. You can also request a discount for paying upfront or in full. If you received care from an out-of-network provider without consent, you may be protected from balance billing. Some facilities use third-party advocates to negotiate on your behalf. Payment plans with zero interest are often available even after billing.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>Is the privacy of this calculator protected?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Yes, your privacy is fully protected. This calculator runs entirely in your browser and performs all cost calculations locally on your device. No personal information, medical data, or financial information is sent to our servers or any third party. We do not collect, store, or track any data you enter. No cookies or analytics are used to identify you. Your usage is completely anonymous. This is an educational tool only - for actual medical consultations or billing questions, consult with your healthcare provider or hospital directly.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <div class="bg-gray-100 rounded-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="plan-cost-calculator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <span class="font-semibold text-teal-primary">→ Plan Cost Calculator</span>
+                    <p class="text-sm text-gray-600">Compare total costs across multiple plans</p>
+                </a>
+                <a href="drug-cost-finder.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <span class="font-semibold text-teal-primary">→ Drug Cost Finder</span>
+                    <p class="text-sm text-gray-600">Compare prescription drug prices</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-white mb-4">HealthCalc Hub</h4>
+                    <p class="text-sm">Free, unbiased healthcare cost calculators. All calculations private, no data collection.</p>
+                </div>
+                <div></div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Disclaimer</h4>
+                    <p class="text-xs text-gray-400">These are average estimates. Actual costs vary by location, provider, and individual circumstances.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 HealthCalc Hub. Last Updated: April 3, 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const procedures = {
+            'office-visit-new': { name: 'Office Visit (New Patient)', minCost: 200, maxCost: 300 },
+            'office-visit-est': { name: 'Office Visit (Established)', minCost: 150, maxCost: 200 },
+            'annual-physical': { name: 'Annual Physical Exam', minCost: 200, maxCost: 400 },
+            'bloodwork': { name: 'Comprehensive Blood Work', minCost: 100, maxCost: 250 },
+            'xray': { name: 'X-Ray', minCost: 200, maxCost: 400 },
+            'mri': { name: 'MRI Scan', minCost: 1000, maxCost: 3000 },
+            'ct-scan': { name: 'CT Scan', minCost: 500, maxCost: 1500 },
+            'ultrasound': { name: 'Ultrasound', minCost: 200, maxCost: 500 },
+            'colonoscopy': { name: 'Colonoscopy', minCost: 2000, maxCost: 3500 },
+            'mammogram': { name: 'Mammogram', minCost: 150, maxCost: 350 },
+            'er-visit': { name: 'Emergency Room Visit', minCost: 1500, maxCost: 3000 },
+            'urgent-care': { name: 'Urgent Care Visit', minCost: 150, maxCost: 300 },
+            'physical-therapy': { name: 'Physical Therapy (per session)', minCost: 100, maxCost: 250 },
+            'vaginal-birth': { name: 'Vaginal Childbirth (uncomplicated)', minCost: 10000, maxCost: 15000 },
+            'c-section': { name: 'Cesarean Section (C-Section)', minCost: 15000, maxCost: 25000 },
+            'knee-replacement': { name: 'Knee Replacement', minCost: 30000, maxCost: 50000 },
+            'hip-replacement': { name: 'Hip Replacement', minCost: 30000, maxCost: 50000 },
+            'appendectomy': { name: 'Appendectomy', minCost: 10000, maxCost: 20000 },
+            'cataract-surgery': { name: 'Cataract Surgery', minCost: 3500, maxCost: 7000 },
+            'dental-cleaning': { name: 'Dental Cleaning', minCost: 100, maxCost: 200 },
+            'root-canal': { name: 'Root Canal', minCost: 700, maxCost: 1500 },
+            'skin-biopsy': { name: 'Skin Biopsy', minCost: 200, maxCost: 500 },
+            'allergy-testing': { name: 'Allergy Testing', minCost: 200, maxCost: 1000 },
+            'sleep-study': { name: 'Sleep Study', minCost: 1000, maxCost: 3000 },
+            'hearing-test': { name: 'Hearing Test', minCost: 60, maxCost: 250 }
+        };
+
+        function updateProcedure() {
+            const selected = document.getElementById('procedure-select').value;
+            if (selected) {
+                updateCalculation();
+            }
+        }
+
+        function updateCalculation() {
+            const procedureId = document.getElementById('procedure-select').value;
+            if (!procedureId) {
+                alert('Please select a procedure');
+                return;
+            }
+
+            const procedure = procedures[procedureId];
+            const avgCost = (procedure.minCost + procedure.maxCost) / 2;
+            const insuranceStatus = document.getElementById('insurance-status').value;
+
+            // Show/hide relevant fields
+            if (insuranceStatus === 'uninsured') {
+                document.getElementById('deductible-section').style.display = 'none';
+                document.getElementById('coinsurance-section').style.display = 'none';
+                document.getElementById('oop-max-section').style.display = 'none';
+                document.getElementById('remaining-oop-section').style.display = 'none';
+            } else {
+                document.getElementById('deductible-section').style.display = 'block';
+                document.getElementById('coinsurance-section').style.display = 'block';
+                document.getElementById('oop-max-section').style.display = 'block';
+                document.getElementById('remaining-oop-section').style.display = 'block';
+            }
+
+            let yourOOP = 0;
+            let insurancePayment = 0;
+
+            if (insuranceStatus === 'uninsured') {
+                // Uninsured: pay full charge or negotiate down
+                yourOOP = avgCost;
+                insurancePayment = 0;
+            } else {
+                // Insured: calculate based on deductible and coinsurance
+                const deductibleStatus = document.getElementById('deductible-status').value;
+                const coinsurancePct = parseInt(document.getElementById('coinsurance').value) / 100;
+                const oopMax = parseFloat(document.getElementById('oop-max').value);
+                const remainingOOP = parseFloat(document.getElementById('remaining-oop').value);
+
+                const allowedAmount = avgCost * 0.6; // Negotiated rate is typically 40-60% of charge
+
+                let yourCost = 0;
+
+                if (deductibleStatus === 'not-met') {
+                    // Pay full deductible (up to allowedAmount) or up to remaining deductible
+                    const remainingDeductible = Math.min(1500, allowedAmount);
+                    yourCost = Math.min(remainingDeductible, allowedAmount);
+                    insurancePayment = allowedAmount - yourCost;
+                } else if (deductibleStatus === 'partial') {
+                    // Pay remaining deductible + coinsurance
+                    const remainingDeductible = 500;
+                    yourCost = remainingDeductible + ((allowedAmount - remainingDeductible) * coinsurancePct);
+                    insurancePayment = allowedAmount - yourCost;
+                } else {
+                    // Deductible met, pay only coinsurance
+                    yourCost = allowedAmount * coinsurancePct;
+                    insurancePayment = allowedAmount - yourCost;
+                }
+
+                // Cap at remaining OOP maximum
+                yourOOP = Math.min(yourCost, remainingOOP);
+                insurancePayment = Math.max(allowedAmount - yourOOP, 0);
+            }
+
+            // Display results
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('total-charge').textContent = '$' + avgCost.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('insurance-payment').textContent = '$' + insurancePayment.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('your-oop').textContent = '$' + yourOOP.toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            // Cash discount (typical 20-30% off)
+            const cashDiscount = avgCost * 0.25;
+            document.getElementById('cash-discount').textContent = '$' + (avgCost - cashDiscount).toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            // Breakdown
+            document.getElementById('breakdown-charge').textContent = '$' + avgCost.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('breakdown-deductible-amt').textContent = insuranceStatus === 'insured' ? '$500' : '$0';
+            document.getElementById('breakdown-coinsurance-amt').textContent = '$' + (yourOOP - 500).toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('breakdown-oop-total').textContent = '$' + yourOOP.toLocaleString('en-US', {maximumFractionDigits: 0});
+        }
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

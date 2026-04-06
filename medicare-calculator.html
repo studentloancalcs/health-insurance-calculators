@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare Cost Calculator 2026 - Compare Medicare Plans & Costs</title>
+
+    <meta name="description" content="Calculate Medicare costs for 2026 including Parts A, B, D, and IRMAA surcharges. Compare Original Medicare vs Medicare Advantage.">
+    <meta name="keywords" content="Medicare calculator 2026, Medicare cost estimator, Medicare Part D calculator, IRMAA calculator, Medigap costs">
+    <meta name="author" content="HealthCalc Hub">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Medicare Cost Calculator 2026">
+    <meta property="og:description" content="Estimate your Medicare costs for 2026 including IRMAA surcharges and out-of-pocket expenses.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Medicare Cost Calculator",
+      "url": "https://studentloancalcs.github.io/health-insurance-calculators/medicare-calculator.html",
+      "applicationCategory": "HealthApplication"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the different parts of Medicare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medicare has four parts: Part A (hospital insurance) covers inpatient hospital stays, skilled nursing, hospice, and home health - usually free for those with 10+ years of Medicare tax payments; Part B (medical insurance) covers doctor visits, outpatient care, and preventive services - $185/month in 2026; Part D (prescription drugs) covers medications through standalone plans; and Medigap (supplemental insurance) fills gaps in Original Medicare. Some choose Medicare Advantage (Part C) instead, which is an all-in-one alternative offered by private insurers. Understanding each part helps you choose coverage that fits your healthcare needs and budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is IRMAA and how does it affect my Medicare premiums?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IRMAA (Income-Related Monthly Adjustment Amount) is an income-based surcharge added to Part B and Part D premiums for higher-income Medicare beneficiaries. In 2026, unmarried individuals earning over $97,000 and married couples over $194,000 pay extra. The surcharge increases with income brackets, up to an additional $356/month at the highest income level. IRMAA is calculated using your Modified Adjusted Gross Income (MAGI) from 2 years prior. It's automatically deducted from your Social Security check. You can appeal IRMAA if you've had a significant income decrease due to retirement, job loss, or death of a spouse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I enroll in Medicare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You become eligible for Medicare at age 65. You should enroll during your Initial Enrollment Period, which starts 3 months before your 65th birthday month, includes that month, and ends 3 months after. Enrolling on time avoids late enrollment penalties (10% higher premiums for each 12-month period you're late). If you have employer coverage when turning 65, you may defer Part B enrollment without penalty while employed. Once you lose employer coverage, you have 8 months to enroll without penalty. Missing this window triggers permanent premium increases, so plan ahead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Medicare Advantage and Original Medicare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Original Medicare (Parts A and B) allows you to see any provider nationwide, but leaves you vulnerable to out-of-pocket costs - that's why most buy Medigap. Medicare Advantage (Part C) is managed by private insurers and usually has $0 premiums and lower copays, but restricts you to in-network providers (except emergencies). Advantage plans include Part D drug coverage. Advantage has annual out-of-pocket limits; Original Medicare doesn't. Choose Original Medicare if you want provider flexibility and comprehensive coverage (with Medigap). Choose Advantage if you want lower premiums and don't mind network restrictions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Part D donut hole in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Part D 'donut hole' (coverage gap) is a range of drug costs you're responsible for after initial coverage ends. In 2026, you enter the donut hole after you and your plan have spent $6,550 in covered drugs combined. In the gap, you pay up to 25% of brand-name drug costs and 25% of generic drug costs until your out-of-pocket spending reaches $2,100. After that, you pay just small copayments as catastrophic coverage kicks in. Biosimilar drugs (copies of high-cost biologic drugs) have lower copayments to help offset donut hole costs. The donut hole shrinks each year as part of the Affordable Care Act."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data safe in this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, your data is completely safe and private. This calculator runs entirely in your browser and processes all information locally on your device without transmitting any personal or financial information to external servers. We do not collect, store, or share any data you enter about income, healthcare usage, or medical conditions. No tracking cookies are used. For actual Medicare enrollment and account management, use Medicare.gov directly, which is a secure government website protected by federal privacy laws. This is an educational tool only for estimating costs."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        input, select { border: 1px solid #e5e7eb; }
+        input:focus, select:focus { outline: none; border-color: #0D9488; box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">$</span>
+                    </div>
+                    <span class="text-xl font-bold text-teal-dark">HealthCalc</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-teal-primary">Home</a>
+                    <a href="medicare-calculator.html" class="text-teal-primary font-semibold">Medicare</a>
+                    <a href="plan-cost-calculator.html" class="text-gray-600 hover:text-teal-primary">Plan Cost</a>
+                    <a href="procedure-cost.html" class="text-gray-600 hover:text-teal-primary">Procedures</a>
+                    <a href="drug-cost-finder.html" class="text-gray-600 hover:text-teal-primary">Drugs</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-teal-primary">Blog</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Home</a>
+                <a href="medicare-calculator.html" class="block px-3 py-2 text-base font-medium text-teal-primary font-semibold">Medicare</a>
+                <a href="plan-cost-calculator.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Plan Cost</a>
+                <a href="procedure-cost.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Procedures</a>
+                <a href="drug-cost-finder.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Drugs</a>
+                <a href="blog.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <a href="index.html" class="text-teal-primary hover:underline">Home</a>
+            <span class="text-gray-500 mx-2">/</span>
+            <span class="text-gray-700 font-semibold">Medicare Calculator</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <section class="text-white py-12" style="background: linear-gradient(to right, #0D9488, #134E4A);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">Medicare Cost Calculator 2026</h1>
+            <p class="text-lg" style="color: #CCFBF1;">Estimate your Medicare costs including Parts A, B, D, and IRMAA surcharges</p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- How It Works -->
+        <details class="bg-white rounded-lg shadow-md p-6 mb-8 cursor-pointer">
+            <summary class="font-bold text-lg flex items-center">
+                <span class="text-teal-primary mr-2">ℹ️</span>
+                How This Calculator Works
+                <span class="ml-auto">▼</span>
+            </summary>
+            <div class="mt-4 text-gray-700 space-y-3">
+                <p><strong>2026 Medicare Costs:</strong></p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Part A: Hospital insurance (premium $0 for most; $518/month for late enrollees)</li>
+                    <li>Part B: Medical insurance ($202.90/month standard)</li>
+                    <li>Part D: Prescription drug ($615 deductible, $2,100 OOP cap)</li>
+                    <li>IRMAA: Income-Related Monthly Adjustment Amount (surcharges for higher incomes)</li>
+                </ul>
+                <p><strong>IRMAA Brackets (2026):</strong> If your income exceeds certain thresholds, you pay more for Parts B and D.</p>
+            </div>
+        </details>
+
+        <!-- Input Section -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Information</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Age</label>
+                    <input type="number" id="age" min="65" max="120" step="1" class="w-full px-4 py-2 rounded-lg" value="72" onchange="updateCalculation()">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Filing Status</label>
+                    <select id="filing-status" class="w-full px-4 py-2 rounded-lg" onchange="updateCalculation()">
+                        <option value="single" selected>Single</option>
+                        <option value="married">Married Filing Jointly</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Modified Adjusted Gross Income ($)</label>
+                    <input type="number" id="magi" min="0" step="5000" class="w-full px-4 py-2 rounded-lg" value="85000" onchange="updateCalculation()">
+                    <p class="text-xs text-gray-500 mt-1">Used for IRMAA calculation</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Medicare Plan Type</label>
+                    <select id="plan-type" class="w-full px-4 py-2 rounded-lg" onchange="updateCalculation()">
+                        <option value="original" selected>Original Medicare + Medigap + Part D</option>
+                        <option value="advantage">Medicare Advantage (All-in-One)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Estimated Prescription Costs ($)</label>
+                    <input type="number" id="drug-costs" min="0" step="500" class="w-full px-4 py-2 rounded-lg" value="2000" onchange="updateCalculation()">
+                    <p class="text-xs text-gray-500 mt-1">Your annual prescription expenses</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Medical Usage Level</label>
+                    <select id="usage-level" class="w-full px-4 py-2 rounded-lg" onchange="updateCalculation()">
+                        <option value="low">Low (few doctor visits)</option>
+                        <option value="medium" selected>Medium (regular visits)</option>
+                        <option value="high">High (frequent care)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="updateCalculation()" class="w-full bg-teal-primary text-white font-bold py-3 rounded-lg mt-8 hover:bg-teal-dark transition text-lg">
+                Calculate Medicare Costs
+            </button>
+        </div>
+
+        <!-- AdSense Placeholder -->
+        <!-- AdSense -->
+
+        <!-- Results Section -->
+        <div id="results" class="hidden space-y-8 mb-8">
+            <!-- Cost Summary -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+                    <p class="text-gray-600 text-sm mb-2">Monthly Premium</p>
+                    <p class="text-3xl font-bold text-teal-primary" id="monthly-premium">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">Parts A, B, D, and Medigap</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+                    <p class="text-gray-600 text-sm mb-2">Annual Out-of-Pocket</p>
+                    <p class="text-3xl font-bold text-teal-primary" id="annual-oop">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">Deductibles, copays, coinsurance</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-coral bg-opacity-10 to-white rounded-lg shadow-md p-6 border-l-4 border-coral">
+                    <p class="text-gray-600 text-sm mb-2">IRMAA Surcharge</p>
+                    <p class="text-3xl font-bold text-coral" id="irmaa-surcharge">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">Income-related adjustment</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-100 to-white rounded-lg shadow-md p-6 border-l-4 border-green-600">
+                    <p class="text-gray-600 text-sm mb-2">Total Annual Cost</p>
+                    <p class="text-3xl font-bold text-green-600" id="total-annual-cost">$0</p>
+                    <p class="text-xs text-gray-500 mt-2">Premiums + out-of-pocket</p>
+                </div>
+            </div>
+
+            <!-- Detailed Breakdown -->
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Cost Breakdown</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                        <span class="text-gray-700">Part A (Hospital) - Monthly</span>
+                        <span class="font-bold text-gray-900" id="part-a-cost">$0</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                        <span class="text-gray-700">Part B (Medical) - Monthly</span>
+                        <span class="font-bold text-gray-900" id="part-b-cost">$185</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                        <span class="text-gray-700">Part D (Drugs) - Monthly</span>
+                        <span class="font-bold text-gray-900" id="part-d-cost">$0</span>
+                    </div>
+                    <div id="medigap-row" class="flex justify-between items-center py-3 border-b border-gray-200">
+                        <span class="text-gray-700">Medigap Plan F - Monthly</span>
+                        <span class="font-bold text-gray-900" id="medigap-cost">$150</span>
+                    </div>
+                    <div id="irmaa-row" class="flex justify-between items-center py-3 border-b border-gray-200 bg-orange-50">
+                        <span class="text-gray-700"><strong>IRMAA Surcharge - Monthly</strong></span>
+                        <span class="font-bold text-coral" id="irmaa-monthly">$0</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 bg-teal-light rounded px-3">
+                        <span class="font-semibold text-gray-900">Total Monthly Premium</span>
+                        <span class="font-bold text-xl text-teal-primary" id="breakdown-monthly">$0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alert if IRMAA -->
+            <div id="irmaa-alert" class="hidden bg-orange-50 border-l-4 border-orange-500 p-6 rounded">
+                <h4 class="font-bold text-orange-800 mb-2">Higher Income? You're Paying IRMAA</h4>
+                <p class="text-orange-700 text-sm">Your income is above Medicare thresholds, so you're paying extra (IRMAA surcharges) for Parts B and D. This is automatically deducted from your Social Security check.</p>
+            </div>
+
+            <!-- AdSense Placeholder -->
+            <!-- AdSense -->
+        </div>
+
+        <!-- Medicare Parts Explanation -->
+        <div class="bg-teal-light rounded-lg p-8 my-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Understanding Medicare Parts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-lg text-teal-primary mb-3">Part A - Hospital Insurance</h3>
+                    <p class="text-gray-700 text-sm mb-3">Covers inpatient hospital stays, skilled nursing, hospice, and home health.</p>
+                    <p class="text-xs text-gray-600"><strong>2026 Cost:</strong> Usually $0 if you paid Medicare taxes for 10+ years. Late enrollment penalty applies.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-lg text-teal-primary mb-3">Part B - Medical Insurance</h3>
+                    <p class="text-gray-700 text-sm mb-3">Covers doctor visits, outpatient care, durable medical equipment, and preventive services.</p>
+                    <p class="text-xs text-gray-600"><strong>2026 Cost:</strong> $202.90/month standard (higher income = IRMAA surcharge).</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-lg text-teal-primary mb-3">Part D - Prescription Drugs</h3>
+                    <p class="text-gray-700 text-sm mb-3">Covers prescription medications through standalone plans.</p>
+                    <p class="text-xs text-gray-600"><strong>2026 Cost:</strong> $615 deductible, $2,100 OOP cap. Costs vary by plan and location.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-lg text-teal-primary mb-3">Medigap - Supplemental Insurance</h3>
+                    <p class="text-gray-700 text-sm mb-3">Fills gaps in Original Medicare (copays, coinsurance, deductibles).</p>
+                    <p class="text-xs text-gray-600"><strong>2026 Cost:</strong> $100-300+ per month depending on plan type (A-N).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Original Medicare vs Medicare Advantage -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Original Medicare vs Medicare Advantage</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-teal-light border-b border-gray-300">
+                        <tr>
+                            <th class="text-left py-3 px-3 font-bold text-gray-900">Feature</th>
+                            <th class="text-center py-3 px-3 font-bold text-gray-900">Original Medicare</th>
+                            <th class="text-center py-3 px-3 font-bold text-gray-900">Medicare Advantage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-3">Covers All Providers</td>
+                            <td class="text-center py-3 px-3">✓ Yes (network-wide)</td>
+                            <td class="text-center py-3 px-3">Limited (plan network)</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 bg-gray-50">
+                            <td class="py-3 px-3">Out-of-Network Coverage</td>
+                            <td class="text-center py-3 px-3">✓ Yes</td>
+                            <td class="text-center py-3 px-3">Usually not (emergency only)</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-3">Referrals Required</td>
+                            <td class="text-center py-3 px-3">✗ No</td>
+                            <td class="text-center py-3 px-3">✓ Usually yes</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 bg-gray-50">
+                            <td class="py-3 px-3">Medigap Supplement Needed</td>
+                            <td class="text-center py-3 px-3">✓ Recommended</td>
+                            <td class="text-center py-3 px-3">✗ No</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-3">Prescription Drug Plan</td>
+                            <td class="text-center py-3 px-3">Separate Part D</td>
+                            <td class="text-center py-3 px-3">Included</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mt-12 mb-12">
+            <h2 class="text-3xl font-bold mb-8" style="color: #134E4A;">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What are the different parts of Medicare?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Medicare has four parts: Part A (hospital insurance) covers inpatient hospital stays, skilled nursing, hospice, and home health - usually free for those with 10+ years of Medicare tax payments; Part B (medical insurance) covers doctor visits, outpatient care, and preventive services - $185/month in 2026; Part D (prescription drugs) covers medications through standalone plans; and Medigap (supplemental insurance) fills gaps in Original Medicare. Some choose Medicare Advantage (Part C) instead, which is an all-in-one alternative offered by private insurers. Understanding each part helps you choose coverage that fits your healthcare needs and budget.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is IRMAA and how does it affect my Medicare premiums?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>IRMAA (Income-Related Monthly Adjustment Amount) is an income-based surcharge added to Part B and Part D premiums for higher-income Medicare beneficiaries. In 2026, unmarried individuals earning over $97,000 and married couples over $194,000 pay extra. The surcharge increases with income brackets, up to an additional $356/month at the highest income level. IRMAA is calculated using your Modified Adjusted Gross Income (MAGI) from 2 years prior. It's automatically deducted from your Social Security check. You can appeal IRMAA if you've had a significant income decrease due to retirement, job loss, or death of a spouse.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>When should I enroll in Medicare?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>You become eligible for Medicare at age 65. You should enroll during your Initial Enrollment Period, which starts 3 months before your 65th birthday month, includes that month, and ends 3 months after. Enrolling on time avoids late enrollment penalties (10% higher premiums for each 12-month period you're late). If you have employer coverage when turning 65, you may defer Part B enrollment without penalty while employed. Once you lose employer coverage, you have 8 months to enroll without penalty. Missing this window triggers permanent premium increases, so plan ahead.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is the difference between Medicare Advantage and Original Medicare?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Original Medicare (Parts A and B) allows you to see any provider nationwide, but leaves you vulnerable to out-of-pocket costs - that's why most buy Medigap. Medicare Advantage (Part C) is managed by private insurers and usually has $0 premiums and lower copays, but restricts you to in-network providers (except emergencies). Advantage plans include Part D drug coverage. Advantage has annual out-of-pocket limits; Original Medicare doesn't. Choose Original Medicare if you want provider flexibility and comprehensive coverage (with Medigap). Choose Advantage if you want lower premiums and don't mind network restrictions.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>What is the Part D donut hole in 2026?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>The Part D 'donut hole' (coverage gap) is a range of drug costs you're responsible for after initial coverage ends. In 2026, you enter the donut hole after you and your plan have spent $6,550 in covered drugs combined. In the gap, you pay up to 25% of brand-name drug costs and 25% of generic drug costs until your out-of-pocket spending reaches $2,100. After that, you pay just small copayments as catastrophic coverage kicks in. Biosimilar drugs (copies of high-cost biologic drugs) have lower copayments to help offset donut hole costs. The donut hole shrinks each year as part of the Affordable Care Act.</p></div>
+                </details>
+                <details class="border border-gray-200 rounded-lg">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+                        <span>Is my data safe in this calculator?</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700"><p>Yes, your data is completely safe and private. This calculator runs entirely in your browser and processes all information locally on your device without transmitting any personal or financial information to external servers. We do not collect, store, or share any data you enter about income, healthcare usage, or medical conditions. No tracking cookies are used. For actual Medicare enrollment and account management, use Medicare.gov directly, which is a secure government website protected by federal privacy laws. This is an educational tool only for estimating costs.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <div class="bg-gray-100 rounded-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="plan-cost-calculator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <span class="font-semibold text-teal-primary">→ Plan Cost Calculator</span>
+                    <p class="text-sm text-gray-600">Compare total costs across multiple plans</p>
+                </a>
+                <a href="drug-cost-finder.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <span class="font-semibold text-teal-primary">→ Drug Cost Finder</span>
+                    <p class="text-sm text-gray-600">Compare prescription drug prices</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-white mb-4">HealthCalc Hub</h4>
+                    <p class="text-sm">Free, unbiased healthcare cost calculators. All calculations private, no data collection.</p>
+                </div>
+                <div></div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Disclaimer</h4>
+                    <p class="text-xs text-gray-400">These are estimates for 2026. Visit Medicare.gov for official costs and enrollment information.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 HealthCalc Hub. Last Updated: April 6, 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 2026 IRMAA Thresholds (updated per CMS 2026 guidelines)
+        const irmaaThresholds = {
+            'single': [
+                { min: 0, max: 109000, surcharge: 0 },
+                { min: 109001, max: 137000, surcharge: 81 },
+                { min: 137001, max: 171000, surcharge: 203 },
+                { min: 171001, max: 205000, surcharge: 325 },
+                { min: 205001, max: 500000, surcharge: 446 },
+                { min: 500001, max: Infinity, surcharge: 487 }
+            ],
+            'married': [
+                { min: 0, max: 218000, surcharge: 0 },
+                { min: 218001, max: 274000, surcharge: 81 },
+                { min: 274001, max: 342000, surcharge: 203 },
+                { min: 342001, max: 410000, surcharge: 325 },
+                { min: 410001, max: 750000, surcharge: 446 },
+                { min: 750001, max: Infinity, surcharge: 487 }
+            ]
+        };
+
+        function updateCalculation() {
+            const age = parseInt(document.getElementById('age').value);
+            const filingStatus = document.getElementById('filing-status').value;
+            const magi = parseFloat(document.getElementById('magi').value) || 0;
+            const planType = document.getElementById('plan-type').value;
+            const drugCosts = parseFloat(document.getElementById('drug-costs').value) || 0;
+            const usageLevel = document.getElementById('usage-level').value;
+
+            // Part A
+            let partACost = 0; // Most people pay $0
+
+            // Part B
+            let partBCost = 202.90;
+
+            // Calculate IRMAA surcharge
+            const irmaaThreshold = irmaaThresholds[filingStatus];
+            let irmaaSurcharge = 0;
+            for (let bracket of irmaaThreshold) {
+                if (magi >= bracket.min && magi <= bracket.max) {
+                    irmaaSurcharge = bracket.surcharge;
+                    break;
+                }
+            }
+
+            // Show IRMAA alert if surcharge applies
+            if (irmaaSurcharge > 0) {
+                document.getElementById('irmaa-alert').classList.remove('hidden');
+            } else {
+                document.getElementById('irmaa-alert').classList.add('hidden');
+            }
+
+            // Part D
+            const partDPremium = 35;
+            const partDDeductible = 615;
+            const partDOOPCap = 2100;
+
+            // Estimate drug costs
+            let drugOOP = 0;
+            if (drugCosts > 0) {
+                // Deductible first
+                let afterDeductible = Math.max(0, drugCosts - partDDeductible);
+                // Then coinsurance 25% until OOP cap
+                let coinsurance = afterDeductible * 0.25;
+                drugOOP = Math.min(partDDeductible + coinsurance, partDOOPCap);
+            }
+
+            // Medical OOP (varies by usage)
+            let medicalOOP = 0;
+            if (usageLevel === 'low') {
+                medicalOOP = 150; // Part B deductible
+            } else if (usageLevel === 'medium') {
+                medicalOOP = 500; // Deductible + some copays
+            } else {
+                medicalOOP = 1500; // High usage
+            }
+
+            // Medigap Plan F premium (if Original Medicare)
+            let medigapCost = planType === 'original' ? 150 : 0;
+            document.getElementById('medigap-row').style.display = planType === 'original' ? '' : 'none';
+
+            // Medicare Advantage premium (varies)
+            let maaPremium = planType === 'advantage' ? 30 : 0;
+
+            // Calculate totals
+            const monthlyPremium = partACost + partBCost + partDPremium + medigapCost + maaPremium + irmaaSurcharge;
+            const annualPremiums = monthlyPremium * 12;
+            const annualOOP = drugOOP + medicalOOP;
+            const totalAnnualCost = annualPremiums + annualOOP;
+
+            // Display results
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('monthly-premium').textContent = '$' + monthlyPremium.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('annual-oop').textContent = '$' + annualOOP.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('irmaa-surcharge').textContent = '$' + (irmaaSurcharge * 12).toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('total-annual-cost').textContent = '$' + totalAnnualCost.toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            // Breakdown
+            document.getElementById('part-a-cost').textContent = '$' + partACost;
+            document.getElementById('part-b-cost').textContent = '$' + partBCost;
+            document.getElementById('part-d-cost').textContent = '$' + partDPremium;
+            document.getElementById('medigap-cost').textContent = '$' + medigapCost;
+            document.getElementById('irmaa-monthly').textContent = '$' + irmaaSurcharge;
+            document.getElementById('breakdown-monthly').textContent = '$' + monthlyPremium.toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            // Show/hide IRMAA row
+            document.getElementById('irmaa-row').style.display = irmaaSurcharge > 0 ? '' : 'none';
+        }
+
+        // Calculate on load
+        window.addEventListener('load', updateCalculation);
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
