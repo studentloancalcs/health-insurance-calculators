@@ -633,6 +633,21 @@
       </p>
      </div>
      <div>
+      <h4 class="font-bold text-white mb-4">
+       Legal
+      </h4>
+      <ul class="space-y-2 text-sm">
+       <li>
+        <a class="hover:text-teal-primary" href="privacy.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-teal-primary" href="terms.html">
+         Terms of Service
+        </a>
+       </li>
+      </ul>
      </div>
      <div>
       <h4 class="font-bold text-white mb-4">
@@ -716,20 +731,4 @@
             document.getElementById('phase1-amount').textContent = '$' + phase1.toLocaleString('en-US', {maximumFractionDigits: 0});
 
             document.getElementById('phase2-bar').style.width = phase2Width + '%';
-            document.getElementById('phase2-amount').textContent = '$' + phase2Amount.toLocaleString('en-US', {maximumFractionDigits: 0});
-
-            document.getElementById('phase3-bar').style.width = phase3Width + '%';
-            document.getElementById('phase3-amount').textContent = '$' + phase3Amount.toLocaleString('en-US', {maximumFractionDigits: 0});
-        }
-
-        // Initialize on load
-        window.addEventListener('load', updateVisualization);
-  </script>
-  <script>
-   // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-  </script>
- </body>
-</html>
+     

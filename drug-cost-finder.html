@@ -680,6 +680,21 @@
       </p>
      </div>
      <div>
+      <h4 class="font-bold text-white mb-4">
+       Legal
+      </h4>
+      <ul class="space-y-2 text-sm">
+       <li>
+        <a class="hover:text-teal-primary" href="privacy.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-teal-primary" href="terms.html">
+         Terms of Service
+        </a>
+       </li>
+      </ul>
      </div>
      <div>
       <h4 class="font-bold text-white mb-4">
@@ -782,23 +797,4 @@
             if (insurancePrice < bestPrice) {
                 bestOption = 'Insurance';
                 bestPrice = insurancePrice;
-            }
-            document.getElementById('best-option').textContent = bestOption;
-            document.getElementById('comp-best').textContent = '$' + bestPrice.toLocaleString('en-US', {maximumFractionDigits: 0});
-
-            // Show Medicare info if selected
-            if (insuranceType === 'medicare') {
-                document.getElementById('medicare-info').classList.remove('hidden');
-            } else {
-                document.getElementById('medicare-info').classList.add('hidden');
-            }
-        }
-  </script>
-  <script>
-   // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-  </script>
- </body>
-</html>
+    

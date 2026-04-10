@@ -731,6 +731,21 @@
       </p>
      </div>
      <div>
+      <h4 class="font-bold text-white mb-4">
+       Legal
+      </h4>
+      <ul class="space-y-2 text-sm">
+       <li>
+        <a class="hover:text-teal-primary" href="privacy.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-teal-primary" href="terms.html">
+         Terms of Service
+        </a>
+       </li>
+      </ul>
      </div>
      <div>
       <h4 class="font-bold text-white mb-4">
@@ -920,35 +935,4 @@
                             title: {
                                 display: true,
                                 text: 'Income as % of FPL'
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: true
-                        },
-                        annotation: {
-                            drawTime: 'afterDatasetsDraw'
-                        }
-                    }
-                }
-            });
-
-            // Add cliff line at 400% FPL
-            const cliffIndex = 8;
-            if (cliffIndex < subsidies.length) {
-                ctx.style.position = 'relative';
-            }
-        }
-
-        // Calculate on page load
-        window.addEventListener('load', calculateSubsidy);
-  </script>
-  <script>
-   // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-  </script>
- </body>
-</html>
+                    
