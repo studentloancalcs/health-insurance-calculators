@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACA Subsidy Calculator 2026 - Obamacare Premium & Subsidy Estimator</title>
-
-    <meta name="description" content="Calculate your ACA subsidies and healthcare.gov marketplace premiums for 2026. Includes the subsidy cliff at 400% FPL and enhanced subsidy changes.">
-    <meta name="keywords" content="ACA subsidy calculator 2026, Obamacare subsidy calculator, healthcare marketplace calculator, ACA premium estimator, subsidy cliff 2026">
-    <meta name="author" content="HealthCalc Hub">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ACA Subsidy Calculator 2026">
-    <meta property="og:description" content="Estimate your ACA subsidies and premiums for 2026 with the subsidy cliff at 400% FPL.">
-
-    <script type="application/ld+json">
-    {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <title>
+   ACA Subsidy Calculator 2026 - Obamacare Premium &amp; Subsidy Estimator
+  </title>
+  <meta content="Calculate your ACA subsidies and healthcare.gov marketplace premiums for 2026. Includes the subsidy cliff at 400% FPL and enhanced subsidy changes." name="description"/>
+  <link href="https://healthcosttools.com/aca-subsidy-calculator.html" rel="canonical"/>
+  <meta content="ACA subsidy calculator 2026, Obamacare subsidy calculator, healthcare marketplace calculator, ACA premium estimator, subsidy cliff 2026" name="keywords"/>
+  <meta content="HealthCalc Hub" name="author"/>
+  <meta content="index, follow" name="robots"/>
+  <meta content="website" property="og:type"/>
+  <meta content="ACA Subsidy Calculator 2026" property="og:title"/>
+  <meta content="Estimate your ACA subsidies and premiums for 2026 with the subsidy cliff at 400% FPL." property="og:description"/>
+  <script type="application/ld+json">
+   {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "ACA Subsidy Calculator 2026",
       "url": "https://studentloancalcs.github.io/health-insurance-calculators/aca-subsidy-calculator.html",
       "applicationCategory": "FinanceApplication"
     }
-    </script>
-
-    <script type="application/ld+json">
-    {
+  </script>
+  <script type="application/ld+json">
+   {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
@@ -79,15 +79,15 @@
         }
       ]
     }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <style>
-        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  </script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <style>
+   * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
         .bg-teal-primary { background-color: #0D9488; }
         .bg-teal-dark { background-color: #134E4A; }
         .bg-teal-light { background-color: #F0FDFA; }
@@ -96,354 +96,660 @@
         .text-coral { color: #F97316; }
         input, select { border: 1px solid #e5e7eb; }
         input:focus, select:focus { outline: none; border-color: #0D9488; box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1); }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-900">
-    <!-- Navigation -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">$</span>
-                    </div>
-                    <span class="text-xl font-bold text-teal-dark">HealthCalc</span>
-                </a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-teal-primary">Home</a>
-                    <a href="plan-cost-calculator.html" class="text-gray-600 hover:text-teal-primary">Plan Cost</a>
-                    <a href="aca-subsidy-calculator.html" class="text-teal-primary font-semibold">ACA Subsidy</a>
-                    <a href="procedure-cost.html" class="text-gray-600 hover:text-teal-primary">Procedures</a>
-                    <a href="drug-cost-finder.html" class="text-gray-600 hover:text-teal-primary">Drugs</a>
-                    <a href="blog.html" class="text-gray-600 hover:text-teal-primary">Blog</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
-                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Home</a>
-                <a href="plan-cost-calculator.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Plan Cost</a>
-                <a href="aca-subsidy-calculator.html" class="block px-3 py-2 text-base font-medium text-teal-primary font-semibold">ACA Subsidy</a>
-                <a href="procedure-cost.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Procedures</a>
-                <a href="drug-cost-finder.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Drugs</a>
-                <a href="blog.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Blog</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Breadcrumb -->
-    <div class="bg-gray-100 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <a href="index.html" class="text-teal-primary hover:underline">Home</a>
-            <span class="text-gray-500 mx-2">/</span>
-            <span class="text-gray-700 font-semibold">ACA Subsidy Calculator</span>
-        </div>
+  </style>
+  <meta content="https://healthcosttools.com/aca-subsidy-calculator.html" property="og:url"/>
+  <meta content="https://healthcosttools.com/og-image.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="ACA Subsidy Calculator 2026" name="twitter:title"/>
+  <meta content="Estimate your ACA subsidies and premiums for 2026 with the subsidy cliff at 400% FPL." name="twitter:description"/>
+  <meta content="https://healthcosttools.com/og-image.png" name="twitter:image"/>
+ </head>
+ <body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <a class="flex items-center space-x-2" href="index.html">
+      <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
+       <span class="text-white font-bold text-lg">
+        $
+       </span>
+      </div>
+      <span class="text-xl font-bold text-teal-dark">
+       HealthCalc
+      </span>
+     </a>
+     <div class="hidden md:flex space-x-8">
+      <a class="text-gray-600 hover:text-teal-primary" href="index.html">
+       Home
+      </a>
+      <a class="text-gray-600 hover:text-teal-primary" href="plan-cost-calculator.html">
+       Plan Cost
+      </a>
+      <a class="text-teal-primary font-semibold" href="aca-subsidy-calculator.html">
+       ACA Subsidy
+      </a>
+      <a class="text-gray-600 hover:text-teal-primary" href="procedure-cost.html">
+       Procedures
+      </a>
+      <a class="text-gray-600 hover:text-teal-primary" href="drug-cost-finder.html">
+       Drugs
+      </a>
+      <a class="text-gray-600 hover:text-teal-primary" href="blog.html">
+       Blog
+      </a>
+     </div>
+     <button class="md:hidden text-gray-600" id="mobile-menu-btn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+       <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+       </path>
+      </svg>
+     </button>
     </div>
-
-    <!-- Header -->
-    <section class="text-white py-12" style="background: linear-gradient(to right, #0D9488, #134E4A);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold mb-4">ACA Subsidy Calculator 2026</h1>
-            <p class="text-lg" style="color: #CCFBF1;">Estimate your tax credits and premiums on healthcare.gov</p>
-        </div>
-    </section>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Subsidy Cliff Alert -->
-        <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-8 rounded">
-            <div class="flex items-start">
-                <span class="text-3xl mr-4">⚠️</span>
-                <div>
-                    <h3 class="font-bold text-red-800 text-lg mb-2">2026 Subsidy Cliff Alert</h3>
-                    <p class="text-red-700 mb-2">Enhanced ACA subsidies expired at the end of 2025. The "subsidy cliff" is back at <strong>400% Federal Poverty Level (FPL)</strong>.</p>
-                    <p class="text-red-700 mb-2"><strong>For 2026:</strong> If your income exceeds 400% FPL ($62,160 for an individual), you receive <strong>NO SUBSIDY AT ALL</strong>.</p>
-                    <p class="text-red-700 text-sm">Your expected contribution percentage (premium as % of income) will return to pre-2021 levels: 8.05-9.12% for those near the cliff.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- How It Works -->
-        <details class="bg-white rounded-lg shadow-md p-6 mb-8 cursor-pointer">
-            <summary class="font-bold text-lg flex items-center">
-                <span class="text-teal-primary mr-2">ℹ️</span>
-                How This Calculator Works
-                <span class="ml-auto">▼</span>
-            </summary>
-            <div class="mt-4 text-gray-700 space-y-3">
-                <p>The ACA subsidy calculation is based on your income and family size to determine your Federal Poverty Level (FPL) percentage.</p>
-                <p><strong>2026 Federal Poverty Levels:</strong></p>
-                <ul class="list-disc list-inside space-y-1">
-                    <li>Individual: $15,650</li>
-                    <li>Each additional family member: +$5,580</li>
-                </ul>
-                <p><strong>Subsidy Calculation:</strong> Your expected contribution (what you should pay as a % of income) is compared to the benchmark Silver plan. The difference is your subsidy.</p>
-            </div>
-        </details>
-
-        <!-- Input Section -->
-        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Household Information</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Annual Household Income ($)</label>
-                    <input type="number" id="income" min="0" step="1000" class="w-full px-4 py-2 rounded-lg" value="55000">
-                    <p class="text-xs text-gray-500 mt-1">Projected 2026 income (modified adjusted gross income)</p>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Family Size</label>
-                    <select id="family-size" class="w-full px-4 py-2 rounded-lg">
-                        <option value="1">1 person</option>
-                        <option value="2" selected>2 people</option>
-                        <option value="3">3 people</option>
-                        <option value="4">4 people</option>
-                        <option value="5">5 people</option>
-                        <option value="6">6 people</option>
-                        <option value="7">7 people</option>
-                        <option value="8">8 people</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Primary Applicant Age</label>
-                    <input type="number" id="age" min="0" max="120" step="1" class="w-full px-4 py-2 rounded-lg" value="35">
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">State</label>
-                    <select id="state" class="w-full px-4 py-2 rounded-lg">
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MO">Missouri</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="NY" selected>New York</option>
-                        <option value="OH">Ohio</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="TX">Texas</option>
-                        <option value="CA">California</option>
-                        <option value="WA">Washington</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Tobacco Use</label>
-                    <select id="tobacco" class="w-full px-4 py-2 rounded-lg">
-                        <option value="no" selected>Non-tobacco user</option>
-                        <option value="yes">Tobacco user</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Filing Status</label>
-                    <select id="filing-status" class="w-full px-4 py-2 rounded-lg">
-                        <option value="single" selected>Single</option>
-                        <option value="married">Married Filing Jointly</option>
-                        <option value="hoh">Head of Household</option>
-                    </select>
-                </div>
-            </div>
-
-            <button onclick="calculateSubsidy()" class="w-full bg-teal-primary text-white font-bold py-3 rounded-lg mt-8 hover:bg-teal-dark transition text-lg">
-                Calculate My Subsidy & Premium
-            </button>
-        </div>
-        <!-- Results Section -->
-        <div id="results" class="hidden space-y-8 mb-8">
-            <!-- Key Metrics -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
-                    <p class="text-gray-600 text-sm mb-2">Your FPL %</p>
-                    <p class="text-3xl font-bold text-teal-primary" id="fpl-percent">0%</p>
-                    <p class="text-xs text-gray-500 mt-2">Federal Poverty Level</p>
-                </div>
-
-                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
-                    <p class="text-gray-600 text-sm mb-2">Expected Contribution %</p>
-                    <p class="text-3xl font-bold text-teal-primary" id="contribution-pct">0%</p>
-                    <p class="text-xs text-gray-500 mt-2">% of income for premiums</p>
-                </div>
-
-                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
-                    <p class="text-gray-600 text-sm mb-2">Monthly Subsidy</p>
-                    <p class="text-3xl font-bold text-teal-primary" id="monthly-subsidy">$0</p>
-                    <p class="text-xs text-gray-500 mt-2">Per month (estimated)</p>
-                </div>
-
-                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
-                    <p class="text-gray-600 text-sm mb-2">Annual Savings</p>
-                    <p class="text-3xl font-bold text-teal-primary" id="annual-savings">$0</p>
-                    <p class="text-xs text-gray-500 mt-2">Estimated yearly tax credit</p>
-                </div>
-            </div>
-
-            <!-- Premium Comparison -->
-            <div class="bg-white rounded-lg shadow-md p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Monthly Premium Comparison</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="border border-gray-200 rounded-lg p-6">
-                        <p class="text-gray-600 text-sm mb-2">Benchmark Silver Plan</p>
-                        <p class="text-2xl font-bold text-gray-900 mb-2" id="benchmark-premium">$0</p>
-                        <p class="text-xs text-gray-500">Second-lowest Silver plan (base premium)</p>
-                    </div>
-                    <div class="border border-gray-200 rounded-lg p-6">
-                        <p class="text-gray-600 text-sm mb-2">Your Expected Payment</p>
-                        <p class="text-2xl font-bold text-gray-900 mb-2" id="your-payment">$0</p>
-                        <p class="text-xs text-gray-500">Based on your income</p>
-                    </div>
-                    <div class="border border-teal-primary bg-teal-light rounded-lg p-6">
-                        <p class="text-gray-600 text-sm mb-2">Subsidy Covers</p>
-                        <p class="text-2xl font-bold text-teal-primary mb-2" id="subsidy-amount">$0</p>
-                        <p class="text-xs text-gray-500">Monthly tax credit</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chart -->
-            <div class="bg-white rounded-lg shadow-md p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Subsidy Cliff Visualization</h3>
-                <p class="text-gray-600 mb-4">This chart shows how your subsidy decreases as income increases, and the cliff at 400% FPL where subsidies end completely.</p>
-                <div style="position: relative; height: 400px;">
-                    <canvas id="subsidyChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Alert for those near cliff -->
-            <div id="cliff-alert" class="hidden bg-orange-50 border-l-4 border-orange-500 p-6 rounded">
-                <h4 class="font-bold text-orange-800 mb-2">You're Near the Subsidy Cliff</h4>
-                <p class="text-orange-700 text-sm">A modest income increase could eliminate your subsidy. Consider tax planning strategies or discuss with a tax professional.</p>
-            </div>
-
-            <!-- Alert for those above cliff -->
-            <div id="no-subsidy-alert" class="hidden bg-red-50 border-l-4 border-red-500 p-6 rounded">
-                <h4 class="font-bold text-red-800 mb-2">Income Above Subsidy Threshold</h4>
-                <p class="text-red-700 text-sm">Your income exceeds 400% FPL. You do not qualify for ACA subsidies. Consider other coverage options like employer plans or religious health shares.</p>
-            </div>
-        </div>
-        <!-- Educational Section -->
-        <div class="bg-teal-light rounded-lg p-8 my-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Understanding ACA Subsidies in 2026</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-bold text-lg text-teal-primary mb-3">The Subsidy Cliff Returns</h3>
-                    <p class="text-gray-700 mb-3">The enhanced subsidies that kept premiums affordable for middle-income families expired on December 31, 2025. Starting January 2026, the "subsidy cliff" is back.</p>
-                    <p class="text-gray-700">If your income is between 300-400% FPL, your expected contribution rises to 8.05-9.12% of income. Above 400% FPL? No subsidy.</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-teal-primary mb-3">Federal Poverty Level (FPL)</h3>
-                    <p class="text-gray-700 mb-3">FPL percentages determine subsidy eligibility. The 2026 poverty level for an individual is $15,650. It increases by $5,580 per additional family member.</p>
-                    <p class="text-gray-700">Your income as a percentage of FPL determines your eligibility and subsidy amount.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- FAQ Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mt-12 mb-12">
-            <h2 class="text-3xl font-bold mb-8" style="color: #134E4A;">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>What is the ACA subsidy cliff in 2026?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>The ACA subsidy cliff is an income threshold at 400% of the Federal Poverty Level where subsidies end abruptly. In 2026, for a single person, this threshold is $62,160. If your income is $62,160 or below, you're eligible for subsidies. If it exceeds this by even $1, you receive zero subsidy. For those near the cliff (between 300-400% FPL), your expected contribution jumps from about 6-8% to 8-9% of income, making premiums significantly more expensive. This cliff creates a major coverage affordability problem for middle-income families.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>Who qualifies for ACA subsidies?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>You qualify for ACA subsidies (tax credits) if your household income is between 100% and 400% of the Federal Poverty Level and you're not covered by employer insurance or Medicaid. For 2026, the individual poverty level is $15,650, so subsidies are available for incomes up to $62,600. You must be a U.S. citizen or legal resident, enrolled in a qualified plan on healthcare.gov, and provide accurate income information. Self-employed individuals, part-time workers, and those with unpredictable income can estimate income changes to optimize subsidy amounts.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>How are ACA subsidies calculated?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>ACA subsidies equal the difference between the benchmark Silver plan premium and your expected contribution percentage. Your expected contribution is a percentage of your Modified Adjusted Gross Income (MAGI) that increases with your income level: 2% at 100% FPL, rising to 9.12% at 400% FPL. For example, if the Silver plan costs $500/month and you should pay 5% of your income ($200/month), the subsidy covers $300. Subsidies go directly to insurance companies to reduce your monthly premium payment.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>What happened to enhanced ACA subsidies after 2025?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>Enhanced subsidies that reduced expected contribution percentages expired December 31, 2025. During 2021-2025, these temporary increases made premiums extremely affordable for middle-income families and expanded the subsidy cliff to 600% FPL. Now in 2026, subsidies return to pre-2021 levels with the 400% FPL cliff restored. This means millions of middle-income people will face higher premiums unless they can reduce their income or find employer coverage. The American Rescue Plan was not extended, so these enhanced subsidies are gone.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>How do I stay below the 400% FPL threshold to keep subsidies?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>The 400% FPL income limit depends on family size. For individuals it's $62,600; for families of 4, it's $128,440 in 2026. To stay eligible, estimate your actual expected income for the year, not prior-year income. If you've had a life change (job loss, divorce, reduced hours), you can report lower income. However, if your actual income exceeds your estimate, you may owe back subsidies at tax time. Conservative income estimates are safer. If you expect to exceed 400% FPL, explore employer plans, spousal coverage, or waiting until December to enroll for the new year.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>Is my data safe when I use this calculator?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>Yes, your data is completely safe. This calculator processes all information locally in your browser without sending any personal data to external servers. We do not store, access, or share any income or household information you enter. Your privacy is protected - no tracking cookies are used. For actual ACA subsidy calculations and enrollment, visit healthcare.gov directly, which is a secure government website protected by federal privacy laws and uses HTTPS encryption.</p></div>
-                </details>
-            </div>
-        </section>
-
-        <!-- Related Calculators -->
-        <div class="bg-gray-100 rounded-lg p-8 mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="plan-cost-calculator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
-                    <span class="font-semibold text-teal-primary">→ Plan Cost Calculator</span>
-                    <p class="text-sm text-gray-600">Compare total costs across multiple plans</p>
-                </a>
-                <a href="hsa-fsa-calculator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
-                    <span class="font-semibold text-teal-primary">→ HSA vs FSA Calculator</span>
-                    <p class="text-sm text-gray-600">Tax-advantaged savings comparison</p>
-                </a>
-            </div>
-        </div>
+    <div class="hidden md:hidden pb-4 border-t border-gray-100" id="mobile-menu">
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="index.html">
+      Home
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="plan-cost-calculator.html">
+      Plan Cost
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-teal-primary font-semibold" href="aca-subsidy-calculator.html">
+      ACA Subsidy
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="procedure-cost.html">
+      Procedures
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="drug-cost-finder.html">
+      Drugs
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="blog.html">
+      Blog
+     </a>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h4 class="font-bold text-white mb-4">HealthCalc Hub</h4>
-                    <p class="text-sm">Free, unbiased healthcare cost calculators. All calculations private, no data collection.</p>
-                </div>
-                <div></div>
-                <div>
-                    <h4 class="font-bold text-white mb-4">Disclaimer</h4>
-                    <p class="text-xs text-gray-400">These estimates are for educational purposes. Visit healthcare.gov for official subsidy calculations.</p>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-sm">
-                <p>&copy; 2026 HealthCalc Hub. Last Updated: April 6, 2026</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const FPL_2026 = {
+   </div>
+  </nav>
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 border-b border-gray-200">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <a class="text-teal-primary hover:underline" href="index.html">
+     Home
+    </a>
+    <span class="text-gray-500 mx-2">
+     /
+    </span>
+    <span class="text-gray-700 font-semibold">
+     ACA Subsidy Calculator
+    </span>
+   </div>
+  </div>
+  <!-- Header -->
+  <section class="text-white py-12" style="background: linear-gradient(to right, #0D9488, #134E4A);">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold mb-4">
+     ACA Subsidy Calculator 2026
+    </h1>
+    <p class="text-lg" style="color: #CCFBF1;">
+     Estimate your tax credits and premiums on healthcare.gov
+    </p>
+   </div>
+  </section>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+   <!-- Subsidy Cliff Alert -->
+   <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-8 rounded">
+    <div class="flex items-start">
+     <span class="text-3xl mr-4">
+      ⚠️
+     </span>
+     <div>
+      <h3 class="font-bold text-red-800 text-lg mb-2">
+       2026 Subsidy Cliff Alert
+      </h3>
+      <p class="text-red-700 mb-2">
+       Enhanced ACA subsidies expired at the end of 2025. The "subsidy cliff" is back at
+       <strong>
+        400% Federal Poverty Level (FPL)
+       </strong>
+       .
+      </p>
+      <p class="text-red-700 mb-2">
+       <strong>
+        For 2026:
+       </strong>
+       If your income exceeds 400% FPL ($62,160 for an individual), you receive
+       <strong>
+        NO SUBSIDY AT ALL
+       </strong>
+       .
+      </p>
+      <p class="text-red-700 text-sm">
+       Your expected contribution percentage (premium as % of income) will return to pre-2021 levels: 8.05-9.12% for those near the cliff.
+      </p>
+     </div>
+    </div>
+   </div>
+   <!-- How It Works -->
+   <details class="bg-white rounded-lg shadow-md p-6 mb-8 cursor-pointer">
+    <summary class="font-bold text-lg flex items-center">
+     <span class="text-teal-primary mr-2">
+      ℹ️
+     </span>
+     How This Calculator Works
+     <span class="ml-auto">
+      ▼
+     </span>
+    </summary>
+    <div class="mt-4 text-gray-700 space-y-3">
+     <p>
+      The ACA subsidy calculation is based on your income and family size to determine your Federal Poverty Level (FPL) percentage.
+     </p>
+     <p>
+      <strong>
+       2026 Federal Poverty Levels:
+      </strong>
+     </p>
+     <ul class="list-disc list-inside space-y-1">
+      <li>
+       Individual: $15,650
+      </li>
+      <li>
+       Each additional family member: +$5,580
+      </li>
+     </ul>
+     <p>
+      <strong>
+       Subsidy Calculation:
+      </strong>
+      Your expected contribution (what you should pay as a % of income) is compared to the benchmark Silver plan. The difference is your subsidy.
+     </p>
+    </div>
+   </details>
+   <!-- Input Section -->
+   <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">
+     Your Household Information
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Annual Household Income ($)
+      </label>
+      <input class="w-full px-4 py-2 rounded-lg" id="income" min="0" step="1000" type="number" value="55000"/>
+      <p class="text-xs text-gray-500 mt-1">
+       Projected 2026 income (modified adjusted gross income)
+      </p>
+     </div>
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Family Size
+      </label>
+      <select class="w-full px-4 py-2 rounded-lg" id="family-size">
+       <option value="1">
+        1 person
+       </option>
+       <option selected="" value="2">
+        2 people
+       </option>
+       <option value="3">
+        3 people
+       </option>
+       <option value="4">
+        4 people
+       </option>
+       <option value="5">
+        5 people
+       </option>
+       <option value="6">
+        6 people
+       </option>
+       <option value="7">
+        7 people
+       </option>
+       <option value="8">
+        8 people
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Primary Applicant Age
+      </label>
+      <input class="w-full px-4 py-2 rounded-lg" id="age" max="120" min="0" step="1" type="number" value="35"/>
+     </div>
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       State
+      </label>
+      <select class="w-full px-4 py-2 rounded-lg" id="state">
+       <option value="AL">
+        Alabama
+       </option>
+       <option value="AK">
+        Alaska
+       </option>
+       <option value="AZ">
+        Arizona
+       </option>
+       <option value="CA">
+        California
+       </option>
+       <option value="CO">
+        Colorado
+       </option>
+       <option value="CT">
+        Connecticut
+       </option>
+       <option value="DE">
+        Delaware
+       </option>
+       <option value="FL">
+        Florida
+       </option>
+       <option value="GA">
+        Georgia
+       </option>
+       <option value="HI">
+        Hawaii
+       </option>
+       <option value="IL">
+        Illinois
+       </option>
+       <option value="IN">
+        Indiana
+       </option>
+       <option value="IA">
+        Iowa
+       </option>
+       <option value="KS">
+        Kansas
+       </option>
+       <option value="KY">
+        Kentucky
+       </option>
+       <option value="LA">
+        Louisiana
+       </option>
+       <option value="MA">
+        Massachusetts
+       </option>
+       <option value="MI">
+        Michigan
+       </option>
+       <option value="MN">
+        Minnesota
+       </option>
+       <option value="MO">
+        Missouri
+       </option>
+       <option value="NC">
+        North Carolina
+       </option>
+       <option selected="" value="NY">
+        New York
+       </option>
+       <option value="OH">
+        Ohio
+       </option>
+       <option value="PA">
+        Pennsylvania
+       </option>
+       <option value="TX">
+        Texas
+       </option>
+       <option value="CA">
+        California
+       </option>
+       <option value="WA">
+        Washington
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Tobacco Use
+      </label>
+      <select class="w-full px-4 py-2 rounded-lg" id="tobacco">
+       <option selected="" value="no">
+        Non-tobacco user
+       </option>
+       <option value="yes">
+        Tobacco user
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Filing Status
+      </label>
+      <select class="w-full px-4 py-2 rounded-lg" id="filing-status">
+       <option selected="" value="single">
+        Single
+       </option>
+       <option value="married">
+        Married Filing Jointly
+       </option>
+       <option value="hoh">
+        Head of Household
+       </option>
+      </select>
+     </div>
+    </div>
+    <button class="w-full bg-teal-primary text-white font-bold py-3 rounded-lg mt-8 hover:bg-teal-dark transition text-lg" onclick="calculateSubsidy()">
+     Calculate My Subsidy &amp; Premium
+    </button>
+   </div>
+   <!-- Results Section -->
+   <div class="hidden space-y-8 mb-8" id="results">
+    <!-- Key Metrics -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+     <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+      <p class="text-gray-600 text-sm mb-2">
+       Your FPL %
+      </p>
+      <p class="text-3xl font-bold text-teal-primary" id="fpl-percent">
+       0%
+      </p>
+      <p class="text-xs text-gray-500 mt-2">
+       Federal Poverty Level
+      </p>
+     </div>
+     <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+      <p class="text-gray-600 text-sm mb-2">
+       Expected Contribution %
+      </p>
+      <p class="text-3xl font-bold text-teal-primary" id="contribution-pct">
+       0%
+      </p>
+      <p class="text-xs text-gray-500 mt-2">
+       % of income for premiums
+      </p>
+     </div>
+     <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+      <p class="text-gray-600 text-sm mb-2">
+       Monthly Subsidy
+      </p>
+      <p class="text-3xl font-bold text-teal-primary" id="monthly-subsidy">
+       $0
+      </p>
+      <p class="text-xs text-gray-500 mt-2">
+       Per month (estimated)
+      </p>
+     </div>
+     <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+      <p class="text-gray-600 text-sm mb-2">
+       Annual Savings
+      </p>
+      <p class="text-3xl font-bold text-teal-primary" id="annual-savings">
+       $0
+      </p>
+      <p class="text-xs text-gray-500 mt-2">
+       Estimated yearly tax credit
+      </p>
+     </div>
+    </div>
+    <!-- Premium Comparison -->
+    <div class="bg-white rounded-lg shadow-md p-8">
+     <h3 class="text-2xl font-bold text-gray-900 mb-6">
+      Monthly Premium Comparison
+     </h3>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="border border-gray-200 rounded-lg p-6">
+       <p class="text-gray-600 text-sm mb-2">
+        Benchmark Silver Plan
+       </p>
+       <p class="text-2xl font-bold text-gray-900 mb-2" id="benchmark-premium">
+        $0
+       </p>
+       <p class="text-xs text-gray-500">
+        Second-lowest Silver plan (base premium)
+       </p>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-6">
+       <p class="text-gray-600 text-sm mb-2">
+        Your Expected Payment
+       </p>
+       <p class="text-2xl font-bold text-gray-900 mb-2" id="your-payment">
+        $0
+       </p>
+       <p class="text-xs text-gray-500">
+        Based on your income
+       </p>
+      </div>
+      <div class="border border-teal-primary bg-teal-light rounded-lg p-6">
+       <p class="text-gray-600 text-sm mb-2">
+        Subsidy Covers
+       </p>
+       <p class="text-2xl font-bold text-teal-primary mb-2" id="subsidy-amount">
+        $0
+       </p>
+       <p class="text-xs text-gray-500">
+        Monthly tax credit
+       </p>
+      </div>
+     </div>
+    </div>
+    <!-- Chart -->
+    <div class="bg-white rounded-lg shadow-md p-8">
+     <h3 class="text-2xl font-bold text-gray-900 mb-6">
+      Subsidy Cliff Visualization
+     </h3>
+     <p class="text-gray-600 mb-4">
+      This chart shows how your subsidy decreases as income increases, and the cliff at 400% FPL where subsidies end completely.
+     </p>
+     <div style="position: relative; height: 400px;">
+      <canvas id="subsidyChart">
+      </canvas>
+     </div>
+    </div>
+    <!-- Alert for those near cliff -->
+    <div class="hidden bg-orange-50 border-l-4 border-orange-500 p-6 rounded" id="cliff-alert">
+     <h4 class="font-bold text-orange-800 mb-2">
+      You're Near the Subsidy Cliff
+     </h4>
+     <p class="text-orange-700 text-sm">
+      A modest income increase could eliminate your subsidy. Consider tax planning strategies or discuss with a tax professional.
+     </p>
+    </div>
+    <!-- Alert for those above cliff -->
+    <div class="hidden bg-red-50 border-l-4 border-red-500 p-6 rounded" id="no-subsidy-alert">
+     <h4 class="font-bold text-red-800 mb-2">
+      Income Above Subsidy Threshold
+     </h4>
+     <p class="text-red-700 text-sm">
+      Your income exceeds 400% FPL. You do not qualify for ACA subsidies. Consider other coverage options like employer plans or religious health shares.
+     </p>
+    </div>
+   </div>
+   <!-- Educational Section -->
+   <div class="bg-teal-light rounded-lg p-8 my-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">
+     Understanding ACA Subsidies in 2026
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div>
+      <h3 class="font-bold text-lg text-teal-primary mb-3">
+       The Subsidy Cliff Returns
+      </h3>
+      <p class="text-gray-700 mb-3">
+       The enhanced subsidies that kept premiums affordable for middle-income families expired on December 31, 2025. Starting January 2026, the "subsidy cliff" is back.
+      </p>
+      <p class="text-gray-700">
+       If your income is between 300-400% FPL, your expected contribution rises to 8.05-9.12% of income. Above 400% FPL? No subsidy.
+      </p>
+     </div>
+     <div>
+      <h3 class="font-bold text-lg text-teal-primary mb-3">
+       Federal Poverty Level (FPL)
+      </h3>
+      <p class="text-gray-700 mb-3">
+       FPL percentages determine subsidy eligibility. The 2026 poverty level for an individual is $15,650. It increases by $5,580 per additional family member.
+      </p>
+      <p class="text-gray-700">
+       Your income as a percentage of FPL determines your eligibility and subsidy amount.
+      </p>
+     </div>
+    </div>
+   </div>
+   <!-- FAQ Section -->
+   <section class="bg-white rounded-lg shadow-lg p-8 mt-12 mb-12">
+    <h2 class="text-3xl font-bold mb-8" style="color: #134E4A;">
+     Frequently Asked Questions
+    </h2>
+    <div class="space-y-4">
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        What is the ACA subsidy cliff in 2026?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        The ACA subsidy cliff is an income threshold at 400% of the Federal Poverty Level where subsidies end abruptly. In 2026, for a single person, this threshold is $62,160. If your income is $62,160 or below, you're eligible for subsidies. If it exceeds this by even $1, you receive zero subsidy. For those near the cliff (between 300-400% FPL), your expected contribution jumps from about 6-8% to 8-9% of income, making premiums significantly more expensive. This cliff creates a major coverage affordability problem for middle-income families.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        Who qualifies for ACA subsidies?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        You qualify for ACA subsidies (tax credits) if your household income is between 100% and 400% of the Federal Poverty Level and you're not covered by employer insurance or Medicaid. For 2026, the individual poverty level is $15,650, so subsidies are available for incomes up to $62,600. You must be a U.S. citizen or legal resident, enrolled in a qualified plan on healthcare.gov, and provide accurate income information. Self-employed individuals, part-time workers, and those with unpredictable income can estimate income changes to optimize subsidy amounts.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        How are ACA subsidies calculated?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        ACA subsidies equal the difference between the benchmark Silver plan premium and your expected contribution percentage. Your expected contribution is a percentage of your Modified Adjusted Gross Income (MAGI) that increases with your income level: 2% at 100% FPL, rising to 9.12% at 400% FPL. For example, if the Silver plan costs $500/month and you should pay 5% of your income ($200/month), the subsidy covers $300. Subsidies go directly to insurance companies to reduce your monthly premium payment.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        What happened to enhanced ACA subsidies after 2025?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        Enhanced subsidies that reduced expected contribution percentages expired December 31, 2025. During 2021-2025, these temporary increases made premiums extremely affordable for middle-income families and expanded the subsidy cliff to 600% FPL. Now in 2026, subsidies return to pre-2021 levels with the 400% FPL cliff restored. This means millions of middle-income people will face higher premiums unless they can reduce their income or find employer coverage. The American Rescue Plan was not extended, so these enhanced subsidies are gone.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        How do I stay below the 400% FPL threshold to keep subsidies?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        The 400% FPL income limit depends on family size. For individuals it's $62,600; for families of 4, it's $128,440 in 2026. To stay eligible, estimate your actual expected income for the year, not prior-year income. If you've had a life change (job loss, divorce, reduced hours), you can report lower income. However, if your actual income exceeds your estimate, you may owe back subsidies at tax time. Conservative income estimates are safer. If you expect to exceed 400% FPL, explore employer plans, spousal coverage, or waiting until December to enroll for the new year.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        Is my data safe when I use this calculator?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        Yes, your data is completely safe. This calculator processes all information locally in your browser without sending any personal data to external servers. We do not store, access, or share any income or household information you enter. Your privacy is protected - no tracking cookies are used. For actual ACA subsidy calculations and enrollment, visit healthcare.gov directly, which is a secure government website protected by federal privacy laws and uses HTTPS encryption.
+       </p>
+      </div>
+     </details>
+    </div>
+   </section>
+   <!-- Related Calculators -->
+   <div class="bg-gray-100 rounded-lg p-8 mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">
+     Related Calculators
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <a class="bg-white p-4 rounded-lg hover:shadow-md transition" href="plan-cost-calculator.html">
+      <span class="font-semibold text-teal-primary">
+       → Plan Cost Calculator
+      </span>
+      <p class="text-sm text-gray-600">
+       Compare total costs across multiple plans
+      </p>
+     </a>
+     <a class="bg-white p-4 rounded-lg hover:shadow-md transition" href="hsa-fsa-calculator.html">
+      <span class="font-semibold text-teal-primary">
+       → HSA vs FSA Calculator
+      </span>
+      <p class="text-sm text-gray-600">
+       Tax-advantaged savings comparison
+      </p>
+     </a>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+     <div>
+      <h4 class="font-bold text-white mb-4">
+       HealthCalc Hub
+      </h4>
+      <p class="text-sm">
+       Free, unbiased healthcare cost calculators. All calculations private, no data collection.
+      </p>
+     </div>
+     <div>
+     </div>
+     <div>
+      <h4 class="font-bold text-white mb-4">
+       Disclaimer
+      </h4>
+      <p class="text-xs text-gray-400">
+       These estimates are for educational purposes. Visit healthcare.gov for official subsidy calculations.
+      </p>
+     </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8 text-center text-sm">
+     <p>
+      © 2026 HealthCalc Hub. Last Updated: April 6, 2026
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const FPL_2026 = {
             single: 15960,
             family: [15960, 21640, 27320, 33000, 38680, 44360, 50040, 55720, 61400, 67080]
         };
@@ -637,13 +943,12 @@
 
         // Calculate on page load
         window.addEventListener('load', calculateSubsidy);
-    </script>
-
-    <script>
-        // Mobile menu toggle
+  </script>
+  <script>
+   // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-    </script>
-</body>
+  </script>
+ </body>
 </html>

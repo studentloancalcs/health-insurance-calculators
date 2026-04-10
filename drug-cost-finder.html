@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prescription Drug Price Comparison 2026 - Find the Lowest Cost</title>
-
-    <meta name="description" content="Compare prescription drug prices for generic and brand medications. Find the lowest cost at pharmacies and with insurance coverage.">
-    <meta name="keywords" content="prescription drug cost comparison, cheapest pharmacy for prescriptions, drug price finder, medication prices, pharmacy discount">
-    <meta name="author" content="HealthCalc Hub">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Prescription Drug Price Comparison 2026">
-    <meta property="og:description" content="Compare prescription drug prices and find the lowest cost options with or without insurance.">
-
-    <script type="application/ld+json">
-    {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <title>
+   Prescription Drug Price Comparison 2026 - Find the Lowest Cost
+  </title>
+  <meta content="Compare prescription drug prices for generic and brand medications. Find the lowest cost at pharmacies and with insurance coverage." name="description"/>
+  <link href="https://healthcosttools.com/drug-cost-finder.html" rel="canonical"/>
+  <meta content="prescription drug cost comparison, cheapest pharmacy for prescriptions, drug price finder, medication prices, pharmacy discount" name="keywords"/>
+  <meta content="HealthCalc Hub" name="author"/>
+  <meta content="index, follow" name="robots"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Prescription Drug Price Comparison 2026" property="og:title"/>
+  <meta content="Compare prescription drug prices and find the lowest cost options with or without insurance." property="og:description"/>
+  <script type="application/ld+json">
+   {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Prescription Drug Price Comparison",
       "url": "https://studentloancalcs.github.io/health-insurance-calculators/drug-cost-finder.html",
       "applicationCategory": "HealthApplication"
     }
-    </script>
-
-    <script type="application/ld+json">
-    {
+  </script>
+  <script type="application/ld+json">
+   {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
@@ -79,13 +79,12 @@
         }
       ]
     }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  </script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
         .bg-teal-primary { background-color: #0D9488; }
         .bg-teal-dark { background-color: #134E4A; }
         .bg-teal-light { background-color: #F0FDFA; }
@@ -94,336 +93,612 @@
         .text-coral { color: #F97316; }
         input, select { border: 1px solid #e5e7eb; }
         input:focus, select:focus { outline: none; border-color: #0D9488; box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1); }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-900">
-    <!-- Navigation -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">$</span>
-                    </div>
-                    <span class="text-xl font-bold text-teal-dark">HealthCalc</span>
-                </a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-teal-primary">Home</a>
-                    <a href="plan-cost-calculator.html" class="text-gray-600 hover:text-teal-primary">Plan Cost</a>
-                    <a href="aca-subsidy-calculator.html" class="text-gray-600 hover:text-teal-primary">ACA Subsidy</a>
-                    <a href="procedure-cost.html" class="text-gray-600 hover:text-teal-primary">Procedures</a>
-                    <a href="drug-cost-finder.html" class="text-teal-primary font-semibold">Drugs</a>
-                    <a href="blog.html" class="text-gray-600 hover:text-teal-primary">Blog</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100">
-                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Home</a>
-                <a href="plan-cost-calculator.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Plan Cost</a>
-                <a href="aca-subsidy-calculator.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">ACA Subsidy</a>
-                <a href="procedure-cost.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Procedures</a>
-                <a href="drug-cost-finder.html" class="block px-3 py-2 text-base font-medium text-teal-primary font-semibold">Drugs</a>
-                <a href="blog.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary">Blog</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Breadcrumb -->
-    <div class="bg-gray-100 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <a href="index.html" class="text-teal-primary hover:underline">Home</a>
-            <span class="text-gray-500 mx-2">/</span>
-            <span class="text-gray-700 font-semibold">Drug Cost Finder</span>
-        </div>
+  </style>
+  <meta content="https://healthcosttools.com/drug-cost-finder.html" property="og:url"/>
+  <meta content="https://healthcosttools.com/og-image.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Prescription Drug Price Comparison 2026" name="twitter:title"/>
+  <meta content="Compare prescription drug prices and find the lowest cost options with or without insurance." name="twitter:description"/>
+  <meta content="https://healthcosttools.com/og-image.png" name="twitter:image"/>
+ </head>
+ <body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <a class="flex items-center space-x-2" href="index.html">
+      <div class="w-10 h-10 bg-teal-primary rounded-lg flex items-center justify-center">
+       <span class="text-white font-bold text-lg">
+        $
+       </span>
+      </div>
+      <span class="text-xl font-bold text-teal-dark">
+       HealthCalc
+      </span>
+     </a>
+     <div class="hidden md:flex space-x-8">
+      <a class="text-gray-600 hover:text-teal-primary" href="index.html">
+       Home
+      </a>
+      <a class="text-gray-600 hover:text-teal-primary" href="plan-cost-calculator.html">
+       Plan Cost
+      </a>
+      <a class="text-gray-600 hover:text-teal-primary" href="aca-subsidy-calculator.html">
+       ACA Subsidy
+      </a>
+      <a class="text-gray-600 hover:text-teal-primary" href="procedure-cost.html">
+       Procedures
+      </a>
+      <a class="text-teal-primary font-semibold" href="drug-cost-finder.html">
+       Drugs
+      </a>
+      <a class="text-gray-600 hover:text-teal-primary" href="blog.html">
+       Blog
+      </a>
+     </div>
+     <button class="md:hidden text-gray-600" id="mobile-menu-btn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+       <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+       </path>
+      </svg>
+     </button>
     </div>
-
-    <!-- Header -->
-    <section class="text-white py-12" style="background: linear-gradient(to right, #0D9488, #134E4A);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold mb-4">Prescription Drug Price Comparison 2026</h1>
-            <p class="text-lg" style="color: #CCFBF1;">Find the lowest cost for your medications with or without insurance</p>
-        </div>
-    </section>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- How It Works -->
-        <details class="bg-white rounded-lg shadow-md p-6 mb-8 cursor-pointer">
-            <summary class="font-bold text-lg flex items-center">
-                <span class="text-teal-primary mr-2">ℹ️</span>
-                How This Calculator Works
-                <span class="ml-auto">▼</span>
-            </summary>
-            <div class="mt-4 text-gray-700 space-y-3">
-                <p>Prescription prices vary significantly by insurance plan, pharmacy, and whether you use a discount card.</p>
-                <p><strong>Key Points:</strong></p>
-                <ul class="list-disc list-inside space-y-1">
-                    <li>Insurance Copay: What you pay with insurance (usually $10-75 per prescription)</li>
-                    <li>Discount Card (like GoodRx): Often cheaper than insurance for uninsured or high-deductible plans</li>
-                    <li><strong>Important:</strong> Discount card prices don't count toward your deductible</li>
-                    <li>Medicare Part D: 2026 out-of-pocket cap is $2,100 annually</li>
-                    <li>Generic vs Brand: Generics are typically 80-90% cheaper than brand names</li>
-                </ul>
-            </div>
-        </details>
-
-        <!-- Input Section -->
-        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Find Your Prescription Cost</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Select Medication</label>
-                    <select id="drug-select" class="w-full px-4 py-2 rounded-lg" onchange="updateDrug()">
-                        <option value="">-- Choose a medication --</option>
-                        <optgroup label="Blood Pressure & Heart">
-                            <option value="lisinopril">Lisinopril (generic) - Blood Pressure</option>
-                            <option value="amlodipine">Amlodipine (generic) - Blood Pressure</option>
-                            <option value="losartan">Losartan (generic) - Blood Pressure</option>
-                            <option value="hctz">Hydrochlorothiazide - Blood Pressure</option>
-                        </optgroup>
-                        <optgroup label="Diabetes">
-                            <option value="metformin">Metformin (generic) - Diabetes</option>
-                        </optgroup>
-                        <optgroup label="Cholesterol">
-                            <option value="atorvastatin">Atorvastatin (generic Lipitor) - Cholesterol</option>
-                        </optgroup>
-                        <optgroup label="GI & Acid Reflux">
-                            <option value="omeprazole">Omeprazole (generic Prilosec) - Acid Reflux</option>
-                            <option value="pantoprazole">Pantoprazole (generic Protonix) - Acid Reflux</option>
-                        </optgroup>
-                        <optgroup label="Thyroid">
-                            <option value="levothyroxine">Levothyroxine (generic Synthroid) - Thyroid</option>
-                        </optgroup>
-                        <optgroup label="Respiratory">
-                            <option value="albuterol">Albuterol Inhaler (generic Ventolin) - Asthma</option>
-                        </optgroup>
-                        <optgroup label="Mental Health">
-                            <option value="sertraline">Sertraline (generic Zoloft) - Depression</option>
-                            <option value="escitalopram">Escitalopram (generic Lexapro) - Anxiety</option>
-                            <option value="fluoxetine">Fluoxetine (generic Prozac) - Depression</option>
-                        </optgroup>
-                        <optgroup label="Pain & Inflammation">
-                            <option value="gabapentin">Gabapentin (generic Neurontin) - Nerve Pain</option>
-                            <option value="meloxicam">Meloxicam - Pain</option>
-                            <option value="cyclobenzaprine">Cyclobenzaprine - Muscle Relaxant</option>
-                        </optgroup>
-                        <optgroup label="Antibiotics">
-                            <option value="amoxicillin">Amoxicillin (generic) - Antibiotic</option>
-                            <option value="azithromycin">Azithromycin (generic Z-Pack) - Antibiotic</option>
-                        </optgroup>
-                        <optgroup label="Allergies & Asthma">
-                            <option value="montelukast">Montelukast (generic Singulair) - Allergies</option>
-                            <option value="advair">Advair (Fluticasone-Salmeterol) - Asthma</option>
-                        </optgroup>
-                        <optgroup label="Inflammation & Immune">
-                            <option value="prednisone">Prednisone (generic) - Inflammation</option>
-                        </optgroup>
-                        <optgroup label="Specialty & Biologics">
-                            <option value="insulin">Insulin Lispro (Humalog) - Diabetes</option>
-                            <option value="ozempic">Ozempic (Semaglutide) - Diabetes/GLP-1</option>
-                            <option value="eliquis">Eliquis (Apixaban) - Blood Clot Prevention</option>
-                            <option value="jardiance">Jardiance (Empagliflozin) - Diabetes</option>
-                            <option value="xarelto">Xarelto (Rivaroxaban) - Blood Clot Prevention</option>
-                            <option value="humira">Humira (Adalimumab) - Immunosuppressant</option>
-                            <option value="trulicity">Trulicity (Dulaglutide) - Diabetes/GLP-1</option>
-                            <option value="entresto">Entresto (Sacubitril-Valsartan) - Heart Failure</option>
-                            <option value="dupixent">Dupixent (Dupilumab) - Atopic Dermatitis</option>
-                        </optgroup>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Insurance Coverage</label>
-                    <select id="insurance-type" class="w-full px-4 py-2 rounded-lg" onchange="updateCalculation()">
-                        <option value="commercial">Commercial Insurance</option>
-                        <option value="medicare">Medicare Part D</option>
-                        <option value="uninsured">Uninsured (Cash/Discount Card)</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Typical Copay ($)</label>
-                    <input type="number" id="copay" min="0" step="5" class="w-full px-4 py-2 rounded-lg" value="30" onchange="updateCalculation()">
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Supply (Days)</label>
-                    <select id="supply" class="w-full px-4 py-2 rounded-lg" onchange="updateCalculation()">
-                        <option value="30">30 days</option>
-                        <option value="90">90 days</option>
-                    </select>
-                </div>
-            </div>
-
-            <button onclick="updateCalculation()" class="w-full bg-teal-primary text-white font-bold py-3 rounded-lg hover:bg-teal-dark transition text-lg">
-                Calculate Drug Cost
-            </button>
-        </div>
-        <!-- Results Section -->
-        <div id="results" class="hidden space-y-8 mb-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
-                    <p class="text-gray-600 text-sm mb-2">Retail Price (No Insurance)</p>
-                    <p class="text-3xl font-bold text-teal-primary" id="retail-price">$0</p>
-                    <p class="text-xs text-gray-500 mt-2">Full cash price at pharmacy</p>
-                </div>
-
-                <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
-                    <p class="text-gray-600 text-sm mb-2">With Insurance Copay</p>
-                    <p class="text-3xl font-bold text-teal-primary" id="insurance-price">$0</p>
-                    <p class="text-xs text-gray-500 mt-2">Your out-of-pocket with coverage</p>
-                </div>
-
-                <div class="bg-gradient-to-br from-green-100 to-white rounded-lg shadow-md p-6 border-l-4 border-green-600">
-                    <p class="text-gray-600 text-sm mb-2">Discount Card Price</p>
-                    <p class="text-3xl font-bold text-green-600" id="discount-price">$0</p>
-                    <p class="text-xs text-gray-500 mt-2">With GoodRx or similar</p>
-                </div>
-            </div>
-
-            <!-- Cost Comparison -->
-            <div class="bg-white rounded-lg shadow-md p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Where to Buy: Cost Comparison</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center py-4 px-4 bg-gray-50 rounded-lg">
-                        <span class="font-semibold text-gray-900">Retail (No Insurance)</span>
-                        <span class="text-xl font-bold text-gray-900" id="comp-retail">$0</span>
-                    </div>
-                    <div class="flex justify-between items-center py-4 px-4 bg-gray-50 rounded-lg">
-                        <span class="font-semibold text-gray-900">With Commercial Insurance</span>
-                        <span class="text-xl font-bold text-gray-900" id="comp-insurance">$0</span>
-                    </div>
-                    <div class="flex justify-between items-center py-4 px-4 bg-green-50 rounded-lg border border-green-200">
-                        <span class="font-semibold text-gray-900">Best Option: <span id="best-option">Discount Card</span></span>
-                        <span class="text-xl font-bold text-green-600" id="comp-best">$0</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Medicare Info -->
-            <div id="medicare-info" class="hidden bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
-                <h4 class="font-bold text-blue-800 mb-2">Medicare Part D 2026</h4>
-                <p class="text-blue-700 text-sm mb-2">Out-of-pocket cap: <strong>$2,100</strong> per year</p>
-                <p class="text-blue-700 text-sm">Once you reach this limit, Medicare covers most of your drug costs for the rest of the year.</p>
-            </div>
-        </div>
-
-        <!-- Educational Section -->
-        <div class="bg-teal-light rounded-lg p-8 my-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Smart Prescription Strategies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-bold text-lg text-teal-primary mb-3">When to Use Insurance</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li>✓ Your deductible is almost met (medications count toward it)</li>
-                        <li>✓ You have a low copay ($10-15)</li>
-                        <li>✓ You're on specialty drugs (biologics, insulin)</li>
-                        <li>✓ You have Medicare and are in the low-income subsidy program</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-teal-primary mb-3">When to Use Discount Cards</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li>✓ You haven't met your deductible yet</li>
-                        <li>✓ Your copay is high ($50+)</li>
-                        <li>✓ You're uninsured or between plans</li>
-                        <li>✓ Your insurance doesn't cover the medication</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- FAQ Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mt-12 mb-12">
-            <h2 class="text-3xl font-bold mb-8" style="color: #134E4A;">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>Why do prescription drug prices vary so much between pharmacies?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>Prescription prices vary between pharmacies due to different pharmacy purchasing agreements, manufacturer rebates, and insurance contracts. Chain pharmacies like CVS and Walgreens negotiate different pricing with manufacturers than independent pharmacies. Generic drugs have more price variation because multiple manufacturers compete. Insurance companies negotiate different copays and formularies. Mail-order pharmacies often offer discounts for 90-day supplies. Some pharmacies offer loyalty programs. Retail prices for uninsured customers vary by location and pharmacy size. Always compare prices using GoodRx, SingleCare, or your insurance provider's pharmacy finder tool before purchasing.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>Should I use insurance or a discount card for prescription drugs?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>Use insurance if you have a low copay ($10-15), your deductible is nearly met, or you're close to your out-of-pocket maximum since medication costs count toward these limits. Use a discount card (like GoodRx) if your copay is high ($50+), you haven't met your deductible yet, or you're uninsured. Discount cards typically provide better savings for high-cost branded medications but don't contribute to your deductible or OOP maximum. For maintenance medications you take regularly, calculate the annual cost with each option. Some insurance plans cover generic versions but not brand names - ask your pharmacist for generic options as they're often 80-90% cheaper.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>What is the Medicare Part D out-of-pocket cap for 2026?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>The 2026 Medicare Part D out-of-pocket (OOP) cap is $2,100. This is the maximum you'll pay annually for covered prescription drugs. Once you reach this limit, Medicare covers the remaining drug costs for the rest of the calendar year, though your plan may require a small copay. The $2,100 limit includes your deductible ($615), copays during the coverage gap, and coinsurance. High-income Medicare beneficiaries may pay IRMAA surcharges on top of Part D premiums. Talk to your Medicare plan about which drugs are covered and whether switching to a less expensive medication could reduce your out-of-pocket costs.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>How can I find cheaper prescription drugs?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>First, ask your doctor if there's a generic or less expensive alternative to your prescribed medication - many generic drugs are equally effective and cost 80-90% less. Use price comparison sites like GoodRx, SingleCare, Walmart, or Costco (membership optional) to compare cash prices across pharmacies. Mail-order pharmacies often offer better prices for maintenance medications. Call your insurance to confirm if the medication is covered and what your copay is. Some manufacturers offer patient assistance programs for low-income individuals. For specialty drugs, ask about 340B program pharmacies which may have lower prices. Don't skip doses or use expired medication to save money - talk to your doctor about cost-saving alternatives instead.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>Are generic drugs as effective as brand name medications?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>Yes, generic drugs are as effective as brand name medications. The FDA requires all generic drugs to have the same active ingredients, strength, dosage form, and route of administration as brand name drugs. Generic manufacturers must prove bioequivalence - that their drug works in the body the same way as the brand name version. The only differences are typically inactive ingredients (like fillers, dyes, or flavoring), which don't affect efficacy. Generic drugs cost less because manufacturers don't repeat expensive research and development or invest in marketing. Some people report minor differences in tolerability due to different inactive ingredients, but the therapeutic effect is identical. Always ask your pharmacist about generics when filling prescriptions.</p></div>
-                </details>
-                <details class="border border-gray-200 rounded-lg">
-                    <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
-                        <span>How is my data privacy protected in this tool?</span>
-                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <div class="px-6 pb-4 text-gray-700"><p>Your data privacy is completely protected. This calculator runs entirely in your browser and does not transmit any medication information, dosages, or personal data to external servers. All cost comparisons are performed locally on your device. We do not collect, store, or share any information about which medications you search for or price. No tracking cookies are used. Your privacy is fully maintained while using this educational tool. For actual prescription purchases and real price checks, use pharmacy websites directly or approved discount programs like GoodRx, which have their own privacy policies.</p></div>
-                </details>
-            </div>
-        </section>
-
-        <!-- Related Calculators -->
-        <div class="bg-gray-100 rounded-lg p-8 mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="plan-cost-calculator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
-                    <span class="font-semibold text-teal-primary">→ Plan Cost Calculator</span>
-                    <p class="text-sm text-gray-600">Compare total costs across multiple plans</p>
-                </a>
-                <a href="procedure-cost.html" class="bg-white p-4 rounded-lg hover:shadow-md transition">
-                    <span class="font-semibold text-teal-primary">→ Procedure Cost Estimator</span>
-                    <p class="text-sm text-gray-600">Find costs for medical procedures</p>
-                </a>
-            </div>
-        </div>
+    <div class="hidden md:hidden pb-4 border-t border-gray-100" id="mobile-menu">
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="index.html">
+      Home
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="plan-cost-calculator.html">
+      Plan Cost
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="aca-subsidy-calculator.html">
+      ACA Subsidy
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="procedure-cost.html">
+      Procedures
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-teal-primary font-semibold" href="drug-cost-finder.html">
+      Drugs
+     </a>
+     <a class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-teal-primary" href="blog.html">
+      Blog
+     </a>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h4 class="font-bold text-white mb-4">HealthCalc Hub</h4>
-                    <p class="text-sm">Free, unbiased healthcare cost calculators. All calculations private, no data collection.</p>
-                </div>
-                <div></div>
-                <div>
-                    <h4 class="font-bold text-white mb-4">Disclaimer</h4>
-                    <p class="text-xs text-gray-400">These are average prices. Actual costs vary by location and pharmacy. Check GoodRx, Walmart, or your insurance for current prices.</p>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-sm">
-                <p>&copy; 2026 HealthCalc Hub. Last Updated: April 3, 2026</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const drugs = {
+   </div>
+  </nav>
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 border-b border-gray-200">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <a class="text-teal-primary hover:underline" href="index.html">
+     Home
+    </a>
+    <span class="text-gray-500 mx-2">
+     /
+    </span>
+    <span class="text-gray-700 font-semibold">
+     Drug Cost Finder
+    </span>
+   </div>
+  </div>
+  <!-- Header -->
+  <section class="text-white py-12" style="background: linear-gradient(to right, #0D9488, #134E4A);">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold mb-4">
+     Prescription Drug Price Comparison 2026
+    </h1>
+    <p class="text-lg" style="color: #CCFBF1;">
+     Find the lowest cost for your medications with or without insurance
+    </p>
+   </div>
+  </section>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+   <!-- How It Works -->
+   <details class="bg-white rounded-lg shadow-md p-6 mb-8 cursor-pointer">
+    <summary class="font-bold text-lg flex items-center">
+     <span class="text-teal-primary mr-2">
+      ℹ️
+     </span>
+     How This Calculator Works
+     <span class="ml-auto">
+      ▼
+     </span>
+    </summary>
+    <div class="mt-4 text-gray-700 space-y-3">
+     <p>
+      Prescription prices vary significantly by insurance plan, pharmacy, and whether you use a discount card.
+     </p>
+     <p>
+      <strong>
+       Key Points:
+      </strong>
+     </p>
+     <ul class="list-disc list-inside space-y-1">
+      <li>
+       Insurance Copay: What you pay with insurance (usually $10-75 per prescription)
+      </li>
+      <li>
+       Discount Card (like GoodRx): Often cheaper than insurance for uninsured or high-deductible plans
+      </li>
+      <li>
+       <strong>
+        Important:
+       </strong>
+       Discount card prices don't count toward your deductible
+      </li>
+      <li>
+       Medicare Part D: 2026 out-of-pocket cap is $2,100 annually
+      </li>
+      <li>
+       Generic vs Brand: Generics are typically 80-90% cheaper than brand names
+      </li>
+     </ul>
+    </div>
+   </details>
+   <!-- Input Section -->
+   <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">
+     Find Your Prescription Cost
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Select Medication
+      </label>
+      <select class="w-full px-4 py-2 rounded-lg" id="drug-select" onchange="updateDrug()">
+       <option value="">
+        -- Choose a medication --
+       </option>
+       <optgroup label="Blood Pressure &amp; Heart">
+        <option value="lisinopril">
+         Lisinopril (generic) - Blood Pressure
+        </option>
+        <option value="amlodipine">
+         Amlodipine (generic) - Blood Pressure
+        </option>
+        <option value="losartan">
+         Losartan (generic) - Blood Pressure
+        </option>
+        <option value="hctz">
+         Hydrochlorothiazide - Blood Pressure
+        </option>
+       </optgroup>
+       <optgroup label="Diabetes">
+        <option value="metformin">
+         Metformin (generic) - Diabetes
+        </option>
+       </optgroup>
+       <optgroup label="Cholesterol">
+        <option value="atorvastatin">
+         Atorvastatin (generic Lipitor) - Cholesterol
+        </option>
+       </optgroup>
+       <optgroup label="GI &amp; Acid Reflux">
+        <option value="omeprazole">
+         Omeprazole (generic Prilosec) - Acid Reflux
+        </option>
+        <option value="pantoprazole">
+         Pantoprazole (generic Protonix) - Acid Reflux
+        </option>
+       </optgroup>
+       <optgroup label="Thyroid">
+        <option value="levothyroxine">
+         Levothyroxine (generic Synthroid) - Thyroid
+        </option>
+       </optgroup>
+       <optgroup label="Respiratory">
+        <option value="albuterol">
+         Albuterol Inhaler (generic Ventolin) - Asthma
+        </option>
+       </optgroup>
+       <optgroup label="Mental Health">
+        <option value="sertraline">
+         Sertraline (generic Zoloft) - Depression
+        </option>
+        <option value="escitalopram">
+         Escitalopram (generic Lexapro) - Anxiety
+        </option>
+        <option value="fluoxetine">
+         Fluoxetine (generic Prozac) - Depression
+        </option>
+       </optgroup>
+       <optgroup label="Pain &amp; Inflammation">
+        <option value="gabapentin">
+         Gabapentin (generic Neurontin) - Nerve Pain
+        </option>
+        <option value="meloxicam">
+         Meloxicam - Pain
+        </option>
+        <option value="cyclobenzaprine">
+         Cyclobenzaprine - Muscle Relaxant
+        </option>
+       </optgroup>
+       <optgroup label="Antibiotics">
+        <option value="amoxicillin">
+         Amoxicillin (generic) - Antibiotic
+        </option>
+        <option value="azithromycin">
+         Azithromycin (generic Z-Pack) - Antibiotic
+        </option>
+       </optgroup>
+       <optgroup label="Allergies &amp; Asthma">
+        <option value="montelukast">
+         Montelukast (generic Singulair) - Allergies
+        </option>
+        <option value="advair">
+         Advair (Fluticasone-Salmeterol) - Asthma
+        </option>
+       </optgroup>
+       <optgroup label="Inflammation &amp; Immune">
+        <option value="prednisone">
+         Prednisone (generic) - Inflammation
+        </option>
+       </optgroup>
+       <optgroup label="Specialty &amp; Biologics">
+        <option value="insulin">
+         Insulin Lispro (Humalog) - Diabetes
+        </option>
+        <option value="ozempic">
+         Ozempic (Semaglutide) - Diabetes/GLP-1
+        </option>
+        <option value="eliquis">
+         Eliquis (Apixaban) - Blood Clot Prevention
+        </option>
+        <option value="jardiance">
+         Jardiance (Empagliflozin) - Diabetes
+        </option>
+        <option value="xarelto">
+         Xarelto (Rivaroxaban) - Blood Clot Prevention
+        </option>
+        <option value="humira">
+         Humira (Adalimumab) - Immunosuppressant
+        </option>
+        <option value="trulicity">
+         Trulicity (Dulaglutide) - Diabetes/GLP-1
+        </option>
+        <option value="entresto">
+         Entresto (Sacubitril-Valsartan) - Heart Failure
+        </option>
+        <option value="dupixent">
+         Dupixent (Dupilumab) - Atopic Dermatitis
+        </option>
+       </optgroup>
+      </select>
+     </div>
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Insurance Coverage
+      </label>
+      <select class="w-full px-4 py-2 rounded-lg" id="insurance-type" onchange="updateCalculation()">
+       <option value="commercial">
+        Commercial Insurance
+       </option>
+       <option value="medicare">
+        Medicare Part D
+       </option>
+       <option value="uninsured">
+        Uninsured (Cash/Discount Card)
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Typical Copay ($)
+      </label>
+      <input class="w-full px-4 py-2 rounded-lg" id="copay" min="0" onchange="updateCalculation()" step="5" type="number" value="30"/>
+     </div>
+     <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+       Supply (Days)
+      </label>
+      <select class="w-full px-4 py-2 rounded-lg" id="supply" onchange="updateCalculation()">
+       <option value="30">
+        30 days
+       </option>
+       <option value="90">
+        90 days
+       </option>
+      </select>
+     </div>
+    </div>
+    <button class="w-full bg-teal-primary text-white font-bold py-3 rounded-lg hover:bg-teal-dark transition text-lg" onclick="updateCalculation()">
+     Calculate Drug Cost
+    </button>
+   </div>
+   <!-- Results Section -->
+   <div class="hidden space-y-8 mb-8" id="results">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+     <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+      <p class="text-gray-600 text-sm mb-2">
+       Retail Price (No Insurance)
+      </p>
+      <p class="text-3xl font-bold text-teal-primary" id="retail-price">
+       $0
+      </p>
+      <p class="text-xs text-gray-500 mt-2">
+       Full cash price at pharmacy
+      </p>
+     </div>
+     <div class="bg-gradient-to-br from-teal-light to-white rounded-lg shadow-md p-6 border-l-4 border-teal-primary">
+      <p class="text-gray-600 text-sm mb-2">
+       With Insurance Copay
+      </p>
+      <p class="text-3xl font-bold text-teal-primary" id="insurance-price">
+       $0
+      </p>
+      <p class="text-xs text-gray-500 mt-2">
+       Your out-of-pocket with coverage
+      </p>
+     </div>
+     <div class="bg-gradient-to-br from-green-100 to-white rounded-lg shadow-md p-6 border-l-4 border-green-600">
+      <p class="text-gray-600 text-sm mb-2">
+       Discount Card Price
+      </p>
+      <p class="text-3xl font-bold text-green-600" id="discount-price">
+       $0
+      </p>
+      <p class="text-xs text-gray-500 mt-2">
+       With GoodRx or similar
+      </p>
+     </div>
+    </div>
+    <!-- Cost Comparison -->
+    <div class="bg-white rounded-lg shadow-md p-8">
+     <h3 class="text-2xl font-bold text-gray-900 mb-6">
+      Where to Buy: Cost Comparison
+     </h3>
+     <div class="space-y-4">
+      <div class="flex justify-between items-center py-4 px-4 bg-gray-50 rounded-lg">
+       <span class="font-semibold text-gray-900">
+        Retail (No Insurance)
+       </span>
+       <span class="text-xl font-bold text-gray-900" id="comp-retail">
+        $0
+       </span>
+      </div>
+      <div class="flex justify-between items-center py-4 px-4 bg-gray-50 rounded-lg">
+       <span class="font-semibold text-gray-900">
+        With Commercial Insurance
+       </span>
+       <span class="text-xl font-bold text-gray-900" id="comp-insurance">
+        $0
+       </span>
+      </div>
+      <div class="flex justify-between items-center py-4 px-4 bg-green-50 rounded-lg border border-green-200">
+       <span class="font-semibold text-gray-900">
+        Best Option:
+        <span id="best-option">
+         Discount Card
+        </span>
+       </span>
+       <span class="text-xl font-bold text-green-600" id="comp-best">
+        $0
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- Medicare Info -->
+    <div class="hidden bg-blue-50 border-l-4 border-blue-500 p-6 rounded" id="medicare-info">
+     <h4 class="font-bold text-blue-800 mb-2">
+      Medicare Part D 2026
+     </h4>
+     <p class="text-blue-700 text-sm mb-2">
+      Out-of-pocket cap:
+      <strong>
+       $2,100
+      </strong>
+      per year
+     </p>
+     <p class="text-blue-700 text-sm">
+      Once you reach this limit, Medicare covers most of your drug costs for the rest of the year.
+     </p>
+    </div>
+   </div>
+   <!-- Educational Section -->
+   <div class="bg-teal-light rounded-lg p-8 my-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">
+     Smart Prescription Strategies
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div>
+      <h3 class="font-bold text-lg text-teal-primary mb-3">
+       When to Use Insurance
+      </h3>
+      <ul class="space-y-2 text-gray-700">
+       <li>
+        ✓ Your deductible is almost met (medications count toward it)
+       </li>
+       <li>
+        ✓ You have a low copay ($10-15)
+       </li>
+       <li>
+        ✓ You're on specialty drugs (biologics, insulin)
+       </li>
+       <li>
+        ✓ You have Medicare and are in the low-income subsidy program
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h3 class="font-bold text-lg text-teal-primary mb-3">
+       When to Use Discount Cards
+      </h3>
+      <ul class="space-y-2 text-gray-700">
+       <li>
+        ✓ You haven't met your deductible yet
+       </li>
+       <li>
+        ✓ Your copay is high ($50+)
+       </li>
+       <li>
+        ✓ You're uninsured or between plans
+       </li>
+       <li>
+        ✓ Your insurance doesn't cover the medication
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <!-- FAQ Section -->
+   <section class="bg-white rounded-lg shadow-lg p-8 mt-12 mb-12">
+    <h2 class="text-3xl font-bold mb-8" style="color: #134E4A;">
+     Frequently Asked Questions
+    </h2>
+    <div class="space-y-4">
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        Why do prescription drug prices vary so much between pharmacies?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        Prescription prices vary between pharmacies due to different pharmacy purchasing agreements, manufacturer rebates, and insurance contracts. Chain pharmacies like CVS and Walgreens negotiate different pricing with manufacturers than independent pharmacies. Generic drugs have more price variation because multiple manufacturers compete. Insurance companies negotiate different copays and formularies. Mail-order pharmacies often offer discounts for 90-day supplies. Some pharmacies offer loyalty programs. Retail prices for uninsured customers vary by location and pharmacy size. Always compare prices using GoodRx, SingleCare, or your insurance provider's pharmacy finder tool before purchasing.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        Should I use insurance or a discount card for prescription drugs?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        Use insurance if you have a low copay ($10-15), your deductible is nearly met, or you're close to your out-of-pocket maximum since medication costs count toward these limits. Use a discount card (like GoodRx) if your copay is high ($50+), you haven't met your deductible yet, or you're uninsured. Discount cards typically provide better savings for high-cost branded medications but don't contribute to your deductible or OOP maximum. For maintenance medications you take regularly, calculate the annual cost with each option. Some insurance plans cover generic versions but not brand names - ask your pharmacist for generic options as they're often 80-90% cheaper.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        What is the Medicare Part D out-of-pocket cap for 2026?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        The 2026 Medicare Part D out-of-pocket (OOP) cap is $2,100. This is the maximum you'll pay annually for covered prescription drugs. Once you reach this limit, Medicare covers the remaining drug costs for the rest of the calendar year, though your plan may require a small copay. The $2,100 limit includes your deductible ($615), copays during the coverage gap, and coinsurance. High-income Medicare beneficiaries may pay IRMAA surcharges on top of Part D premiums. Talk to your Medicare plan about which drugs are covered and whether switching to a less expensive medication could reduce your out-of-pocket costs.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        How can I find cheaper prescription drugs?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        First, ask your doctor if there's a generic or less expensive alternative to your prescribed medication - many generic drugs are equally effective and cost 80-90% less. Use price comparison sites like GoodRx, SingleCare, Walmart, or Costco (membership optional) to compare cash prices across pharmacies. Mail-order pharmacies often offer better prices for maintenance medications. Call your insurance to confirm if the medication is covered and what your copay is. Some manufacturers offer patient assistance programs for low-income individuals. For specialty drugs, ask about 340B program pharmacies which may have lower prices. Don't skip doses or use expired medication to save money - talk to your doctor about cost-saving alternatives instead.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        Are generic drugs as effective as brand name medications?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        Yes, generic drugs are as effective as brand name medications. The FDA requires all generic drugs to have the same active ingredients, strength, dosage form, and route of administration as brand name drugs. Generic manufacturers must prove bioequivalence - that their drug works in the body the same way as the brand name version. The only differences are typically inactive ingredients (like fillers, dyes, or flavoring), which don't affect efficacy. Generic drugs cost less because manufacturers don't repeat expensive research and development or invest in marketing. Some people report minor differences in tolerability due to different inactive ingredients, but the therapeutic effect is identical. Always ask your pharmacist about generics when filling prescriptions.
+       </p>
+      </div>
+     </details>
+     <details class="border border-gray-200 rounded-lg">
+      <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center">
+       <span>
+        How is my data privacy protected in this tool?
+       </span>
+       <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700">
+       <p>
+        Your data privacy is completely protected. This calculator runs entirely in your browser and does not transmit any medication information, dosages, or personal data to external servers. All cost comparisons are performed locally on your device. We do not collect, store, or share any information about which medications you search for or price. No tracking cookies are used. Your privacy is fully maintained while using this educational tool. For actual prescription purchases and real price checks, use pharmacy websites directly or approved discount programs like GoodRx, which have their own privacy policies.
+       </p>
+      </div>
+     </details>
+    </div>
+   </section>
+   <!-- Related Calculators -->
+   <div class="bg-gray-100 rounded-lg p-8 mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">
+     Related Calculators
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <a class="bg-white p-4 rounded-lg hover:shadow-md transition" href="plan-cost-calculator.html">
+      <span class="font-semibold text-teal-primary">
+       → Plan Cost Calculator
+      </span>
+      <p class="text-sm text-gray-600">
+       Compare total costs across multiple plans
+      </p>
+     </a>
+     <a class="bg-white p-4 rounded-lg hover:shadow-md transition" href="procedure-cost.html">
+      <span class="font-semibold text-teal-primary">
+       → Procedure Cost Estimator
+      </span>
+      <p class="text-sm text-gray-600">
+       Find costs for medical procedures
+      </p>
+     </a>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+     <div>
+      <h4 class="font-bold text-white mb-4">
+       HealthCalc Hub
+      </h4>
+      <p class="text-sm">
+       Free, unbiased healthcare cost calculators. All calculations private, no data collection.
+      </p>
+     </div>
+     <div>
+     </div>
+     <div>
+      <h4 class="font-bold text-white mb-4">
+       Disclaimer
+      </h4>
+      <p class="text-xs text-gray-400">
+       These are average prices. Actual costs vary by location and pharmacy. Check GoodRx, Walmart, or your insurance for current prices.
+      </p>
+     </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8 text-center text-sm">
+     <p>
+      © 2026 HealthCalc Hub. Last Updated: April 3, 2026
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const drugs = {
             'lisinopril': { name: 'Lisinopril (10mg, 30 tabs)', min: 4, max: 15 },
             'amlodipine': { name: 'Amlodipine (5mg, 30 tabs)', min: 4, max: 15 },
             'losartan': { name: 'Losartan (50mg, 30 tabs)', min: 4, max: 15 },
@@ -518,13 +793,12 @@
                 document.getElementById('medicare-info').classList.add('hidden');
             }
         }
-    </script>
-
-    <script>
-        // Mobile menu toggle
+  </script>
+  <script>
+   // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-    </script>
-</body>
+  </script>
+ </body>
 </html>
