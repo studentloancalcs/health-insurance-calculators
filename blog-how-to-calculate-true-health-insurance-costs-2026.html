@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to calculate your real health insurance costs in 2026 by adding up premiums, deductibles, copays, coinsurance, and out-of-pocket maximums. Includes a step-by-step worksheet and 2026 ACA limits.">
+    <meta name="keywords" content="how to calculate health insurance costs 2026, total cost of health insurance, health insurance deductible vs out of pocket maximum, bronze vs silver vs gold plan costs 2026, true cost of health insurance plan">
+    <title>How to Calculate Your True Health Insurance Costs in 2026: Beyond the Monthly Premium</title>
+    <link rel="canonical" href="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-calculate-true-health-insurance-costs-2026.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta property="og:title" content="How to Calculate Your True Health Insurance Costs in 2026: Beyond the Monthly Premium">
+    <meta property="og:description" content="Your monthly premium is only part of the picture. Learn how to add up deductibles, copays, coinsurance, and out-of-pocket maximums to find your real health insurance cost in 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-calculate-true-health-insurance-costs-2026.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Calculate Your True Health Insurance Costs in 2026: Beyond the Monthly Premium">
+    <meta name="twitter:description" content="Your monthly premium is only part of the picture. Learn how to add up deductibles, copays, coinsurance, and out-of-pocket maximums to find your real health insurance cost in 2026.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        .nav-link {
+            color: #4B5563;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #0D9488;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        article h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #134E4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        article h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0D9488;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        article p {
+            line-height: 1.75;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+        article ul, article ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        article li {
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background-color: #F0FDFA;
+            border-left: 4px solid #0D9488;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .comparison-table {
+            margin: 1.5rem 0;
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #D1D5DB;
+        }
+        .comparison-table th {
+            background-color: #F0FDFA;
+            color: #134E4A;
+            font-weight: 600;
+        }
+        .calculator-link {
+            display: inline-block;
+            background-color: #0D9488;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        .calculator-link:hover {
+            background-color: #134E4A;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Calculate Your True Health Insurance Costs in 2026: Beyond the Monthly Premium",
+      "description": "Learn how to calculate your real health insurance costs in 2026 by adding up premiums, deductibles, copays, coinsurance, and out-of-pocket maximums.",
+      "datePublished": "2026-04-12",
+      "dateModified": "2026-04-12",
+      "author": {
+        "@type": "Organization",
+        "name": "HealthCalc Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HealthCalc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://studentloancalcs.github.io/health-insurance-calculators/logo.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between a deductible and an out-of-pocket maximum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your deductible is the amount you pay before your insurance starts sharing costs. Your out-of-pocket maximum is the most you'll pay in a year for covered services. Once you hit the out-of-pocket max, your plan covers 100% of covered care. In 2026, the ACA out-of-pocket maximum is $10,600 for individuals and $21,200 for families."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do monthly premiums count toward my out-of-pocket maximum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Monthly premiums are a separate cost and do not count toward your deductible or out-of-pocket maximum. Only deductibles, copays, and coinsurance for covered services count toward your out-of-pocket max."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I estimate my total health insurance costs for the year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add up four components: (1) annual premiums (monthly premium × 12), (2) your deductible, (3) estimated copays and coinsurance for expected doctor visits, prescriptions, and procedures, and (4) any costs not covered by your plan. Use a plan cost calculator to compare scenarios across different plan tiers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a Bronze plan or Silver plan cheaper overall in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on how much healthcare you use. Bronze plans have lower premiums but higher deductibles (averaging $7,476). Silver plans cost more monthly but have lower deductibles (averaging $5,304) and qualify for cost-sharing reductions if your income is below 250% FPL. If you expect moderate or high healthcare use, a Silver plan often costs less overall."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the out-of-pocket maximum for health insurance in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For 2026, the ACA out-of-pocket maximum is $10,600 for an individual plan and $21,200 for a family plan. This is the absolute most you'd pay for covered in-network services in a year. High-deductible health plans (HDHPs) have a lower cap of $8,500 for individuals and $17,000 for families."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-primary text-white w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                    <span class="font-bold text-xl text-teal-dark">HealthCalc</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="plan-cost-calculator.html" class="nav-link text-sm font-medium">Plan Cost</a>
+                    <a href="aca-subsidy-calculator.html" class="nav-link text-sm font-medium">ACA Subsidy</a>
+                    <a href="procedure-cost.html" class="nav-link text-sm font-medium">Procedures</a>
+                    <a href="drug-cost-finder.html" class="nav-link text-sm font-medium">Drugs</a>
+                    <a href="blog.html" class="text-teal-primary text-sm font-medium">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block nav-link text-sm font-medium py-2">Home</a>
+                <a href="plan-cost-calculator.html" class="block nav-link text-sm font-medium py-2">Plan Cost</a>
+                <a href="aca-subsidy-calculator.html" class="block nav-link text-sm font-medium py-2">ACA Subsidy</a>
+                <a href="procedure-cost.html" class="block nav-link text-sm font-medium py-2">Procedures</a>
+                <a href="drug-cost-finder.html" class="block nav-link text-sm font-medium py-2">Drugs</a>
+                <a href="blog.html" class="block text-teal-primary text-sm font-medium py-2">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-sm text-gray-600">
+                <a href="index.html" class="text-teal-primary hover:text-teal-dark">Home</a>
+                <span class="mx-2">/</span>
+                <a href="blog.html" class="text-teal-primary hover:text-teal-dark">Blog</a>
+                <span class="mx-2">/</span>
+                <span>How to Calculate Your True Health Insurance Costs in 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-teal-dark mb-4">How to Calculate Your True Health Insurance Costs in 2026: Beyond the Monthly Premium</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-600">
+                <div>
+                    <p><strong>By HealthCalc Team</strong></p>
+                    <p>Published April 12, 2026</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p><strong>10 min read</strong></p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <p>When most people compare health insurance plans, they look at one number: the monthly premium. It makes sense—that's the bill you pay every month whether you visit a doctor or not. But the premium is only one piece of a much larger puzzle, and focusing on it alone can lead you to pick a plan that actually costs you more over the course of a year.</p>
+
+            <p>Your real health insurance cost is the sum of everything you pay: premiums, deductibles, copays, coinsurance, and any services your plan doesn't cover. In a year where you need surgery, have a baby, or manage a chronic condition, the difference between a "cheap" Bronze plan and a "pricier" Silver plan can swing by thousands of dollars—sometimes in the opposite direction of what you'd expect.</p>
+
+            <p>This guide walks you through exactly how to calculate your total expected health insurance costs for 2026, using current ACA limits and real-world scenarios. By the end, you'll have a clear framework for comparing plans based on what you'll actually spend—not just what your monthly bill looks like.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: after intro section -->
+
+        <h2>The Five Components of Your Total Health Insurance Cost</h2>
+
+        <section>
+            <p>Every health insurance plan has the same basic cost structure, but the amounts vary dramatically depending on the metal tier you choose and how much healthcare you use. Here are the five components you need to add up:</p>
+
+            <h3>1. Monthly Premium</h3>
+            <p>This is your fixed monthly payment to keep your insurance active. You pay this regardless of whether you see a doctor. In 2026, marketplace premiums have risen significantly—averaging around 20% higher than 2025 in many states after the enhanced ACA subsidies expired. Your actual premium depends on your age, location, plan tier, and whether you qualify for a <a href="aca-subsidy-calculator.html" class="text-teal-primary hover:text-teal-dark font-medium">premium tax credit</a>.</p>
+
+            <h3>2. Annual Deductible</h3>
+            <p>Your deductible is the amount you pay out of pocket before your insurance starts sharing costs. For 2026, the average deductible on a Bronze plan is about $7,476, while Silver plans average around $5,304 and Gold plans average approximately $1,722. Preventive care—annual checkups, screenings, vaccines—is covered at 100% before you meet your deductible on all ACA plans.</p>
+
+            <h3>3. Copays</h3>
+            <p>A copay is a flat fee you pay for a specific service. For example, $30 for a primary care visit or $50 for a specialist. Some plans charge copays for certain services even before you meet your deductible, while others require you to meet the deductible first. Check your plan's Summary of Benefits carefully.</p>
+
+            <h3>4. Coinsurance</h3>
+            <p>After you meet your deductible, most plans split costs with you through coinsurance. If your plan has 20% coinsurance, you pay 20% of the allowed amount for a covered service and your plan pays 80%. The metal tier determines the general split: Bronze plans cover about 60% of costs on average, Silver covers 70%, Gold covers 80%, and Platinum covers 90%.</p>
+
+            <h3>5. Out-of-Pocket Maximum</h3>
+            <p>This is the safety net. Once your deductibles, copays, and coinsurance reach this ceiling, your plan pays 100% of covered services for the rest of the year. In 2026, the ACA caps this at <strong>$10,600 for individuals</strong> and <strong>$21,200 for families</strong>. For <a href="hsa-fsa-calculator.html" class="text-teal-primary hover:text-teal-dark font-medium">HSA-eligible high-deductible plans</a>, the limits are lower: $8,500 for individuals and $17,000 for families.</p>
+
+            <div class="info-box">
+                <strong>What doesn't count toward your out-of-pocket max:</strong> Monthly premiums, out-of-network care (on most plans), and services your plan doesn't cover at all. These costs are always on you, no matter how much you've already spent.
+            </div>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: mid-article -->
+
+        <h2>The Real Cost Comparison: Bronze vs. Silver vs. Gold in 2026</h2>
+
+        <section>
+            <p>Here's where the math gets interesting. Let's compare what a 35-year-old individual in a mid-cost market would actually pay under three scenarios: a healthy year with minimal care, a moderate year with a few specialist visits and prescriptions, and a high-cost year involving surgery or a hospital stay.</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cost Component</th>
+                            <th>Bronze Plan</th>
+                            <th>Silver Plan</th>
+                            <th>Gold Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly Premium</td>
+                            <td>$290</td>
+                            <td>$410</td>
+                            <td>$520</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Premium Cost</td>
+                            <td>$3,480</td>
+                            <td>$4,920</td>
+                            <td>$6,240</td>
+                        </tr>
+                        <tr>
+                            <td>Deductible</td>
+                            <td>$7,450</td>
+                            <td>$5,300</td>
+                            <td>$1,700</td>
+                        </tr>
+                        <tr>
+                            <td>Coinsurance</td>
+                            <td>40%</td>
+                            <td>30%</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>Out-of-Pocket Max</td>
+                            <td>$9,200</td>
+                            <td>$9,200</td>
+                            <td>$8,700</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Scenario A: Healthy Year (Two Checkups, One Prescription)</h3>
+            <p>In a year where you only need preventive care and one generic prescription ($20/month), the Bronze plan wins. Preventive care is free on all plans, so your total cost is essentially premiums plus the prescription. Bronze total: roughly $3,720. Silver total: about $5,160. Gold total: around $6,480. When you're healthy, the lowest premium saves you the most.</p>
+
+            <h3>Scenario B: Moderate Year ($8,000 in Medical Bills)</h3>
+            <p>Now imagine you need a few specialist visits, imaging, a minor procedure, and ongoing prescriptions totaling $8,000 in billed charges. With a Bronze plan, you'd pay the full $7,450 deductible plus 40% of the remaining $550—adding about $7,670 in out-of-pocket costs to your $3,480 in premiums. Total: roughly $11,150. With Silver, you'd pay the $5,300 deductible plus 30% of $2,700, adding about $6,110. Total: roughly $11,030. With Gold, you'd pay the $1,700 deductible plus 20% of $6,300, adding about $2,960. Total: roughly $9,200. The Gold plan—despite having the highest premium—saves you almost $2,000 in this scenario.</p>
+
+            <h3>Scenario C: High-Cost Year ($50,000 Surgery)</h3>
+            <p>If you need major surgery or a hospital stay, you'll hit the out-of-pocket maximum on any plan. Your total cost becomes premiums plus the out-of-pocket max. Bronze total: $3,480 + $9,200 = $12,680. Silver total: $4,920 + $9,200 = $14,120. Gold total: $6,240 + $8,700 = $14,940. In a worst-case year, Bronze actually costs the least because its low premium more than offsets the higher out-of-pocket max.</p>
+
+            <div class="info-box">
+                <strong>The takeaway:</strong> Bronze plans are cheapest when you're very healthy or very sick. Silver and Gold plans often save money in the middle—when you have moderate but not catastrophic healthcare needs. Use our <a href="plan-cost-calculator.html" class="text-teal-primary hover:text-teal-dark font-medium">plan cost calculator</a> to plug in your expected usage and see which tier actually costs you less.
+            </div>
+        </section>
+
+        <h2>A Step-by-Step Worksheet for Estimating Your 2026 Costs</h2>
+
+        <section>
+            <p>Here's a practical framework you can use right now. Grab your plan's Summary of Benefits and Costs (SBC) document—every insurer is required to provide one—and work through these steps:</p>
+
+            <h3>Step 1: Calculate Your Annual Premium</h3>
+            <p>Take your monthly premium and multiply by 12. If you receive a premium tax credit, subtract that first. For instance, if your plan costs $450/month and your tax credit is $200/month, your net premium is $250/month or $3,000/year. Not sure if you qualify for a subsidy? Check with our <a href="aca-subsidy-calculator.html" class="text-teal-primary hover:text-teal-dark font-medium">ACA subsidy calculator</a>.</p>
+
+            <h3>Step 2: Estimate Your Expected Medical Spending</h3>
+            <p>Think about what healthcare you actually used last year. Include doctor visits (primary care and specialists), prescriptions (monthly and one-time), lab work and imaging, any planned procedures or surgeries, and emergency room visits. Add these up to get your estimated total medical charges for the year. Don't forget to include your regular prescriptions—a $50/month medication is $600/year in charges.</p>
+
+            <h3>Step 3: Apply Your Deductible</h3>
+            <p>Subtract preventive care visits from your total (those are free). For everything else, you pay 100% until you hit your deductible. If your expected charges are less than your deductible, your out-of-pocket medical cost equals your expected charges. If they're more, your deductible amount becomes the first chunk of your out-of-pocket cost.</p>
+
+            <h3>Step 4: Calculate Coinsurance on the Rest</h3>
+            <p>For any charges above your deductible, apply your coinsurance rate. If you have $3,000 in charges above your deductible and 30% coinsurance, you'd owe $900. Add this to your deductible amount.</p>
+
+            <h3>Step 5: Check Against the Out-of-Pocket Max</h3>
+            <p>If your deductible plus coinsurance exceeds your plan's out-of-pocket maximum, cap it there. You won't pay more than the out-of-pocket max no matter what.</p>
+
+            <h3>Step 6: Add Premium + Out-of-Pocket Costs</h3>
+            <p>Your total estimated annual cost = annual premium + out-of-pocket medical costs (capped at the OOP max). This is the number you should compare across plans—not just the premium.</p>
+
+            <a href="plan-cost-calculator.html" class="calculator-link">Run the Numbers With Our Calculator</a>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: after worksheet section -->
+
+        <h2>Special Considerations for 2026</h2>
+
+        <section>
+            <p>Several policy changes in 2026 make this calculation especially important this year:</p>
+
+            <h3>The Subsidy Cliff Is Back</h3>
+            <p>The enhanced ACA premium tax credits that were in place from 2021 through 2025 have expired. If your household income exceeds 400% of the Federal Poverty Level ($62,600 for an individual, $129,000 for a family of four in 2026), you no longer receive any premium subsidy. For people just above this threshold, premiums can spike dramatically. Read our <a href="blog-aca-subsidy-cliff-2026-what-to-know.html" class="text-teal-primary hover:text-teal-dark font-medium">full guide to the subsidy cliff</a> for strategies to manage this change.</p>
+
+            <h3>Bronze Plans Are Now HSA-Eligible</h3>
+            <p>Starting in 2026, all ACA Bronze and Catastrophic plans automatically qualify as HSA-compatible high-deductible health plans. This means you can pair a Bronze plan with a Health Savings Account and contribute up to $4,400 (individual) or $8,750 (family) in pre-tax dollars. The tax savings from an HSA can effectively reduce your total cost by 22–37% on the money you put in, depending on your tax bracket. Learn more in our <a href="blog-bronze-plan-hsa-eligible-2026.html" class="text-teal-primary hover:text-teal-dark font-medium">Bronze plan HSA guide</a>.</p>
+
+            <h3>Silver Plan Cost-Sharing Reductions Still Exist</h3>
+            <p>If your income is between 100% and 250% of the Federal Poverty Level ($15,650 to $39,125 for an individual), Silver plans come with cost-sharing reductions (CSRs) that lower your deductible, copays, and out-of-pocket maximum—sometimes dramatically. A Silver plan with CSR can have a deductible as low as $300 and an out-of-pocket max of $3,350, making it significantly cheaper than any other tier for moderate healthcare use.</p>
+
+            <h3>Preventive Care Remains Free</h3>
+            <p>All ACA plans must cover preventive services at 100% with no cost-sharing, even before you meet your deductible. This includes annual wellness exams, immunizations, cancer screenings, blood pressure and cholesterol checks, and many more services. Taking advantage of these free services can help you catch problems early and avoid bigger bills later.</p>
+        </section>
+
+        <h2>Three Common Mistakes People Make When Comparing Plans</h2>
+
+        <section>
+            <h3>Mistake 1: Choosing the Cheapest Premium Without Checking the Deductible</h3>
+            <p>A plan with a $200/month premium and a $7,500 deductible costs $2,400/year in premiums alone. But if you need even moderate care—a few specialist visits and some imaging—you could easily pay an additional $4,000–$5,000 before insurance kicks in. A $350/month plan with a $2,000 deductible would have cost you less overall.</p>
+
+            <h3>Mistake 2: Ignoring the Provider Network</h3>
+            <p>The cheapest plan on paper might not include your doctors or preferred hospital. Out-of-network care typically doesn't count toward your deductible or out-of-pocket maximum, meaning you'd pay full price on top of your premiums. Always verify your providers are in-network before enrolling. Use our <a href="procedure-cost.html" class="text-teal-primary hover:text-teal-dark font-medium">procedure cost finder</a> to estimate what specific treatments might cost.</p>
+
+            <h3>Mistake 3: Forgetting About Prescription Drug Costs</h3>
+            <p>Your plan's formulary determines what you pay for medications. The same drug can cost $15 on one plan and $80 on another depending on the tier it's assigned to. If you take regular prescriptions, look up each one on the plan's drug formulary before comparing total costs. Our <a href="drug-cost-finder.html" class="text-teal-primary hover:text-teal-dark font-medium">drug cost finder</a> can help you estimate prescription expenses across different plans.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: before FAQ section -->
+
+        <h2>Frequently Asked Questions</h2>
+
+        <section>
+            <h3>What is the difference between a deductible and an out-of-pocket maximum?</h3>
+            <p>Your deductible is the amount you pay before insurance starts sharing costs. Your out-of-pocket maximum is the absolute ceiling on what you'll pay in a year for covered in-network services. Once you hit the out-of-pocket max, your plan covers 100%. In 2026, the ACA caps the out-of-pocket maximum at $10,600 for individuals and $21,200 for families.</p>
+
+            <h3>Do monthly premiums count toward my out-of-pocket maximum?</h3>
+            <p>No. Premiums are a separate expense. Only deductibles, copays, and coinsurance for covered in-network services count toward your out-of-pocket maximum. This is why your "true cost" calculation needs to include both premiums and potential out-of-pocket spending.</p>
+
+            <h3>How do I estimate my total health insurance costs for the year?</h3>
+            <p>Add your annual premiums (monthly premium times 12) to your estimated out-of-pocket costs (deductible, copays, and coinsurance based on your expected healthcare use). Cap the out-of-pocket portion at your plan's out-of-pocket maximum. The sum is your estimated total annual cost.</p>
+
+            <h3>Is a Bronze plan or Silver plan cheaper overall in 2026?</h3>
+            <p>It depends on your healthcare use and income. Bronze wins if you're very healthy or if your costs are high enough to hit the out-of-pocket max. Silver wins for moderate healthcare use—especially if you qualify for cost-sharing reductions. If your income is below 250% FPL ($39,125 for an individual), Silver with CSR is almost always the best deal.</p>
+
+            <h3>What is the out-of-pocket maximum for health insurance in 2026?</h3>
+            <p>The ACA out-of-pocket maximum for 2026 is $10,600 for individual plans and $21,200 for family plans. HSA-eligible high-deductible plans have a lower cap of $8,500 for individuals and $17,000 for families.</p>
+        </section>
+
+        <h2>The Bottom Line: Calculate Before You Choose</h2>
+
+        <section>
+            <p>Picking a health insurance plan based solely on the monthly premium is like choosing a car based only on the sticker price without asking about gas mileage, maintenance costs, or insurance rates. The premium is just one part of your total annual healthcare spending.</p>
+
+            <p>Take 15 minutes to run through the worksheet above with your actual medical history and expected needs. Or, even better, use our free <a href="plan-cost-calculator.html" class="text-teal-primary hover:text-teal-dark font-medium">plan cost calculator</a> to plug in your numbers and see a side-by-side comparison. The calculator models your expected total cost across all metal tiers so you can make an informed choice—not a guess.</p>
+
+            <a href="plan-cost-calculator.html" class="calculator-link">Compare Plan Costs Now</a>
+            <a href="aca-subsidy-calculator.html" class="calculator-link">Check Your Subsidy Eligibility</a>
+            <a href="hsa-fsa-calculator.html" class="calculator-link">HSA/FSA Savings Calculator</a>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="mt-12 p-6 bg-teal-light rounded-lg">
+            <h2>Related Calculators & Tools</h2>
+            <p>Estimate your healthcare costs and find savings with these free tools:</p>
+            <div class="mt-4 flex flex-wrap gap-4">
+                <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+                <a href="aca-subsidy-calculator.html" class="calculator-link">ACA Subsidy Estimator</a>
+                <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+                <a href="hsa-fsa-calculator.html" class="calculator-link">HSA/FSA Calculator</a>
+            </div>
+        </section>
+
+        <div class="mt-8 p-4 bg-gray-100 text-center text-sm text-gray-600 rounded">
+            <p><strong>Privacy Note:</strong> All calculations happen in your browser. We never collect your data.</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-teal-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-white text-teal-dark w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                        <span class="font-bold text-xl">HealthCalc</span>
+                    </div>
+                    <p class="text-teal-light text-sm">Free health insurance calculators designed to help you understand costs and make smarter healthcare decisions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="plan-cost-calculator.html" class="hover:text-white transition-colors">Plan Cost Calculator</a></li>
+                        <li><a href="aca-subsidy-calculator.html" class="hover:text-white transition-colors">ACA Subsidy Estimator</a></li>
+                        <li><a href="procedure-cost.html" class="hover:text-white transition-colors">Procedure Cost Finder</a></li>
+                        <li><a href="drug-cost-finder.html" class="hover:text-white transition-colors">Drug Cost Finder</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Disclaimer</h4>
+                    <p class="text-teal-light text-sm">HealthCalc provides educational information only and is not a substitute for professional medical or financial advice. Always consult with qualified professionals for your specific situation.</p>
+                </div>
+            </div>
+            <div class="border-t border-teal-light pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-teal-light">
+                <p>&copy; 2026 HealthCalc. All rights reserved.</p>
+                <p>All our calculators are 100% private — calculations happen in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
