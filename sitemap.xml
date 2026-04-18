@@ -93,4 +93,7 @@
   <url>
     <loc>https://healthcosttools.com/blog-medicare-part-d-out-of-pocket-cap-2026.html</loc>
     <lastmod>2026-04-10</lastmod>
-  
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
