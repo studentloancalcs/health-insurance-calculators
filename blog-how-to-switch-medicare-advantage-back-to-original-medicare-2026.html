@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5586HWYPB0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5586HWYPB0');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nearly 3 million Medicare Advantage enrollees had their 2026 plan exit or shrink. Here's how to switch back to Original Medicare in 2026 — the MA-OEP window, the SEP triggered by a plan exit, and the Medigap guaranteed-issue traps that can leave you paying underwritten premiums for the rest of your life.">
+    <meta name="keywords" content="switch Medicare Advantage to Original Medicare 2026, MA-OEP 2026, Medigap guaranteed issue 2026, Medicare Advantage disenrollment 2026, Medicare Advantage trial right, SEP plan exit Medicare 2026, drop Medicare Advantage plan">
+    <title>How to Switch from Medicare Advantage Back to Original Medicare in 2026: The MA-OEP Window, Medigap Guaranteed-Issue Traps, and the SEP That Kept 3 Million People Insured</title>
+    <link rel="canonical" href="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-switch-medicare-advantage-back-to-original-medicare-2026.html">
+    <meta property="og:title" content="How to Switch from Medicare Advantage Back to Original Medicare in 2026">
+    <meta property="og:description" content="MA-OEP runs January 1 to March 31 in 2026, but the real question is whether you can still buy a Medigap policy without medical underwriting. Here's the full playbook — the trial right, the plan-exit SEP, state-level guaranteed issue, and the math of the switch.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-switch-medicare-advantage-back-to-original-medicare-2026.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Switch from Medicare Advantage Back to Original Medicare in 2026">
+    <meta name="twitter:description" content="The complete 2026 guide to leaving a Medicare Advantage plan: the disenrollment windows, the Medigap traps, and how to run the math before you switch.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        .nav-link {
+            color: #4B5563;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #0D9488;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        article h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #134E4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        article h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0D9488;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        article p {
+            line-height: 1.75;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+        article ul, article ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        article li {
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background-color: #F0FDFA;
+            border-left: 4px solid #0D9488;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background-color: #FEF3C7;
+            border-left: 4px solid #F97316;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .comparison-table {
+            margin: 1.5rem 0;
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #D1D5DB;
+        }
+        .comparison-table th {
+            background-color: #F0FDFA;
+            color: #134E4A;
+            font-weight: 600;
+        }
+        .calculator-link {
+            display: inline-block;
+            background-color: #0D9488;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        .calculator-link:hover {
+            background-color: #134E4A;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Switch from Medicare Advantage Back to Original Medicare in 2026: The MA-OEP Window, Medigap Guaranteed-Issue Traps, and the SEP That Kept 3 Million People Insured",
+      "description": "Nearly 3 million Medicare Advantage enrollees had their plan exit or shrink for 2026. This is the full 2026 playbook for switching back to Original Medicare — the MA-OEP window, the special enrollment period triggered by a plan exit, the 12-month trial right, and how state-level Medigap guaranteed-issue rules change whether the switch is safe or expensive.",
+      "datePublished": "2026-07-22",
+      "dateModified": "2026-07-22",
+      "author": {
+        "@type": "Organization",
+        "name": "HealthCalc Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HealthCalc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://studentloancalcs.github.io/health-insurance-calculators/logo.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When can I switch from Medicare Advantage back to Original Medicare in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three main windows. The Medicare Advantage Open Enrollment Period (MA-OEP) runs January 1 through March 31, 2026, and lets any current MA enrollee drop the plan and return to Original Medicare. The Annual Election Period runs October 15 through December 7, 2026 for coverage effective January 1, 2027. And a Special Enrollment Period is triggered any time your plan exits your service area, changes its provider network materially, or you move outside the plan's coverage area. The SEP for a plan exit generally runs from October 15 through February 28 of the following year, but check your specific notice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I be able to buy a Medigap policy when I switch back?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your state and your history. In most states, dropping Medicare Advantage does not automatically give you guaranteed-issue rights for Medigap. Insurers can medically underwrite your application and either deny you or charge a permanent surcharge. The main exceptions are: the 12-month trial right if you joined MA when first eligible at 65 (or dropped Medigap for MA within your first year of MA), the plan-exit SEP guaranteed-issue right, and state-specific rules. Connecticut and New York offer year-round guaranteed issue. Massachusetts offers guaranteed issue every February 1 through March 31. Maine, Missouri, California, Washington, Oregon, and a growing number of other states have their own partial protections."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 12-month Medicare Advantage trial right?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The trial right gives you a federal guaranteed-issue right to buy a Medigap policy if you drop your first Medicare Advantage plan within 12 months of enrolling. It applies in two situations. First, if you joined Medicare Advantage the moment you became eligible for Medicare at 65 and you drop it within the first year, you can buy Medigap plans A, B, C, D, F, G, K, or L without medical underwriting. Second, if you had Medigap, dropped it to try Medicare Advantage, and are now returning within the first year, you can typically get your old Medigap policy back, or a comparable one. Outside the trial-right window, you generally have no federal protection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many people had to switch plans in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 3 million Medicare Advantage enrollees — roughly 10 percent of MA enrollment — were forced to switch coverage for 2026 because insurers either exited markets entirely or scaled back service areas. The impact was highly geographic. In seven states, more than 40 percent of MA enrollees had to find new coverage: Vermont was hardest hit at about 92 percent, along with Idaho, Wyoming, North Dakota, South Dakota, Maryland, and New Hampshire. If your plan was one of the exiting plans, you received a non-renewal notice by September 30, 2025, and gained a Special Enrollment Period plus a federal guaranteed-issue right to buy certain Medigap policies for a limited time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to buy a Medigap policy and a Part D drug plan when I go back to Original Medicare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You are not required to, but almost everyone should. Original Medicare has no out-of-pocket maximum, meaning a single serious hospitalization can create six-figure exposure. A Medigap (Medicare Supplement) policy caps or eliminates that exposure. Original Medicare also does not cover prescription drugs, so a standalone Part D plan is essential — and if you delay enrollment without other creditable drug coverage, you incur a permanent late-enrollment penalty. In 2026 the Part D out-of-pocket maximum is capped at $2,100, which limits catastrophic drug costs but not the monthly premium or the deductible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep my Medicare Advantage plan's dental and vision benefits after switching?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Once you return to Original Medicare, the supplemental benefits your MA plan bundled — dental, vision, hearing, gym memberships, over-the-counter allowances — go away. You can buy standalone dental and vision plans, and many Medigap issuers offer them as add-ons, but they are separate purchases. Budget for this before switching. A standalone dental plan runs roughly $25 to $60 per month in 2026, and standalone vision plans run $10 to $25 per month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I actually make the switch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The mechanics are simple. Enroll in a standalone Part D plan or a Medigap policy, and your Medicare Advantage plan will be automatically disenrolled when the new coverage begins. Alternatively, call 1-800-MEDICARE or use Medicare.gov to disenroll from the MA plan directly, and your coverage reverts to Original Medicare on the first of the following month. The order matters when you also want a Medigap policy: apply for and get accepted to Medigap first, then trigger the MA disenrollment for the same start date to avoid a coverage gap."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-primary text-white w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                    <span class="font-bold text-xl text-teal-dark">HealthCalc</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="plan-cost-calculator.html" class="nav-link text-sm font-medium">Plan Cost</a>
+                    <a href="aca-subsidy-calculator.html" class="nav-link text-sm font-medium">ACA Subsidy</a>
+                    <a href="procedure-cost.html" class="nav-link text-sm font-medium">Procedures</a>
+                    <a href="drug-cost-finder.html" class="nav-link text-sm font-medium">Drugs</a>
+                    <a href="blog.html" class="text-teal-primary text-sm font-medium">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block nav-link text-sm font-medium py-2">Home</a>
+                <a href="plan-cost-calculator.html" class="block nav-link text-sm font-medium py-2">Plan Cost</a>
+                <a href="aca-subsidy-calculator.html" class="block nav-link text-sm font-medium py-2">ACA Subsidy</a>
+                <a href="procedure-cost.html" class="block nav-link text-sm font-medium py-2">Procedures</a>
+                <a href="drug-cost-finder.html" class="block nav-link text-sm font-medium py-2">Drugs</a>
+                <a href="blog.html" class="block text-teal-primary text-sm font-medium py-2">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-sm text-gray-600">
+                <a href="index.html" class="text-teal-primary hover:text-teal-dark">Home</a>
+                <span class="mx-2">/</span>
+                <a href="blog.html" class="text-teal-primary hover:text-teal-dark">Blog</a>
+                <span class="mx-2">/</span>
+                <span>How to Switch from Medicare Advantage Back to Original Medicare in 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-teal-dark mb-4">How to Switch from Medicare Advantage Back to Original Medicare in 2026: The MA-OEP Window, Medigap Guaranteed-Issue Traps, and the SEP That Kept 3 Million People Insured</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-600">
+                <div>
+                    <p><strong>By HealthCalc Team</strong></p>
+                    <p>Published July 22, 2026</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p><strong>11 min read</strong></p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <p>The single biggest Medicare story of 2026 wasn't a benefit expansion or a premium hike. It was a wave of Medicare Advantage plan exits and service-area reductions that pushed roughly <strong>3 million enrollees</strong> — about 10 percent of everyone in the MA program — into finding new coverage. In seven states, more than 40 percent of MA enrollees were affected. In Vermont, the number was closer to <strong>92 percent</strong>. Idaho, Wyoming, North Dakota, South Dakota, Maryland, and New Hampshire also saw double-digit shares of enrollees forced to shop.</p>
+
+            <p>That backdrop matters because the mechanics of leaving Medicare Advantage in 2026 are more forgiving than in a typical year — for people affected by exits. For everyone else, the rules haven't changed, and the traps are the same as they've always been. A one-way door on Medigap underwriting is the biggest one: once you leave your first six months of Medicare eligibility (or a small set of guaranteed-issue windows), an insurer can look at your health history and either deny you, exclude conditions, or charge a permanently higher rate. This guide walks through the 2026 disenrollment windows, the guaranteed-issue paths, the state-level protections, and the order of operations to switch back cleanly.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: after intro section -->
+
+        <h2>The Three Windows to Leave Medicare Advantage in 2026</h2>
+
+        <section>
+            <p>Federal rules give you a limited set of moments each year to change coverage. For anyone currently on a Medicare Advantage plan in 2026, these are your options:</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Window</th>
+                            <th>Dates</th>
+                            <th>What You Can Do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Medicare Advantage Open Enrollment Period (MA-OEP)</td>
+                            <td>January 1 &ndash; March 31, 2026</td>
+                            <td>Switch to another MA plan or drop MA and return to Original Medicare. One change only.</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Election Period (AEP)</td>
+                            <td>October 15 &ndash; December 7, 2026</td>
+                            <td>Any coverage change &mdash; MA to Original, MA to MA, add or drop Part D. Effective January 1, 2027.</td>
+                        </tr>
+                        <tr>
+                            <td>Special Enrollment Period (SEP)</td>
+                            <td>Triggered by a life event</td>
+                            <td>Move, plan exit, dual-eligible status, loss of employer coverage, and about a dozen other triggers.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>The MA-OEP is often misunderstood: it lets current Advantage enrollees make one change, but it does not open a door for people already on Original Medicare to enroll in Medicare Advantage. It's a one-directional flexibility window for people who are already in MA.</p>
+
+            <div class="info-box">
+                <strong>The mid-year loophole most people miss:</strong> If you move to a ZIP code where your MA plan doesn't operate, that qualifies as an SEP. So does moving into or out of a nursing facility, becoming eligible for Medicaid, losing employer or union coverage, and a handful of other triggers. The move-triggered SEP is one of the cleanest ways to leave an MA plan outside the two standard windows.
+            </div>
+
+            <a href="medicare-calculator.html" class="calculator-link">Medicare Cost Calculator</a>
+        </section>
+
+        <h2>Why the 2026 Plan Exits Created a Rare Guaranteed-Issue Window</h2>
+
+        <section>
+            <p>When an insurer discontinues an MA plan or leaves your service area entirely, CMS treats it as a "non-renewal" event. The insurer must notify affected enrollees by <strong>September 30</strong> of the prior year. The notice does two important things: it triggers a Special Enrollment Period (typically October 15 through February 28 for a January 1 coverage transition), and it grants a federal <strong>guaranteed-issue right</strong> to purchase certain Medigap policies.</p>
+
+            <p>Federal guaranteed-issue rights are the sweet spot for anyone with a health history that would make Medigap underwriting expensive or impossible. The insurer must sell you the policy without asking health questions, cannot charge you a higher rate based on health, and cannot exclude pre-existing conditions. The policies eligible under the plan-exit right are typically Plan A, Plan B, Plan C, Plan D, Plan F, Plan G, Plan K, and Plan L, though Plans C and F are only available to enrollees who became Medicare-eligible before January 1, 2020.</p>
+
+            <p>If your MA plan exited or shrunk for 2026, this window is still relevant to you through <strong>February 28, 2026</strong> at a minimum, and longer in some states. If you're inside it, take the Medigap step now rather than in the AEP — the guaranteed-issue right typically expires 63 days after your MA coverage ends.</p>
+
+            <a href="blog-how-to-appeal-medicare-irmaa-2026-ssa-44.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to appeal Medicare IRMAA in 2026 &rarr;</a>
+        </section>
+
+        <h2>The Medigap Underwriting Trap</h2>
+
+        <section>
+            <p>The core reason "how do I switch back to Original Medicare" is a difficult question is that Original Medicare on its own is often unusable for people who have significant medical needs. Part A covers most hospital costs after a $1,676 deductible per benefit period (2026). Part B covers 80 percent of most outpatient care after a $257 annual deductible (2026), and there is <strong>no annual out-of-pocket maximum</strong>. A single serious hospitalization or an aggressive cancer treatment can produce five- or six-figure cost exposure.</p>
+
+            <p>That's what Medigap solves. It picks up the deductibles, copays, and coinsurance that Original Medicare doesn't cover, and it caps or eliminates your out-of-pocket risk. But Medigap is governed by a completely separate set of rules: <strong>you have one federal window in which insurers must accept you regardless of health</strong>, and that window is the six months starting when you first enroll in Part B at age 65. After that, in most states, insurers can deny you or price you individually based on your health history.</p>
+
+            <div class="warning-box">
+                <strong>The one-way door most people underestimate:</strong> If you enrolled in Medicare Advantage at 65, waited five years, and now want to move to Original Medicare + Medigap, an insurer in most states can look at your health history, decline you, or offer a Medigap policy at a rate that runs $150 to $400 more per month than a healthy 70-year-old would pay. That surcharge is often permanent — it doesn't get "cured" by later good health.
+            </div>
+        </section>
+
+        <h2>The 12-Month Trial Right — the Cleanest Federal Escape Hatch</h2>
+
+        <section>
+            <p>There is one crucial federal exception: the <strong>Medicare Advantage trial right</strong>. It applies in two situations:</p>
+
+            <ol>
+                <li><strong>The "first-time MA" trial.</strong> If you joined an MA plan when you first became eligible for Medicare at 65 (during your Initial Enrollment Period), and you want to leave that MA plan and return to Original Medicare, you have a <strong>12-month window from the start of your MA coverage</strong> in which you can buy Medigap Plans A, B, C, D, F, G, K, or L on a guaranteed-issue basis.</li>
+                <li><strong>The "Medigap to MA back to Medigap" trial.</strong> If you had a Medigap policy, dropped it to try Medicare Advantage, and you're now returning within your first year of MA, you can typically buy back your same Medigap policy if it's still sold, or a comparable policy with the same insurer. You have 12 months to exercise this right.</li>
+            </ol>
+
+            <p>If you're inside either of these windows, do not wait. The trial right expires exactly 12 months after your MA effective date. Miss it and you drop back into the underwritten market with no federal protection.</p>
+        </section>
+
+        <h2>State-Level Guaranteed Issue — the Best Under-the-Radar Path</h2>
+
+        <section>
+            <p>Federal rules are the floor, not the ceiling. Several states go further:</p>
+
+            <ul>
+                <li><strong>Connecticut and New York:</strong> Year-round guaranteed issue and community rating. Any Medicare beneficiary can buy a Medigap policy at any time without medical underwriting.</li>
+                <li><strong>Massachusetts:</strong> Continuous open enrollment for guaranteed-issue Medigap every year from <strong>February 1 through March 31</strong>. If you're switching back during the MA-OEP, this exactly overlaps.</li>
+                <li><strong>Maine:</strong> Guaranteed-issue right during the month of your birthday each year for Plan A, and a broader monthly window for people already holding a Medigap policy.</li>
+                <li><strong>California, Oregon, Washington, Nevada, Idaho, Illinois, Kentucky, and Louisiana:</strong> A "birthday rule" that lets Medigap holders switch to an equal or lesser policy with any insurer around their birthday each year without underwriting.</li>
+                <li><strong>Missouri:</strong> A 60-day window around the anniversary of your policy to switch to a comparable Medigap policy with another insurer.</li>
+            </ul>
+
+            <p>Rules change often. Before you disenroll from an MA plan, look up your state Department of Insurance page on Medigap protections, or call your <strong>SHIP (State Health Insurance Assistance Program)</strong> — a free counseling service in every state. SHIP counselors do not sell insurance and can confirm what guaranteed-issue rights you personally have.</p>
+
+            <a href="blog-how-to-qualify-medicare-savings-programs-2026-qmb-slmb-qi.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to qualify for Medicare Savings Programs in 2026 &rarr;</a>
+        </section>
+
+        <h2>Running the Cost Math Before You Switch</h2>
+
+        <section>
+            <p>Before you actually pull the trigger, compare total annual cost, not just premium. Original Medicare + Medigap + Part D typically has a higher fixed monthly cost than a $0-premium MA plan, but a much lower and more predictable ceiling. Here's a rough 2026 comparison for a healthy 68-year-old in a mid-cost state:</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cost Line</th>
+                            <th>Medicare Advantage (typical)</th>
+                            <th>Original Medicare + Medigap G + Part D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Part B premium</td>
+                            <td>$185 / month</td>
+                            <td>$185 / month</td>
+                        </tr>
+                        <tr>
+                            <td>Plan premium</td>
+                            <td>$0 &ndash; $50 / month</td>
+                            <td>$130 &ndash; $220 / month (Medigap G) + $35 &ndash; $60 / month (Part D)</td>
+                        </tr>
+                        <tr>
+                            <td>Deductibles / copays</td>
+                            <td>Variable; $0 primary care copay is common but specialist and hospital cost-sharing adds up</td>
+                            <td>$257 Part B deductible; almost everything else covered by Medigap G</td>
+                        </tr>
+                        <tr>
+                            <td>Out-of-pocket max</td>
+                            <td>$9,250 in-network (2026 max allowed)</td>
+                            <td>Effectively the Part B deductible + Part D $2,100 OOP cap; well under $2,500 total</td>
+                        </tr>
+                        <tr>
+                            <td>Network</td>
+                            <td>Restricted; referrals often required</td>
+                            <td>Any provider that accepts Medicare (virtually all)</td>
+                        </tr>
+                        <tr>
+                            <td>Extra benefits</td>
+                            <td>Often includes dental, vision, hearing, OTC allowance</td>
+                            <td>Purchased separately; add ~$35 &ndash; $85 / month for standalone dental + vision</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>The rough rule: if you use very little care, MA is often cheaper. If you use any meaningful specialist or hospital care in a given year, Original + Medigap is often cheaper — and always more predictable. The 2026 Part D $2,100 out-of-pocket maximum, which applies regardless of which Medicare path you're on, has made prescription cost less of a differentiator than it used to be.</p>
+
+            <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+            <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+        </section>
+
+        <h2>The Step-by-Step Switch, in the Right Order</h2>
+
+        <section>
+            <p>The mechanics of the switch itself are simple. What matters is doing steps in the right order so you don't end up with a coverage gap or a rejected Medigap application.</p>
+
+            <ol>
+                <li><strong>Confirm your window.</strong> MA-OEP (January 1 &ndash; March 31), AEP (October 15 &ndash; December 7), a triggered SEP, or a trial-right window. Note the deadline.</li>
+                <li><strong>Confirm your guaranteed-issue path.</strong> Federal trial right, federal plan-exit right, or a state-level right. If none applies, understand you may face underwriting.</li>
+                <li><strong>Apply for a Medigap policy first, if you want one.</strong> If underwriting applies, use an independent broker who can shop multiple insurers. If guaranteed issue applies, submit the application within your window and include documentation of the triggering event.</li>
+                <li><strong>Enroll in a standalone Part D drug plan.</strong> Use the Medicare Plan Finder to pick one based on your specific medications. Enrollment in Part D automatically disenrolls you from an MA plan that includes drug coverage (an MA-PD).</li>
+                <li><strong>Confirm effective dates align.</strong> Your Medigap start date and your Part D start date should match, and both should coincide with the end of your MA plan. In practice, the first of the month is your target.</li>
+                <li><strong>Notify your providers.</strong> Give your doctor's office and pharmacy your new Medicare ID and Medigap and Part D card information before your first appointment or refill under the new coverage.</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Free help is genuinely free.</strong> Your <strong>SHIP</strong> counselor and 1-800-MEDICARE do not sell insurance. Neither takes commissions. Both will confirm your window, your rights, and the practical steps. Use them before you sign anything with a licensed sales agent whose incentives may not perfectly align with yours.
+            </div>
+        </section>
+
+        <h2>Common Pitfalls to Avoid</h2>
+
+        <section>
+            <ol>
+                <li><strong>Disenrolling from MA without a Medigap policy lined up.</strong> If underwriting applies and you get denied, you're on Original Medicare with no out-of-pocket cap. Do the Medigap application first.</li>
+                <li><strong>Missing the 63-day guaranteed-issue clock.</strong> The plan-exit and trial rights expire 63 days after your MA coverage ends. Waiting until the AEP in October, then trying to add a Medigap policy in January, misses the window entirely.</li>
+                <li><strong>Forgetting Part D.</strong> If you drop MA-PD without picking up a standalone Part D plan (and you don't have other creditable drug coverage), you incur the Part D late-enrollment penalty for the rest of your Medicare years.</li>
+                <li><strong>Assuming your state rules match a friend's state rules.</strong> Medigap protections vary enormously. Connecticut and New York look nothing like Texas or Florida.</li>
+                <li><strong>Buying Medigap Plan F when you're newly eligible.</strong> Plan F is closed to anyone who became Medicare-eligible on or after January 1, 2020. Plan G is the closest equivalent for new enrollees.</li>
+                <li><strong>Ignoring the dental / vision gap.</strong> MA plans typically include these; Original Medicare doesn't. Budget for standalone plans before you assume the switch saves money.</li>
+            </ol>
+
+            <a href="blog-how-to-coordinate-medicare-employer-plan-after-65-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to coordinate Medicare and an employer plan after 65 in 2026 &rarr;</a>
+        </section>
+
+        <h2>When You Should Not Switch</h2>
+
+        <section>
+            <p>Not everyone benefits from moving off Medicare Advantage. Stay put if:</p>
+
+            <ul>
+                <li>You use almost no care in a typical year and would be paying $150 &ndash; $250 more per month for insurance you rarely touch.</li>
+                <li>Your MA plan's network includes every provider and hospital you actually use, and you have no plans to travel or relocate.</li>
+                <li>Your state has restrictive Medigap rules, you have significant health conditions, and you would face underwriting that either denies you or prices you out.</li>
+                <li>Your MA plan's supplemental benefits (dental, vision, hearing, gym, OTC allowance, transportation) are ones you actively use and would cost more to replace than the coverage difference is worth.</li>
+                <li>You are dual-eligible (Medicare + Medicaid) and enrolled in a D-SNP that coordinates your benefits &mdash; the Medigap market is generally not designed for you.</li>
+            </ul>
+
+            <p>The right question isn't "MA vs. Original Medicare in the abstract." It's "which system minimizes my out-of-pocket total cost and preserves the doctors I need to see for the specific health conditions I have, given the guaranteed-issue rights I actually qualify for right now?" The answer is different for every enrollee.</p>
+        </section>
+
+        <h2>Putting It All Together</h2>
+
+        <section>
+            <p>Switching from Medicare Advantage back to Original Medicare in 2026 is fully allowed, and for anyone whose plan exited or scaled back, the guaranteed-issue window makes it more straightforward than usual. For everyone else, the path runs through a specific combination of federal trial rights, plan-exit SEPs, and state-level Medigap protections that vary widely. The steps that matter are (1) identify which window and which guaranteed-issue right applies to you before you disenroll, (2) get the Medigap application approved before triggering the MA disenrollment, (3) line up a standalone Part D plan for the same effective date, and (4) call SHIP or 1-800-MEDICARE for free confirmation before you sign anything.</p>
+
+            <div class="info-box">
+                <strong>Run the numbers for your situation:</strong>
+                <a href="medicare-calculator.html" class="calculator-link">Medicare Cost Calculator</a>
+                <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+                <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+            </div>
+        </section>
+
+        <div class="mt-8 p-4 bg-gray-100 text-center text-sm text-gray-600 rounded">
+            <p><strong>Privacy Note:</strong> All calculations happen in your browser. We never collect your data.</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-teal-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-white text-teal-dark w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                        <span class="font-bold text-xl">HealthCalc</span>
+                    </div>
+                    <p class="text-teal-light text-sm">Free health insurance calculators designed to help you understand costs and make smarter healthcare decisions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="plan-cost-calculator.html" class="hover:text-white transition-colors">Plan Cost Calculator</a></li>
+                        <li><a href="aca-subsidy-calculator.html" class="hover:text-white transition-colors">ACA Subsidy Estimator</a></li>
+                        <li><a href="procedure-cost.html" class="hover:text-white transition-colors">Procedure Cost Finder</a></li>
+                        <li><a href="drug-cost-finder.html" class="hover:text-white transition-colors">Drug Cost Finder</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Disclaimer</h4>
+                    <p class="text-teal-light text-sm">HealthCalc provides educational information only and is not a substitute for professional medical or financial advice. Always consult with qualified professionals for your specific situation.</p>
+                </div>
+            </div>
+            <div class="border-t border-teal-light pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-teal-light">
+                <p>&copy; 2026 HealthCalc. All rights reserved.</p>
+                <p>All our calculators are 100% private — calculations happen in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
