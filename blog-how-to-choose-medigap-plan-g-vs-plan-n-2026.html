@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5586HWYPB0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5586HWYPB0');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medigap Plan G vs Plan N for 2026: the $283 Part B deductible both leave to you, the $20/$50 copays that make Plan N cheaper, the excess-charge trap in 42 states, and the premium-gap math that tells you which plan actually wins for your situation.">
+    <meta name="keywords" content="Medigap Plan G vs Plan N 2026, Medicare Supplement Plan G Plan N comparison, Plan N excess charges 2026, Part B deductible 2026 Medigap, high deductible Plan G 2026, Medigap premium comparison 2026">
+    <title>How to Choose Between Medigap Plan G and Plan N in 2026: The $283 Deductible, the Excess-Charge Trap, and the Premium-Gap Math That Picks a Winner</title>
+    <link rel="canonical" href="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-choose-medigap-plan-g-vs-plan-n-2026.html">
+    <meta property="og:title" content="How to Choose Between Medigap Plan G and Plan N in 2026: The Premium-Gap Math That Picks a Winner">
+    <meta property="og:description" content="A 2026 walkthrough of the Plan G vs Plan N decision: $283 Part B deductible, $20/$50 Plan N copays, excess charges in 42 states, high-deductible Plan G at $2,950, and the exact premium-gap math that tells you which plan saves money for your situation.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-choose-medigap-plan-g-vs-plan-n-2026.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Medigap Plan G vs Plan N 2026: The Premium-Gap Math That Picks a Winner">
+    <meta name="twitter:description" content="The 2026 numbers, the two hidden costs Plan N leaves on the table, and a break-even formula you can run in five minutes.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        .nav-link {
+            color: #4B5563;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #0D9488;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        article h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #134E4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        article h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0D9488;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        article p {
+            line-height: 1.75;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+        article ul, article ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        article li {
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background-color: #F0FDFA;
+            border-left: 4px solid #0D9488;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background-color: #FEF3C7;
+            border-left: 4px solid #F97316;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .comparison-table {
+            margin: 1.5rem 0;
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #D1D5DB;
+        }
+        .comparison-table th {
+            background-color: #F0FDFA;
+            color: #134E4A;
+            font-weight: 600;
+        }
+        .calculator-link {
+            display: inline-block;
+            background-color: #0D9488;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        .calculator-link:hover {
+            background-color: #134E4A;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Choose Between Medigap Plan G and Plan N in 2026: The $283 Deductible, the Excess-Charge Trap, and the Premium-Gap Math That Picks a Winner",
+      "description": "A 2026 decision guide for Medigap Plan G vs Plan N: the $283 Part B deductible, Plan N's $20/$50 copays, excess charges in 42 states, the high-deductible Plan G $2,950 alternative, and the break-even formula that identifies which plan actually costs less for your situation.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "author": {
+        "@type": "Organization",
+        "name": "HealthCalc Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HealthCalc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://studentloancalcs.github.io/health-insurance-calculators/logo.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between Medigap Plan G and Plan N in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plan G and Plan N cover almost the same Original Medicare gaps in 2026 with three differences. First, Plan N charges you a copay of up to $20 for most office visits and up to $50 for emergency room visits that don't lead to admission; Plan G has no copays. Second, Plan N does not cover Medicare Part B excess charges, which are the up-to-15-percent surcharges a non-participating provider is allowed to bill in 42 states; Plan G covers them fully. Third, Plan N's monthly premium is typically $30 to $50 lower than Plan G in the same rating area. Both plans require you to pay the $283 Part B deductible yourself before either kicks in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Medigap Plan G or Plan N cover the 2026 Part B deductible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Neither. The Medicare Part B deductible is $283 for 2026, and both Plan G and Plan N require you to pay it in full before the Medigap plan covers anything under Part B. The only standardized Medigap plan that still covers the Part B deductible is Plan C or Plan F, which are closed to new enrollees who became Medicare-eligible on or after January 1, 2020, under the MACRA rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Part B excess charges and why do they matter for Plan N?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Part B excess charge is what happens when you see a doctor who has not agreed to accept the Medicare-approved amount as full payment. Under federal law, such a non-participating provider may bill you up to 15 percent above the Medicare-approved rate. Plan G covers those excess charges; Plan N does not. Eight states — Connecticut, Massachusetts, Minnesota, New York, Ohio, Pennsylvania, Rhode Island, and Vermont — prohibit excess charges entirely, so the coverage gap in Plan N is essentially moot there. In the other 42 states, whether excess charges matter depends on the mix of participating providers in your area and how likely you are to see a non-participating specialist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does Plan N actually save you money compared to Plan G in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plan N saves you money when the annual premium gap between Plan G and Plan N in your area is larger than your expected Plan N cost-sharing. The rough formula: (12 × monthly premium difference) versus (annual office-visit copays × $20 + expected ER copays × $50 + any excess charges). At around 12 office visits a year and no ER visits, Plan N cost-sharing is about $240; if the premium gap is $30 a month, that's a $360 annual gap in Plan N's favor — Plan N wins by roughly $120 a year. At more than 18 office visits or in a state with real excess-charge exposure, the math often flips toward Plan G."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is high-deductible Plan G and how does it compare in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "High-deductible Plan G covers exactly the same Original Medicare gaps as standard Plan G, but you first pay a $2,950 annual deductible in 2026 (up from $2,870 in 2025) before the plan pays anything. Because you carry that first-dollar risk, the monthly premium is typically 60 to 70 percent lower than standard Plan G. HD-Plan G tends to make sense for healthy new enrollees who want catastrophic protection at the lowest possible premium and who are comfortable self-funding routine costs. It becomes less attractive if you already have chronic conditions or expect frequent care."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch from Plan N to Plan G later without medical underwriting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally no, unless you have a guaranteed-issue right or live in a state with year-round switching rules such as California, Connecticut, Maine, Massachusetts, Missouri, New York, Oregon, or Washington. In most states, once your six-month Medigap Open Enrollment Period ends, insurers can medically underwrite any application for a different plan and can decline you or charge higher premiums based on your health. If you are considering starting on Plan N to save on premium, understand that your ability to upgrade to Plan G later is not guaranteed."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-primary text-white w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                    <span class="font-bold text-xl text-teal-dark">HealthCalc</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="plan-cost-calculator.html" class="nav-link text-sm font-medium">Plan Cost</a>
+                    <a href="aca-subsidy-calculator.html" class="nav-link text-sm font-medium">ACA Subsidy</a>
+                    <a href="procedure-cost.html" class="nav-link text-sm font-medium">Procedures</a>
+                    <a href="drug-cost-finder.html" class="nav-link text-sm font-medium">Drugs</a>
+                    <a href="blog.html" class="text-teal-primary text-sm font-medium">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block nav-link text-sm font-medium py-2">Home</a>
+                <a href="plan-cost-calculator.html" class="block nav-link text-sm font-medium py-2">Plan Cost</a>
+                <a href="aca-subsidy-calculator.html" class="block nav-link text-sm font-medium py-2">ACA Subsidy</a>
+                <a href="procedure-cost.html" class="block nav-link text-sm font-medium py-2">Procedures</a>
+                <a href="drug-cost-finder.html" class="block nav-link text-sm font-medium py-2">Drugs</a>
+                <a href="blog.html" class="block text-teal-primary text-sm font-medium py-2">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-sm text-gray-600">
+                <a href="index.html" class="text-teal-primary hover:text-teal-dark">Home</a>
+                <span class="mx-2">/</span>
+                <a href="blog.html" class="text-teal-primary hover:text-teal-dark">Blog</a>
+                <span class="mx-2">/</span>
+                <span>How to Choose Between Medigap Plan G and Plan N in 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-teal-dark mb-4">How to Choose Between Medigap Plan G and Plan N in 2026: The $283 Deductible, the Excess-Charge Trap, and the Premium-Gap Math That Picks a Winner</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-600">
+                <div>
+                    <p><strong>By HealthCalc Team</strong></p>
+                    <p>Published August 8, 2026</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p><strong>12 min read</strong></p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <p>If you are choosing a Medicare Supplement plan for the first time in 2026 — or thinking of switching — the shortlist for most people comes down to two: Medigap Plan G and Medigap Plan N. Plan F is closed to anyone who became Medicare-eligible on or after January 1, 2020, so it's off the table for new enrollees. Plans A, B, D, K, L, and M exist but leave enough gaps that few brokers seriously recommend them. The real decision is Plan G versus Plan N — and it comes down to three numbers, one state law, and a break-even formula that takes about five minutes to run.</p>
+
+            <p>This guide walks through the exact 2026 differences (including the fresh $283 Part B deductible and the $2,950 high-deductible Plan G threshold), the excess-charge trap that trips up Plan N buyers in 42 states, three real-money scenarios, and the underwriting risk that makes "start on Plan N, switch to Plan G later" a much more fragile plan than it sounds.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: after intro section -->
+
+        <h2>The Two Plans in One Sentence</h2>
+
+        <section>
+            <p>Plan G covers every gap in Original Medicare except the annual Part B deductible. Plan N covers the same gaps except the Part B deductible, small office-visit and ER copays, and Part B excess charges. Everything else — the important stuff, like the 20 percent Part B coinsurance, the Part A deductible ($1,676 per benefit period in 2026), skilled nursing coinsurance, and the extra 365 hospital days after Original Medicare runs out — is covered identically by both plans.</p>
+
+            <div class="info-box">
+                <strong>The one-sentence version:</strong> Plan G costs more per month and covers everything after $283. Plan N costs less per month and tacks on some pocket-change copays plus one hidden risk (excess charges) that matters in 42 states and doesn't matter in 8.
+            </div>
+        </section>
+
+        <h2>The 2026 Numbers You Actually Need</h2>
+
+        <section>
+            <p>Before you compare quotes, memorize four figures. Everything downstream depends on them.</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>2026 Figure</th>
+                            <th>Amount</th>
+                            <th>Who Pays</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Medicare Part B annual deductible</td>
+                            <td>$283</td>
+                            <td>You, under both Plan G and Plan N</td>
+                        </tr>
+                        <tr>
+                            <td>Medicare Part A hospital deductible (per benefit period)</td>
+                            <td>$1,676</td>
+                            <td>Plan G and Plan N both cover</td>
+                        </tr>
+                        <tr>
+                            <td>Plan N office-visit copay</td>
+                            <td>Up to $20</td>
+                            <td>You, only under Plan N</td>
+                        </tr>
+                        <tr>
+                            <td>Plan N ER copay (waived if admitted)</td>
+                            <td>Up to $50</td>
+                            <td>You, only under Plan N</td>
+                        </tr>
+                        <tr>
+                            <td>Part B excess charge cap</td>
+                            <td>Up to 15% above Medicare rate</td>
+                            <td>You, only under Plan N, and only in 42 states</td>
+                        </tr>
+                        <tr>
+                            <td>High-deductible Plan G annual deductible</td>
+                            <td>$2,950</td>
+                            <td>You, before HD-Plan G pays anything</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>The $283 figure is the biggest change from 2025 (up from $257). Both plans require you to spend it before either kicks in on the Part B side, so it is not a differentiator — it is a shared cost you will pay under either choice.</p>
+
+            <a href="medicare-calculator.html" class="calculator-link">Medicare Cost Calculator</a>
+        </section>
+
+        <h2>The Excess-Charge Question Depends on Your State</h2>
+
+        <section>
+            <p>Part B excess charges are the sleeper issue in the Plan G vs Plan N decision. Federal law lets any doctor who is enrolled in Medicare as a "non-participating provider" bill you up to 15 percent above the Medicare-approved amount. Plan G eats that surcharge; Plan N sends it to you as an out-of-pocket balance.</p>
+
+            <p>In practice, most doctors (roughly 96 percent nationally) accept Medicare assignment and never issue excess charges. But eight states have simply banned them: <strong>Connecticut, Massachusetts, Minnesota, New York, Ohio, Pennsylvania, Rhode Island, and Vermont</strong>. If you live in one of those eight, the excess-charge gap in Plan N is essentially theoretical — a non-participating provider cannot bill you above the Medicare rate no matter what.</p>
+
+            <p>In the other 42 states, whether excess charges bite depends on the specialists you use. Certain fields — psychiatry, some surgical subspecialties, boutique concierge practices — have a higher share of non-participating providers. If you already know your favorite dermatologist or gastroenterologist doesn't take assignment, and you cannot easily switch, Plan G's excess-charge coverage is worth the premium differential on its own.</p>
+
+            <div class="info-box">
+                <strong>Two-minute check:</strong> Go to Medicare.gov's "Care Compare" tool, look up the specialists you actually see, and check the "Accepting Medicare Assignment" field. If they all show "yes," Plan N's excess-charge exposure is a non-issue for you. If any show "no," Plan G has a real coverage advantage.
+            </div>
+        </section>
+
+        <h2>The Premium-Gap Formula That Picks a Winner</h2>
+
+        <section>
+            <p>Once you know the state answer, the rest is arithmetic. Pull two quotes for the same insurance company in your ZIP code: one for Plan G and one for Plan N. Then run this:</p>
+
+            <ol>
+                <li><strong>Annual premium gap</strong> = (Plan G monthly premium − Plan N monthly premium) × 12.</li>
+                <li><strong>Expected Plan N cost-sharing</strong> = (expected office visits × $20) + (expected ER visits × $50) + (estimated excess charges).</li>
+                <li>If (2) is less than (1), <strong>Plan N wins</strong>. Keep the premium savings, absorb the copays.</li>
+                <li>If (2) is greater than (1), <strong>Plan G wins</strong>. Pay the extra premium to lock in zero cost-sharing.</li>
+            </ol>
+
+            <p>This is not a marketing exercise — it is the same math a fee-only advisor would run. The break-even point most commonly lands somewhere between 12 and 20 annual office visits, depending on how big the premium gap is in your area. Below 12 visits, Plan N almost always wins. Above 20, Plan G almost always wins.</p>
+
+            <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+            <a href="medicare-calculator.html" class="calculator-link">Medicare Calculator</a>
+        </section>
+
+        <h2>Three Real-Money Scenarios</h2>
+
+        <section>
+            <h3>Scenario 1: Healthy New Retiree in Ohio — Plan N Wins by $360</h3>
+            <p>Diane, 66, just aged into Medicare in Cleveland. She sees her primary care doctor twice a year and a physical therapist eight times for a shoulder issue. She has no chronic conditions. Ohio is one of the eight states that bans excess charges, so that gap is off the table. A local Plan G quote is $148/month; Plan N is $118/month. Annual premium gap: $360. Plan N cost-sharing: 10 office visits × $20 = $200. Plan N wins by $160 for the year. Even if she has one unexpected ER visit (adding $50), Plan N still wins by $110. Over ten years — assuming premiums scale similarly — that's roughly $1,100 to $1,600 of savings, and she gives up nothing in coverage that Ohio law lets a provider charge her.</p>
+
+            <h3>Scenario 2: Snowbird With Multiple Specialists in Florida — Plan G Wins by $500+</h3>
+            <p>Roberto, 71, splits time between Orlando and a lake cabin. He sees a cardiologist, an endocrinologist, and a rheumatologist regularly — 22 specialist visits a year, plus four primary care visits and typically one ER trip. His rheumatologist is a "non-participating" provider who bills the 15 percent excess charge, roughly $80 above Medicare-approved per visit ($320 a year in excess charges alone). Plan G is $172/month; Plan N is $132/month. Annual premium gap: $480. Plan N cost-sharing: 26 visits × $20 + 1 ER × $50 + $320 excess = $890. Plan G wins by roughly $410 the first year, and the gap grows if he needs a surgery or infusion later. For Roberto, Plan G's zero-copay design is the safer purchase and the cheaper one on expected cost.</p>
+
+            <h3>Scenario 3: Very Healthy 65-Year-Old in Texas — High-Deductible Plan G Wins by $900</h3>
+            <p>Karen, 65, works part-time, has no chronic conditions, and only expects an annual physical (fully covered by Part B preventive services with no cost-sharing). Standard Plan G in her ZIP is $155/month. High-deductible Plan G is $52/month. Plan N is $122/month. Karen's expected medical spend is roughly $0 beyond the Part B deductible she already owes. Her three options over a year cost her $1,860 (Plan G), $1,747 (Plan N + ~10 visits' worth of copay + deductible), and $624 (HD-Plan G, assuming she stays healthy and does not hit the $2,950 deductible). HD-Plan G wins by roughly $900 in a healthy year. The catch is downside risk: if Karen has one bad year with a hospitalization, she'll pay the $2,950 HD deductible plus premiums (~$3,574 total) instead of the standard Plan G's ~$1,860. HD-Plan G is a bet on continued health.</p>
+
+            <div class="warning-box">
+                <strong>The lock-in risk:</strong> If Karen starts on HD-Plan G at 65 and her health deteriorates at 68, she can only switch to standard Plan G if she passes medical underwriting — and by then, most insurers will decline or surcharge her. Guaranteed-issue rights for switching between Medigap plans are limited to a handful of states and specific triggering events. Choose HD-Plan G with your six-year-out situation in mind, not just your day-one health.
+            </div>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: mid-article -->
+
+        <h2>The Underwriting Trap Most Brokers Don't Emphasize</h2>
+
+        <section>
+            <p>Your <strong>Medigap Open Enrollment Period</strong> is a one-time, six-month window that starts the month you turn 65 and enroll in Part B. During that window, insurers must sell you any Medigap plan they offer at the standard rate, regardless of pre-existing conditions or health history. This is the strongest consumer protection in Medicare.</p>
+
+            <p>Once that six-month window closes, most states allow insurers to <strong>medically underwrite</strong> any Medigap application. That means if you enroll in Plan N at 65 to save on premium and try to switch to Plan G at 68 because your health worsened, the insurer can look at your medical records, decline your application entirely, or charge a substantially higher premium reflecting your new risk. Exceptions exist:</p>
+
+            <ul>
+                <li><strong>Guaranteed-issue triggering events</strong> — such as your Medigap insurer going bankrupt, moving out of an Advantage plan's service area, or the "trial right" for switching from Advantage back to Original Medicare within the first 12 months.</li>
+                <li><strong>State laws that mandate broader switching rights.</strong> California, Connecticut, Maine, Massachusetts, Missouri, New York, Oregon, and Washington each have some flavor of continuous or annual guaranteed-issue switching, though the specifics vary widely (Maine and Missouri, for example, tie the right to an "anniversary" window).</li>
+            </ul>
+
+            <p>If you are choosing between Plan N and Plan G partly on the theory that you'll "start cheap and upgrade later," check your state's rules before you commit. In the majority of states, upgrading is not guaranteed, and the door effectively closes after your Open Enrollment Period. If you are unsure you can pass future underwriting, the decision effectively becomes "pick the plan you want to keep for the next 20 years," which usually pushes toward Plan G. See our companion guides on <a href="blog-how-to-switch-medicare-advantage-back-to-original-medicare-2026.html" class="text-teal-primary hover:text-teal-dark">switching from Medicare Advantage back to Original Medicare</a> and the <a href="blog-hsa-medicare-6-month-lookback-trap-2026.html" class="text-teal-primary hover:text-teal-dark">HSA six-month lookback trap</a> for other timing decisions that lock in for years.</p>
+        </section>
+
+        <h2>When to Consider High-Deductible Plan G Instead</h2>
+
+        <section>
+            <p>The high-deductible variant of Plan G is a genuinely different product. You take on the first $2,950 of covered medical spend each year (2026 figure, up from $2,870 in 2025), and after that, HD-Plan G pays exactly like standard Plan G. In exchange, the monthly premium is typically 60 to 70 percent lower.</p>
+
+            <p>HD-Plan G tends to make sense when:</p>
+
+            <ul>
+                <li>You are healthy at enrollment and expect very low utilization in your first several years of Medicare.</li>
+                <li>You want the peace of mind of a defined maximum ($2,950 plus premiums) without paying for first-dollar coverage you don't expect to use.</li>
+                <li>You have savings you can readily tap to cover the $2,950 in a bad year without stress.</li>
+                <li>You live in a state where you have flexibility to switch plans later without underwriting.</li>
+            </ul>
+
+            <p>It tends to <em>not</em> make sense when:</p>
+
+            <ul>
+                <li>You already have chronic conditions with regular specialist care.</li>
+                <li>You expect a planned surgery or procedure in the coming year.</li>
+                <li>You do not have savings to cover $2,950 in a spike year and would rather trade higher premium for smoothed cost.</li>
+                <li>You live in a state where an eventual upgrade to standard Plan G will require passing underwriting.</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Rule of thumb:</strong> If you expect fewer than about $1,200 in Medicare-covered out-of-pocket spend per year, HD-Plan G's premium savings usually beat both Plan G and Plan N. Above that, standard Plan G or Plan N is usually the safer trade.
+            </div>
+        </section>
+
+        <h2>Two Common Mistakes That Cost People Money</h2>
+
+        <section>
+            <h3>Mistake 1: Comparing plans across insurers on features alone</h3>
+            <p>Medigap plans are federally standardized by letter. A Plan G is a Plan G is a Plan G — the coverage is identical whether you buy it from AARP/UnitedHealthcare, Mutual of Omaha, Aetna, Cigna, or a Blue Cross plan. The only real difference is price and the insurer's rate-history stability. Two insurers can charge $80/month difference for exactly the same coverage. Always compare at least three carriers before enrolling, and ask about the insurer's rate-increase pattern over the past five years, not just the current premium.</p>
+
+            <h3>Mistake 2: Ignoring the rating method</h3>
+            <p>Medigap premiums are set one of three ways: attained-age (premium rises as you get older), issue-age (premium locked at your age when you enrolled, with annual inflation adjustments), or community-rated (same premium for everyone regardless of age). Attained-age plans are typically cheapest at 65 and most expensive at 85; community-rated plans are the opposite. If two quotes are close today but one is attained-age and one is community-rated, the community-rated plan is often much cheaper over a 20-year horizon. Ask the broker to show you the projected premium at age 75 and 85, not just today.</p>
+
+            <a href="medicare-calculator.html" class="calculator-link">Medicare Cost Calculator</a>
+            <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+            <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+        </section>
+
+        <h2>The Decision Checklist</h2>
+
+        <section>
+            <p>If you have 15 minutes, you can settle this today:</p>
+
+            <ol>
+                <li><strong>Confirm your state:</strong> is it one of the eight that ban Part B excess charges? If yes, that gap in Plan N is theoretical.</li>
+                <li><strong>Estimate your annual utilization:</strong> primary care visits, specialist visits, expected ER trips, any planned procedures. Round up if you're unsure — sicker projections favor Plan G.</li>
+                <li><strong>Pull three quotes each</strong> for Plan G and Plan N from different insurers in your ZIP code. Verify the rating method (attained-age vs issue-age vs community-rated).</li>
+                <li><strong>Calculate the annual premium gap</strong> and your expected Plan N cost-sharing using the formula earlier in this piece.</li>
+                <li><strong>Consider your state's Medigap switching rules.</strong> If you are outside California, Connecticut, Maine, Massachusetts, Missouri, New York, Oregon, and Washington, treat the decision as roughly permanent.</li>
+                <li><strong>If HD-Plan G is a real contender</strong> (very low expected utilization, healthy today, savings to cover $2,950), price it as a third option and stress-test with a bad-year scenario.</li>
+                <li><strong>Enroll during your six-month Medigap Open Enrollment Period</strong> if you have not already used it. Guaranteed-issue rights outside that window are limited.</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Run the numbers for free:</strong>
+                <a href="medicare-calculator.html" class="calculator-link">Medicare Cost Calculator</a>
+                <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+                <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+                <a href="procedure-cost.html" class="calculator-link">Procedure Cost Finder</a>
+            </div>
+
+            <p>Neither Plan G nor Plan N is a bad choice — both are legitimate, well-designed products, and the standardized coverage is genuinely excellent. The mistake is treating this as a preference decision when it's actually an arithmetic one. Run the premium-gap math against your real utilization and your state's excess-charge rules, and the "right" plan for your situation usually announces itself in a few minutes.</p>
+        </section>
+
+        <div class="mt-8 p-4 bg-gray-100 text-center text-sm text-gray-600 rounded">
+            <p><strong>Privacy Note:</strong> All calculations happen in your browser. We never collect your data.</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-teal-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-white text-teal-dark w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                        <span class="font-bold text-xl">HealthCalc</span>
+                    </div>
+                    <p class="text-teal-light text-sm">Free health insurance calculators designed to help you understand costs and make smarter healthcare decisions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="plan-cost-calculator.html" class="hover:text-white transition-colors">Plan Cost Calculator</a></li>
+                        <li><a href="aca-subsidy-calculator.html" class="hover:text-white transition-colors">ACA Subsidy Estimator</a></li>
+                        <li><a href="procedure-cost.html" class="hover:text-white transition-colors">Procedure Cost Finder</a></li>
+                        <li><a href="drug-cost-finder.html" class="hover:text-white transition-colors">Drug Cost Finder</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Disclaimer</h4>
+                    <p class="text-teal-light text-sm">HealthCalc provides educational information only and is not a substitute for professional medical or financial advice. Always consult with qualified professionals for your specific situation.</p>
+                </div>
+            </div>
+            <div class="border-t border-teal-light pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-teal-light">
+                <p>&copy; 2026 HealthCalc. All rights reserved.</p>
+                <p>All our calculators are 100% private — calculations happen in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
