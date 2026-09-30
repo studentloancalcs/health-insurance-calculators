@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5586HWYPB0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5586HWYPB0');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Medicare 5-Star Special Enrollment Period runs December 8, 2026 through November 30, 2027 and lets you switch to a top-rated MA or Part D plan outside AEP. Here's who qualifies, how the one-per-year rule works, the drug-coverage trap that can trigger a Part D penalty, and how to check if a 5-star plan is actually in your ZIP code.">
+    <meta name="keywords" content="Medicare 5 star SEP 2026, 5 star special enrollment period, Medicare star ratings 2027, switch to 5 star Medicare plan, 5 star Part D plan, Medicare Advantage 5 star, one time SEP Medicare">
+    <title>How to Use the Medicare 5-Star Special Enrollment Period to Upgrade Your Plan in 2026-2027: The Once-a-Year Window, the 21-Contract Reality, and the Drug-Coverage Trap</title>
+    <link rel="canonical" href="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-use-medicare-5-star-sep-2026-2027.html">
+    <meta property="og:title" content="How to Use the Medicare 5-Star Special Enrollment Period to Upgrade Your Plan in 2026-2027">
+    <meta property="og:description" content="The 5-Star SEP runs December 8, 2026 through November 30, 2027 and lets you switch to a top-rated MA or Part D plan outside AEP. Here's how to use it without accidentally losing drug coverage.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-use-medicare-5-star-sep-2026-2027.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Use the Medicare 5-Star SEP to Upgrade Your Plan in 2026-2027">
+    <meta name="twitter:description" content="The once-a-year window, the 21-contract reality, and the drug-coverage trap that can trigger a Part D late-enrollment penalty.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        .nav-link {
+            color: #4B5563;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #0D9488;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        article h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #134E4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        article h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0D9488;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        article p {
+            line-height: 1.75;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+        article ul, article ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        article li {
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background-color: #F0FDFA;
+            border-left: 4px solid #0D9488;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background-color: #FEF3C7;
+            border-left: 4px solid #F97316;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .comparison-table {
+            margin: 1.5rem 0;
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #D1D5DB;
+        }
+        .comparison-table th {
+            background-color: #F0FDFA;
+            color: #134E4A;
+            font-weight: 600;
+        }
+        .calculator-link {
+            display: inline-block;
+            background-color: #0D9488;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        .calculator-link:hover {
+            background-color: #134E4A;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Use the Medicare 5-Star Special Enrollment Period to Upgrade Your Plan in 2026-2027: The Once-a-Year Window, the 21-Contract Reality, and the Drug-Coverage Trap",
+      "description": "The Medicare 5-Star Special Enrollment Period runs from December 8, 2026 through November 30, 2027 and lets you switch to a 5-star-rated Medicare Advantage or stand-alone Part D plan one time outside of AEP. This is the plain-language walkthrough: who qualifies, how the one-use-per-year rule works, what happens to your drug coverage when you switch, the 21 total 5-star contracts CMS designated for the 2026 plan year (18 MA-PD, one Cost Plan, two stand-alone Part D), how the 2027 star ratings will be published in October, effective-date math, and the interaction with the Medigap guaranteed-issue timeline.",
+      "datePublished": "2026-09-30",
+      "dateModified": "2026-09-30",
+      "author": {
+        "@type": "Organization",
+        "name": "HealthCalc Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HealthCalc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://studentloancalcs.github.io/health-insurance-calculators/logo.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Medicare 5-Star Special Enrollment Period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 5-Star SEP is a special enrollment window CMS creates each year that lets Medicare beneficiaries switch, one time, into a Medicare Advantage plan or stand-alone Part D drug plan that has earned an overall 5-star quality rating from CMS. For the 2027 plan year, the window runs December 8, 2026 through November 30, 2027. You can use it only once per plan year, only to move into a 5-star plan (not out of one), and only if a 5-star plan is offered in your ZIP code by an insurer whose 5-star contract includes your area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does the 5-Star SEP start and end for the 2027 plan year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 5-Star SEP for the 2027 plan year runs from December 8, 2026 through November 30, 2027. Enrollments submitted between December 8 and December 31 take effect January 1, 2027. Enrollments submitted from January 1 through November 30 take effect on the first day of the month after your request is received. If you submit on March 10, coverage starts April 1; if you submit on March 31, coverage still starts April 1. The one-per-plan-year rule counts by election, not by month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many 5-star Medicare plans are there and where can I find them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CMS designated 21 total 5-star contracts for the 2026 plan year: 18 Medicare Advantage Prescription Drug (MA-PD) contracts, one Medicare Cost Plan contract, and two stand-alone Part D drug plan contracts. Each contract covers specific service areas, so a 5-star plan being in the country does not mean it is available where you live. The 2027 star ratings will be published by CMS in October 2026, generally the second week. To check whether a 5-star plan is in your area, use the medicare.gov Plan Finder with your ZIP code and look for the 5-star badge next to each plan; you can also filter Plan Finder by star rating."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the 5-Star SEP to switch away from a 5-star plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The 5-Star SEP is a one-way ticket. It can only be used to enroll into a plan that carries the 5-star rating. You cannot use it to leave a 5-star plan for a lower-rated plan, and you cannot use it to swap between two 5-star plans if you have already used your one election for the plan year. If you enroll into a 5-star plan in March and then decide in June that it is not working, you have to use a different enrollment window such as the Annual Election Period (October 15 through December 7) or another qualifying SEP to change again."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I lose my drug coverage if I use the 5-Star SEP to switch Medicare Advantage plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if you accidentally switch from a Medicare Advantage plan with drug coverage (MAPD) to a 5-star Medicare Advantage plan without drug coverage (an MA-only plan). Most 5-star MA plans are MAPDs that bundle Part D drug coverage, but a small number of MA-only plans (typically some Medical Savings Account plans and some PFFS plans) do not include Part D. If you drop into one of those and do not separately enroll in a stand-alone Part D plan, your drug coverage ends and the 63-day clock starts on the Part D late-enrollment penalty. Verify each finalist plan's Summary of Benefits shows Part D coverage before enrolling. If you are using the 5-Star SEP to switch to a stand-alone 5-star Part D plan while keeping Original Medicare, that trap does not apply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the 5-Star SEP different from the Medicare Advantage Open Enrollment Period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The MA Open Enrollment Period (MA OEP) runs January 1 through March 31 each year and lets people already in a Medicare Advantage plan make one change: switch to a different MA plan or drop to Original Medicare with a stand-alone Part D. The 5-Star SEP runs December 8 through November 30, is not limited to MA enrollees, applies to stand-alone Part D as well, and the destination has to be a 5-star plan. The two windows can overlap; if you use the MA OEP in January to move from one MA plan to another, you can still use the 5-Star SEP later in the year to move into a qualifying 5-star plan (they are counted as separate election opportunities under CMS rules)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the 5-Star SEP give me a guaranteed-issue right to buy Medigap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By itself, no. The federal Medigap guaranteed-issue rights are tied to a specific list of qualifying events (initial Medigap open enrollment at age 65, MA plan non-renewal, MA trial-right disenrollment within 12 months of first joining, and a handful of others). Choosing to switch plans under the 5-Star SEP is not on that list. If you use the 5-Star SEP to leave an MA plan for a stand-alone 5-star Part D plan and want to add Medigap at the same time, you will typically be medically underwritten by the Medigap insurer unless your state has broader year-round protections (Connecticut, Maine, Massachusetts, New York and some others do). Confirm your state's rules with your State Health Insurance Assistance Program (SHIP) before assuming the switch is clean."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-primary text-white w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                    <span class="font-bold text-xl text-teal-dark">HealthCalc</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="plan-cost-calculator.html" class="nav-link text-sm font-medium">Plan Cost</a>
+                    <a href="aca-subsidy-calculator.html" class="nav-link text-sm font-medium">ACA Subsidy</a>
+                    <a href="procedure-cost.html" class="nav-link text-sm font-medium">Procedures</a>
+                    <a href="drug-cost-finder.html" class="nav-link text-sm font-medium">Drugs</a>
+                    <a href="blog.html" class="text-teal-primary text-sm font-medium">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block nav-link text-sm font-medium py-2">Home</a>
+                <a href="plan-cost-calculator.html" class="block nav-link text-sm font-medium py-2">Plan Cost</a>
+                <a href="aca-subsidy-calculator.html" class="block nav-link text-sm font-medium py-2">ACA Subsidy</a>
+                <a href="procedure-cost.html" class="block nav-link text-sm font-medium py-2">Procedures</a>
+                <a href="drug-cost-finder.html" class="block nav-link text-sm font-medium py-2">Drugs</a>
+                <a href="blog.html" class="block text-teal-primary text-sm font-medium py-2">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-sm text-gray-600">
+                <a href="index.html" class="text-teal-primary hover:text-teal-dark">Home</a>
+                <span class="mx-2">/</span>
+                <a href="blog.html" class="text-teal-primary hover:text-teal-dark">Blog</a>
+                <span class="mx-2">/</span>
+                <span>Use the Medicare 5-Star SEP to Upgrade Your Plan in 2026-2027</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-teal-dark mb-4">How to Use the Medicare 5-Star Special Enrollment Period to Upgrade Your Plan in 2026-2027: The Once-a-Year Window, the 21-Contract Reality, and the Drug-Coverage Trap</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-600">
+                <div>
+                    <p><strong>By HealthCalc Team</strong></p>
+                    <p>Published September 30, 2026</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p><strong>11 min read</strong></p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <p>Most Medicare enrollees think their plan choices are frozen from December 8 through the following October, when the Annual Election Period reopens. That is almost true. There is one federally-created exception that lives inside that window, and almost nobody uses it: the 5-Star Special Enrollment Period. It runs from December 8, 2026 through November 30, 2027 for the 2027 plan year, and it lets you make a one-time switch into a Medicare Advantage plan or stand-alone Part D drug plan that has earned CMS's highest quality rating of five stars.</p>
+
+            <p>The 5-Star SEP is one of the smallest and most under-used enrollment windows in Medicare. CMS designated only 21 total 5-star contracts for the 2026 plan year &mdash; 18 Medicare Advantage Prescription Drug (MA-PD) contracts, one Medicare Cost Plan contract, and two stand-alone Part D drug plan contracts. The 2027 star ratings are scheduled to publish in October 2026. If a 5-star plan is offered in your ZIP code, the SEP is a real option; if not, it does not apply to you no matter how good the plan is somewhere else. Here is how to check, when to use it, and the specific trap that can leave you with a permanent Part D late-enrollment penalty.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: after intro section -->
+
+        <h2>What the 5-Star SEP Actually Does</h2>
+
+        <section>
+            <p>The 5-Star SEP is a one-way ticket. It lets you enroll <em>into</em> a plan that carries CMS's overall 5-star rating &mdash; the highest of the five ratings CMS publishes each October for Medicare Advantage and Part D contracts. You cannot use it to move out of a 5-star plan into something else, and you cannot use it to switch between two 5-star plans once you have used your one election for the plan year.</p>
+
+            <p>Three specific things it lets you do, each requiring the destination to be a 5-star contract in your service area:</p>
+
+            <ul>
+                <li>Switch from a lower-rated Medicare Advantage plan to a 5-star Medicare Advantage plan.</li>
+                <li>Switch from Original Medicare (with or without a stand-alone Part D) into a 5-star Medicare Advantage plan.</li>
+                <li>Switch your stand-alone Part D drug plan to a 5-star stand-alone Part D drug plan while staying on Original Medicare.</li>
+            </ul>
+
+            <p>You can use the SEP once per plan year. If you enroll into a 5-star MA plan under the SEP in March 2027, you have used your 5-Star SEP election for that plan year and cannot use it again until December 8, 2027 when the 2028 SEP opens (assuming a qualifying plan still exists then).</p>
+        </section>
+
+        <h2>The Timeline and Effective Dates</h2>
+
+        <section>
+            <p>Two dates control everything about this window: when your election arrives at the plan, and the first day of the following month.</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Enrollment submitted</th>
+                            <th>Coverage effective date</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dec 8, 2026 &ndash; Dec 31, 2026</td>
+                            <td>January 1, 2027</td>
+                            <td>Same effective date as an AEP election.</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 1 &ndash; Jan 31, 2027</td>
+                            <td>February 1, 2027</td>
+                            <td>One-month bridge on outgoing plan.</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 1 &ndash; Feb 28, 2027</td>
+                            <td>March 1, 2027</td>
+                            <td>Same pattern &mdash; first of next month.</td>
+                        </tr>
+                        <tr>
+                            <td>Any date through Nov 30, 2027</td>
+                            <td>First of the month after submission</td>
+                            <td>Window closes November 30, 2027.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>The rule is simple: whatever month you submit in, coverage starts on the first of the next month. That is different from AEP (all AEP elections take effect January 1) and different from the MA OEP (also month-after for those elections). Practically, this means you have most of the year to shop and switch. You do not have to hurry unless you are trying to synchronize with a plan-year event like the January 1 deductible reset.</p>
+
+            <div class="info-box">
+                <strong>The 5-Star SEP does not extend AEP.</strong> If your plan for 2027 needs to be effective January 1, you should enroll during AEP (October 15 through December 7, 2026), not wait for December 8. The 5-Star SEP overlaps AEP's tail end but does not replace it. The advantage of using the 5-Star SEP is that you can act any time between December 8 and November 30 &mdash; not just in the fall.
+            </div>
+        </section>
+
+        <h2>Finding Out Whether a 5-Star Plan Is in Your ZIP Code</h2>
+
+        <section>
+            <p>The 2026 star ratings gave the top rating to 21 contracts nationwide. Some of those contracts cover multiple states, but many are regional. There are entire counties where no 5-star MA or Part D plan is available at all, and using the 5-Star SEP is not possible there because there is no eligible destination plan.</p>
+
+            <p>The reliable way to check is medicare.gov's Plan Finder:</p>
+
+            <ol>
+                <li>Go to medicare.gov and open Plan Finder.</li>
+                <li>Enter your ZIP code and, if you have specific medications, your drug list. This will not affect the star rating filter but will make cost comparisons accurate.</li>
+                <li>On the results page, filter by star rating and select "5 stars."</li>
+                <li>Look at the plans returned. Confirm each is either a Medicare Advantage plan (with or without drug coverage) or a stand-alone Part D plan, depending on what you are shopping for.</li>
+                <li>Note that a plan's star rating is at the <em>contract</em> level, not the individual-plan level. Multiple plans under the same contract share the same star rating.</li>
+            </ol>
+
+            <p>The 2027 ratings will be published by CMS in the second week of October 2026, so if you are shopping in September 2026 you are still looking at the 2026 ratings. The list of 5-star plans can change year to year; a plan that was 5-star in 2026 might drop to 4.5 in 2027, and a plan that was 4-star in 2026 could climb to 5.</p>
+
+            <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+            <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+            <a href="medicare-calculator.html" class="calculator-link">Medicare Calculator</a>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: mid-article -->
+
+        <h2>The Drug-Coverage Trap</h2>
+
+        <section>
+            <p>This is where people using the 5-Star SEP get burned. Most 5-star Medicare Advantage plans are MAPDs &mdash; they bundle Part D drug coverage into the plan. But a small number of MA plans do not include Part D. Those are typically Medical Savings Account (MSA) plans and some Private Fee-for-Service (PFFS) plans. If one of those happens to carry a 5-star rating and you enroll into it without separately signing up for a stand-alone Part D plan, your drug coverage ends the day the new plan starts.</p>
+
+            <div class="warning-box">
+                <strong>The 63-day Part D penalty rule.</strong> Going 63 or more consecutive days without creditable prescription drug coverage triggers the Medicare Part D late-enrollment penalty. The penalty is 1% of the national base beneficiary premium for each month you were uncovered, added to your Part D premium for the rest of your life. It never goes away. The rule applies whether or not the coverage gap was accidental.
+            </div>
+
+            <p>Two simple protections:</p>
+
+            <ul>
+                <li><strong>Read the Summary of Benefits for each finalist plan.</strong> If the plan is an MA plan and Part D is included, the Summary will describe drug coverage tiers, formulary, and copays. If you cannot find that section, it is probably an MA-only plan and you need to plan separately.</li>
+                <li><strong>Enroll in a stand-alone Part D plan the same day you enroll in an MA-only plan.</strong> CMS lets you hold one MA plan and one Part D plan only when the MA plan is an MA-only plan; if you enroll in an MAPD, adding a separate Part D will disenroll you from the MAPD by default. The rules distinguish between the two cases; a licensed agent or SHIP counselor can confirm which situation you are in.</li>
+            </ul>
+
+            <p>If you are using the 5-Star SEP to move into a stand-alone 5-star Part D plan (leaving Original Medicare intact), this trap does not apply. It only shows up when you are switching Medicare Advantage plans.</p>
+        </section>
+
+        <h2>How the 5-Star SEP Interacts with Other Enrollment Windows</h2>
+
+        <section>
+            <p>The Medicare enrollment calendar has several overlapping windows in early 2027. The 5-Star SEP is a separate election opportunity that stacks with, but does not consume, the others.</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Window</th>
+                            <th>Dates</th>
+                            <th>What it lets you do</th>
+                            <th>Counts against 5-Star SEP?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Annual Election Period (AEP)</td>
+                            <td>Oct 15 &ndash; Dec 7, 2026</td>
+                            <td>Any MA/Part D change; effective Jan 1.</td>
+                            <td>No.</td>
+                        </tr>
+                        <tr>
+                            <td>Medicare Advantage OEP</td>
+                            <td>Jan 1 &ndash; Mar 31, 2027</td>
+                            <td>One change if already in an MA plan.</td>
+                            <td>No.</td>
+                        </tr>
+                        <tr>
+                            <td>5-Star SEP</td>
+                            <td>Dec 8, 2026 &ndash; Nov 30, 2027</td>
+                            <td>One switch into a 5-star plan.</td>
+                            <td>Yes &mdash; this is the one it uses.</td>
+                        </tr>
+                        <tr>
+                            <td>Other SEPs (move, loss of coverage, etc.)</td>
+                            <td>Triggered by qualifying event</td>
+                            <td>Change as the event allows.</td>
+                            <td>No.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Two useful implications. First, if you use the MA OEP in January to switch from Plan A to Plan B, you still have your 5-Star SEP election available if a 5-star plan opens up later. Second, if you use the 5-Star SEP in April and later have a qualifying event (you move to a new service area, for example), that new event opens a fresh SEP with its own election opportunity that does not conflict with the used 5-Star SEP.</p>
+        </section>
+
+        <h2>What Star Ratings Actually Measure &mdash; and What They Don't</h2>
+
+        <section>
+            <p>CMS star ratings combine dozens of measures into a single 1-to-5 overall rating. For Medicare Advantage MAPD contracts, the measures cover: staying healthy (screenings, tests, vaccines), managing chronic conditions, member experience, member complaints, customer service, and drug plan performance (accuracy of pricing, patient safety, adherence). For stand-alone Part D, the measures are narrower &mdash; roughly drug plan customer service, complaints, member experience, and drug safety and accuracy.</p>
+
+            <p>A 5-star overall rating usually reflects consistent above-average performance across those measures. It is not a guarantee of the specific things that might matter most to you: whether your cardiologist is in-network, whether your specific medication is on the formulary at a low tier, whether the plan has a good prior-authorization approval rate for your condition, or whether the plan is available in-network at the specific hospital near your home.</p>
+
+            <div class="info-box">
+                <strong>Rule of thumb.</strong> A 5-star rating is a strong signal that the plan is well-run at a system level. It is not a substitute for verifying your specific doctors, medications, and hospitals against the plan's 2027 documents. If your PCP is not in the plan's 2027 network, a 5-star rating will not help you.
+            </div>
+
+            <p>Because star ratings can change year to year based on measures reported 12 to 24 months in arrears, a plan's 5-star rating for 2027 is largely a reflection of its performance during roughly the 2024 and 2025 measurement years. Recent operational changes at the plan may not yet be visible in the rating.</p>
+        </section>
+
+        <h2>Three Scenarios Where the 5-Star SEP Is Worth Using</h2>
+
+        <section>
+            <h3>Scenario A: You are unhappy with a plan you picked at AEP and a 5-star plan exists in your ZIP</h3>
+            <p>You enrolled in a Medicare Advantage plan for 2027 during AEP because it looked good on paper. By February, you find that its customer service is slow, prior authorizations are getting denied, and the drug prices at your pharmacy are higher than expected. If a 5-star MA plan is offered in your ZIP code, you can use the SEP to switch mid-year. Coverage on the new plan starts the first of the following month, so the transition is fast. Verify your primary care doctor, active specialists, and current medications against the 5-star plan's 2027 network and formulary before enrolling &mdash; the ratings are strong at the system level but you still need the specific pieces to line up.</p>
+
+            <h3>Scenario B: You are on Original Medicare with a mediocre stand-alone Part D plan</h3>
+            <p>You kept Original Medicare and a Medigap policy because of the network flexibility, but the stand-alone Part D plan you signed up for at AEP has a formulary that does not cover one of your medications at a reasonable tier. If a 5-star stand-alone Part D plan is offered in your area, the SEP lets you switch just the Part D portion of your coverage. Your Original Medicare and your Medigap policy are unaffected, and the new Part D coverage starts the first of the following month. This is one of the cleanest uses of the SEP because it only touches one piece of your coverage.</p>
+
+            <h3>Scenario C: You are turning 65 and picked an MA plan in your first year that you do not love</h3>
+            <p>You aged into Medicare in June 2027 and picked an MA plan through your Initial Enrollment Period. It is not a good fit, but the standard 12-month MA trial-right window and the annual MA OEP have already passed. If a 5-star MA plan is offered in your ZIP code, the 5-Star SEP is a route out. Also check whether your Medigap trial-right window is still open &mdash; if you first enrolled in MA within the last 12 months, you may have a separate guaranteed-issue right to move to Original Medicare plus Medigap that is distinct from the 5-Star SEP and might be a better choice depending on your health.</p>
+
+            <a href="blog-how-to-choose-medigap-plan-g-vs-plan-n-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to choose between Medigap Plan G and Plan N in 2026 &rarr;</a>
+        </section>
+
+        <h2>What the 5-Star SEP Does Not Do</h2>
+
+        <section>
+            <p>Three limits worth understanding up front so you do not build a plan around a benefit that is not there.</p>
+
+            <ul>
+                <li><strong>It does not create a Medigap guaranteed-issue right.</strong> Deciding to leave an MA plan under the 5-Star SEP for Original Medicare plus a stand-alone Part D is not on CMS's federal list of Medigap guaranteed-issue triggers. If you want to add Medigap during the switch, you will typically be medically underwritten by the Medigap insurer unless your state (Connecticut, Maine, Massachusetts, New York, and a few others under specific rules) has broader year-round protections.</li>
+                <li><strong>It does not reset your Part D true out-of-pocket (TrOOP) accumulator mid-year.</strong> Any Part D spending that counted toward the $2,100 catastrophic-coverage-phase threshold on your old plan generally does not transfer automatically to the new plan. Some plans do coordinate TrOOP after an in-year switch, but do not assume it. Ask the new plan how mid-year enrollees have TrOOP accounted for before you enroll if you are close to the threshold.</li>
+                <li><strong>It does not give you a way back out.</strong> After you use the 5-Star SEP for the plan year, your next chance to switch is the AEP that fall, the MA OEP the following January (if you are in an MA plan), or a different qualifying-event SEP.</li>
+            </ul>
+        </section>
+
+        <h2>How to Actually Enroll Using the 5-Star SEP</h2>
+
+        <section>
+            <p>The mechanics are the same as any other Medicare Advantage or Part D enrollment. You do not need to file a separate SEP application &mdash; CMS recognizes the SEP based on the plan you are enrolling in and the calendar date.</p>
+
+            <ol>
+                <li><strong>Confirm the plan carries the current 5-star rating.</strong> Look for the "5 stars" badge next to the plan name on medicare.gov Plan Finder or in the plan's own marketing materials. A "4.5-star" plan is not eligible for the SEP.</li>
+                <li><strong>Verify the plan is offered in your ZIP code for the plan year you want.</strong> A plan's service area is set at the county level, and 5-star contracts often do not cover every county.</li>
+                <li><strong>Read the Summary of Benefits, formulary, and provider directory for the specific plan year (2027).</strong> Confirm coverage for your active medications, your regular providers, and any procedures already on your calendar.</li>
+                <li><strong>Enroll through the plan's website, by phone (1-800-MEDICARE also works), or through a licensed agent.</strong> When asked why you are enrolling outside of AEP, indicate you are using the 5-Star Special Enrollment Period.</li>
+                <li><strong>Confirm your effective date in writing.</strong> The new plan will send an ID card and confirmation letter with the effective date. If it is not the first of the month after your submission month, call to correct it.</li>
+                <li><strong>Do not cancel the outgoing plan yourself.</strong> Enrollment in the new MA or Part D plan automatically disenrolls you from your old MA or Part D plan on the effective date; extra action can create a coverage gap.</li>
+            </ol>
+
+            <a href="blog-how-to-compare-medicare-advantage-plans-aep-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to compare Medicare Advantage plans during AEP 2026 &rarr;</a>
+            <a href="blog-how-to-appeal-medicare-part-d-formulary-exclusion-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to appeal a Part D formulary exclusion in 2026 &rarr;</a>
+        </section>
+
+        <h2>The Short Version</h2>
+
+        <section>
+            <p>The Medicare 5-Star Special Enrollment Period is a one-per-plan-year window running December 8, 2026 through November 30, 2027 that lets you switch into a Medicare Advantage or stand-alone Part D plan that carries CMS's overall 5-star rating. CMS designated 21 5-star contracts for the 2026 plan year (18 MA-PD, one Medicare Cost, two stand-alone Part D); the 2027 ratings will be published in October 2026. Check medicare.gov Plan Finder with your ZIP code and the 5-star filter to see what is actually available where you live &mdash; entire counties have none. Enrollments in December take effect January 1; enrollments the rest of the year take effect the first of the month after submission. The SEP does not create Medigap guaranteed-issue rights, does not carry TrOOP across plans automatically, and cannot be used to switch away from a 5-star plan. The biggest trap is enrolling in a rare 5-star MA-only plan (no bundled drug coverage) without separately enrolling in a stand-alone Part D, which starts the 63-day clock on the Part D late-enrollment penalty. Read each finalist plan's Summary of Benefits, verify your doctors and medications against the 2027 network and formulary, and enroll only after confirming the plan actually fits your care &mdash; a 5-star badge is a signal, not a substitute for that check.</p>
+        </section>
+
+        <div class="mt-8 p-4 bg-gray-100 text-center text-sm text-gray-600 rounded">
+            <p><strong>Privacy Note:</strong> All calculations happen in your browser. We never collect your data.</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-teal-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-white text-teal-dark w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                        <span class="font-bold text-xl">HealthCalc</span>
+                    </div>
+                    <p class="text-teal-light text-sm">Free health insurance calculators designed to help you understand costs and make smarter healthcare decisions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="plan-cost-calculator.html" class="hover:text-white transition-colors">Plan Cost Calculator</a></li>
+                        <li><a href="aca-subsidy-calculator.html" class="hover:text-white transition-colors">ACA Subsidy Estimator</a></li>
+                        <li><a href="procedure-cost.html" class="hover:text-white transition-colors">Procedure Cost Finder</a></li>
+                        <li><a href="drug-cost-finder.html" class="hover:text-white transition-colors">Drug Cost Finder</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Disclaimer</h4>
+                    <p class="text-teal-light text-sm">HealthCalc provides educational information only and is not a substitute for professional medical or financial advice. Always consult with qualified professionals for your specific situation.</p>
+                </div>
+            </div>
+            <div class="border-t border-teal-light pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-teal-light">
+                <p>&copy; 2026 HealthCalc. All rights reserved.</p>
+                <p>Last updated September 30, 2026. All our calculators are 100% private &mdash; calculations happen in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
