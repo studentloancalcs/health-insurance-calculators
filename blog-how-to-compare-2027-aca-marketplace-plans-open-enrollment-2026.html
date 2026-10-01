@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5586HWYPB0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5586HWYPB0');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The 2027 ACA open enrollment is the first since the enhanced premium tax credits expired, with insurers filing a median 14-15% rate hike on top of 2026's increases. Here's the pre-November 1 checklist: how to re-pull your SBC math, re-check your 400% FPL subsidy cliff, verify every provider is still in-network for 2027, and avoid the auto-renewal trap.">
+    <meta name="keywords" content="2027 ACA open enrollment, compare marketplace plans 2027, ACA subsidy cliff 2027, enhanced premium tax credit expired, open enrollment November 1 2026, SBC comparison 2027, 400% FPL subsidy, auto-reenrollment ACA, benchmark premium 2027">
+    <title>How to Compare 2027 ACA Marketplace Plans Before November 1: The Post-Subsidy-Cliff Open Enrollment Checklist</title>
+    <link rel="canonical" href="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-compare-2027-aca-marketplace-plans-open-enrollment-2026.html">
+    <meta property="og:title" content="How to Compare 2027 ACA Marketplace Plans Before November 1: The Post-Subsidy-Cliff Open Enrollment Checklist">
+    <meta property="og:description" content="2027 is the first ACA open enrollment since the enhanced premium tax credits expired. Insurers filed a median 14-15% rate increase on top of 2026's record hikes. Here's the pre-November 1 checklist that keeps you from renewing a plan you can no longer afford.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-compare-2027-aca-marketplace-plans-open-enrollment-2026.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Compare 2027 ACA Marketplace Plans Before November 1">
+    <meta name="twitter:description" content="A pre-OE checklist for the first open enrollment without enhanced subsidies: SBC math, the 400% FPL cliff, network verification, and the auto-reenrollment trap.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        .nav-link {
+            color: #4B5563;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #0D9488;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        article h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #134E4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        article h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0D9488;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        article p {
+            line-height: 1.75;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+        article ul, article ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        article li {
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background-color: #F0FDFA;
+            border-left: 4px solid #0D9488;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background-color: #FEF3C7;
+            border-left: 4px solid #F97316;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .comparison-table {
+            margin: 1.5rem 0;
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #D1D5DB;
+        }
+        .comparison-table th {
+            background-color: #F0FDFA;
+            color: #134E4A;
+            font-weight: 600;
+        }
+        .calculator-link {
+            display: inline-block;
+            background-color: #0D9488;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        .calculator-link:hover {
+            background-color: #134E4A;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Compare 2027 ACA Marketplace Plans Before November 1: The Post-Subsidy-Cliff Open Enrollment Checklist",
+      "description": "2027 is the first ACA open enrollment since the enhanced premium tax credits expired. Insurers filed a median 14-15% rate hike on top of 2026's record 25.5% increase. Here's the pre-November 1 checklist for recomputing your subsidy, re-checking the 400% FPL cliff, verifying every provider is still in-network for 2027, and avoiding the auto-reenrollment trap.",
+      "datePublished": "2026-10-01",
+      "dateModified": "2026-10-01",
+      "author": {
+        "@type": "Organization",
+        "name": "HealthCalc Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HealthCalc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://studentloancalcs.github.io/health-insurance-calculators/logo.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When does 2027 ACA open enrollment start and end?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Federal marketplace open enrollment for 2027 coverage runs November 1, 2026 through January 15, 2027. To have coverage effective January 1, 2027, you must select a plan by December 15, 2026. Plans selected between December 16, 2026 and January 15, 2027 take effect February 1, 2027. Several state-based marketplaces (California, New York, New Jersey, Massachusetts, Washington, DC, among others) extend their enrollment windows further, so check your state exchange if HealthCare.gov is not the applicable marketplace in your state."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did ACA premium tax credits actually expire for 2026 and 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The enhanced premium tax credits enacted in 2021 and extended through 2025 expired on December 31, 2025. For 2026 and 2027 plan years, the ACA has reverted to its pre-2021 structure. That means the sliding-scale percent-of-income contribution rules are back (ranging from roughly 2% at 150% of the federal poverty level to 9.5% at 300-400% FPL, indexed for inflation), and the 400% FPL subsidy cliff is back as well: a household earning one dollar over 400% of FPL in 2027 receives zero premium tax credit. Congress could restore the enhancements by legislation, but as of the start of the 2027 open enrollment they have not."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much are 2027 ACA marketplace premiums going up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Preliminary filings analyzed by KFF showed a median proposed 2027 rate increase of about 14% across insurers reviewed, with the Families USA tracker putting the national average request at 15.6%. State-by-state ranges are wide (one insurer filed a 54% increase; another filed a 1% decrease). Final approved rates are typically lower than filed rates, but the direction is set. This follows a record 25.5% national average increase for 2026, so the compounded effect across two years is substantial for anyone whose subsidy fell or ended between 2025 and 2027."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 400% FPL subsidy cliff and how do I check whether I am close to it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ACA uses the federal poverty level in effect at the start of open enrollment (the 2026 FPL guidelines for 2027 coverage). For a household of one in the 48 contiguous states, 400% of the 2026 FPL is approximately $62,600; for a household of two, approximately $84,920. If your projected 2027 modified adjusted gross income is above 400% of FPL for your household size, you receive no premium tax credit for 2027, no matter how high the premium climbs. The cliff is a bright line, not a phase-out. If you are within 10% of the threshold, lowering MAGI through HSA contributions, traditional 401(k) contributions, or a smaller Roth conversion can keep you under it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I do nothing during open enrollment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you do nothing, the marketplace will auto-reenroll you into your current plan or a similar plan from the same issuer, applying whatever subsidy it computes from the income on your 2026 application. That is almost never the right answer in 2027. The subsidy formula changed, premiums changed, and your plan's cheapest-silver status (which drives your tax credit) may have shifted. Auto-renewal frequently drops people into a plan whose net premium is twice what they expected. Log in, re-verify your income, and actively re-select even if you intend to keep the same plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I verify that my doctor and prescriptions are still covered in 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three steps. First, pull the 2027 provider directory and formulary for every plan you are considering from the issuer's website (not the marketplace listing, which is often stale). Second, call every regular provider you see and read the plan name verbatim: 'Are you in-network for Blue Advantage Silver 2027 effective January 1?' Insurer directories are famously inaccurate; the provider's billing office is more reliable. Third, look up each regular prescription on the plan's 2027 formulary by name and strength, and check the tier, any prior authorization requirement, and any step therapy requirement. Formulary tier changes are the single most common cause of 'my premium looks fine but my drug now costs $300' complaints in February."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I lose my subsidy for 2027, what are my realistic options?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Four realistic options. (1) Switch from a silver plan to a bronze or expanded bronze plan to cut premium at the cost of a higher deductible; pair it with an HSA if HSA-eligible. (2) Switch to a catastrophic plan if you are under 30 or qualify for a hardship exemption. (3) Enroll in a direct primary care subscription (typically $75-$125/month) and pair it with a lower-premium high-deductible plan for emergencies. (4) If you lost coverage from an employer, compare COBRA against an unsubsidized marketplace plan; sometimes COBRA is actually cheaper for high-deductible households, especially when the employer still contributes."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-primary text-white w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                    <span class="font-bold text-xl text-teal-dark">HealthCalc</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="plan-cost-calculator.html" class="nav-link text-sm font-medium">Plan Cost</a>
+                    <a href="aca-subsidy-calculator.html" class="nav-link text-sm font-medium">ACA Subsidy</a>
+                    <a href="procedure-cost.html" class="nav-link text-sm font-medium">Procedures</a>
+                    <a href="drug-cost-finder.html" class="nav-link text-sm font-medium">Drugs</a>
+                    <a href="blog.html" class="text-teal-primary text-sm font-medium">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block nav-link text-sm font-medium py-2">Home</a>
+                <a href="plan-cost-calculator.html" class="block nav-link text-sm font-medium py-2">Plan Cost</a>
+                <a href="aca-subsidy-calculator.html" class="block nav-link text-sm font-medium py-2">ACA Subsidy</a>
+                <a href="procedure-cost.html" class="block nav-link text-sm font-medium py-2">Procedures</a>
+                <a href="drug-cost-finder.html" class="block nav-link text-sm font-medium py-2">Drugs</a>
+                <a href="blog.html" class="block text-teal-primary text-sm font-medium py-2">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-sm text-gray-600">
+                <a href="index.html" class="text-teal-primary hover:text-teal-dark">Home</a>
+                <span class="mx-2">/</span>
+                <a href="blog.html" class="text-teal-primary hover:text-teal-dark">Blog</a>
+                <span class="mx-2">/</span>
+                <span>Compare 2027 ACA Marketplace Plans</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-teal-dark mb-4">How to Compare 2027 ACA Marketplace Plans Before November 1: The Post-Subsidy-Cliff Open Enrollment Checklist</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-600">
+                <div>
+                    <p><strong>By HealthCalc Team</strong></p>
+                    <p>Published October 1, 2026</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p><strong>12 min read</strong></p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <p>Open enrollment for 2027 coverage starts November 1, 2026 and runs through January 15, 2027. For most households this is going to be the hardest shopping window in a decade. The enhanced premium tax credits that cushioned ACA premiums from 2021 through 2025 expired on December 31, 2025 and are not in place for 2027. Insurers have filed a median proposed rate increase of roughly 14 percent for 2027, and the Families USA national tracker puts the average filed increase at 15.6 percent. That lands on top of the record 25.5 percent average increase in 2026. If you were enrolled before the enhancements ended, the compounded effect across two years is already visible on your statements.</p>
+
+            <p>The temptation during a price-shock year is to let auto-reenrollment pick up where last year left off. That is almost always wrong in 2027. The subsidy formula changed, the benchmark plan in your rating area probably changed, and the plan that was cheapest for your household in 2025 or 2026 may now be the most expensive. The checklist that follows is organized around the four decisions that drive the final price you actually pay next year: your projected income, the benchmark plan you are being compared against, the network, and the drug list. Working through it before November 1 is the single biggest savings move most families can make this fall.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: after intro section -->
+
+        <h2>Step 1: Lock Down Your 2027 Projected Income</h2>
+
+        <section>
+            <p>The ACA uses modified adjusted gross income (MAGI) &mdash; essentially your tax-return AGI with tax-exempt Social Security, tax-exempt interest, and foreign earned income added back &mdash; and compares it to the 2026 federal poverty level guidelines (the FPL in effect at the start of the enrollment window). The 2026 single-person FPL in the 48 contiguous states is $15,650, with $5,580 added per additional household member.</p>
+
+            <h3>Four percent-of-FPL bands to know for 2027</h3>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>MAGI band (percent of 2026 FPL)</th>
+                            <th>Subsidy structure for 2027</th>
+                            <th>What you contribute to the benchmark silver premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Below 100% FPL</td>
+                            <td>Generally no marketplace APTC in non-expansion states; Medicaid in expansion states</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>100% to 150% FPL</td>
+                            <td>Reduced tax credit (not $0 as under the 2021-2025 enhancements)</td>
+                            <td>Approximately 2.07% to 4.14%</td>
+                        </tr>
+                        <tr>
+                            <td>150% to 300% FPL</td>
+                            <td>Sliding-scale premium tax credit</td>
+                            <td>Approximately 4.14% to 6.52%</td>
+                        </tr>
+                        <tr>
+                            <td>300% to 400% FPL</td>
+                            <td>Sliding-scale premium tax credit, capped at the 2027 affordability percentage</td>
+                            <td>Approximately 6.52% to 9.96% (indexed)</td>
+                        </tr>
+                        <tr>
+                            <td>Over 400% FPL</td>
+                            <td>No premium tax credit &mdash; the cliff is back</td>
+                            <td>100% of premium</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-sm text-gray-600">Applicable-figure percentages are indexed each year; the 2027 figures publish with the final HHS marketplace guidance. The band structure is the pre-2021 ACA framework, back in force for 2027.</p>
+
+            <p>The 400 percent band is a bright line, not a phase-out. If your 2027 MAGI projects to $62,600 for a single filer or $84,920 for a two-person household, you still receive the full tax credit at that level. One dollar over and you receive nothing. Six-figure premiums have been reported in rate filings for older enrollees in high-cost rating areas; the dollar difference between $62,599 and $62,601 of MAGI can exceed $10,000 of out-of-pocket premium.</p>
+
+            <h3>How to project income you don't fully know yet</h3>
+            <p>Freelance and gig income is the usual trouble spot. The marketplace does not use a single number &mdash; it uses the projection you provide, verified later against your tax return. Over-estimating costs you nothing except a smaller monthly subsidy and a refund at tax time; under-estimating triggers an advance premium tax credit (APTC) repayment on your return. For 2026, repayment limits are back to the pre-ARPA levels; for 2027 the same framework applies.</p>
+
+            <div class="info-box">
+                <strong>MAGI-reduction levers that still work in 2027:</strong> HSA contributions (if you are enrolled in an HSA-eligible high-deductible plan), traditional 401(k) and traditional IRA contributions, SEP-IRA or solo 401(k) contributions for self-employed filers, and sizing Roth conversions carefully. Timing matters: these have to be made in the applicable tax year, not after you file.
+            </div>
+
+            <a href="aca-subsidy-calculator.html" class="calculator-link">ACA Subsidy Calculator</a>
+            <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+        </section>
+
+        <h2>Step 2: Re-Pull Your SBC and Rebuild the Total-Cost-of-Care Math</h2>
+
+        <section>
+            <p>The Summary of Benefits and Coverage (SBC) is the standardized four-to-eight-page summary every ACA plan has to publish. During a price-shock year, premium differences across metal tiers compress and widen in ways that are not obvious from the marketplace listing page. The only way to compare 2027 plans honestly is to build the full-year total cost of care, not just the monthly premium.</p>
+
+            <h3>The three-number formula</h3>
+            <ol>
+                <li><strong>Annual premium after subsidy</strong> &mdash; the 2027 net monthly premium times 12.</li>
+                <li><strong>Expected out-of-pocket cost at your utilization</strong> &mdash; copays, coinsurance, and deductible applied to the services you actually used last year. Pull your 2025 EOBs or your plan's annual summary.</li>
+                <li><strong>Risk-weighted catastrophic exposure</strong> &mdash; the plan's annual in-network out-of-pocket maximum, which caps your downside if a bad year happens. The 2026 federal cap is $10,150 single / $20,300 family; the 2027 figures publish with the final HHS marketplace guidance.</li>
+            </ol>
+
+            <p>Compare plans using (1) plus (2) as the "typical year" column and (1) plus (3) as the "bad year" column. A silver plan that looked affordable in 2026 because of enhanced subsidies may now be dominated by a bronze plan with an HSA for low-utilizer households, while high-utilizer households may find that the plan with the higher premium and the lower deductible wins on both axes.</p>
+
+            <a href="deductible-explainer.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How health insurance deductibles actually work &rarr;</a>
+        </section>
+
+        <h2>Step 3: Check Whether Cost-Sharing Reductions Still Save You More Than a Bronze+HSA Combo</h2>
+
+        <section>
+            <p>Cost-sharing reductions (CSRs) are the discount that attaches to silver plans only, for enrollees between 100% and 250% of FPL. They lower the deductible, the copays, and the out-of-pocket maximum &mdash; sometimes dramatically. Under the pre-2021 ACA rules back in force in 2027, CSRs are unchanged in structure, so a CSR-eligible household should almost always stay in silver.</p>
+
+            <p>If your 2027 MAGI projects over 250% of FPL, you are not CSR-eligible and silver's main advantage disappears. In that income band, run the bronze or expanded-bronze versus silver math carefully. For households that rarely hit their deductible, an HSA-eligible bronze with a lower premium often beats silver on total cost even without the enhanced subsidy. For households with ongoing specialty-drug use or chronic condition management, silver often still wins because the copay structure is more predictable.</p>
+
+            <a href="blog-aca-cost-sharing-reductions-silver-plan-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How ACA cost-sharing reductions work on silver plans &rarr;</a>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: mid-article -->
+
+        <h2>Step 4: Verify the Network for Every 2027 Plan You Shortlist</h2>
+
+        <section>
+            <p>Networks shift at renewal more than premiums do, and marketplace plans in 2027 are consolidating as some issuers exit rating areas and others narrow their networks to control cost. The marketplace listing shows a provider directory link; the directory itself is often months behind reality.</p>
+
+            <h3>The three-call protocol</h3>
+            <ol>
+                <li><strong>Pull the 2027 directory from the issuer's own website</strong> (not the marketplace), and search for every provider you see regularly &mdash; primary care, every specialist, any mental-health provider, any physical therapist, and your pharmacy. Note the plan name verbatim.</li>
+                <li><strong>Call each provider's billing office</strong> &mdash; not the front desk &mdash; and read the plan name back: "Are you in-network for [Issuer] [Product Name] [Metal Tier] effective January 1, 2027?" Billing offices know what they will accept at the time you ask; front-desk staff often confuse product lines.</li>
+                <li><strong>Ask about tiered or narrow-network variants.</strong> A plan name on paper can hide a tier-two network in which your provider is covered but at substantially higher cost-sharing. Confirm the tier.</li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>Mid-year network terminations:</strong> Even if a provider is in-network on January 1, 2027, the plan can drop them mid-year. If that happens to an ongoing provider, you may qualify for a continuity-of-care transition period (typically 90 days for chronic conditions or active treatment). This is a plan-by-plan right, not a universal one. Pull the plan's continuity-of-care policy from the SBC supplement or the Evidence of Coverage before you enroll.
+            </div>
+
+            <a href="blog-what-to-do-if-your-doctor-leaves-your-health-insurance-network-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: What to do if your doctor leaves the network mid-year &rarr;</a>
+        </section>
+
+        <h2>Step 5: Walk the 2027 Formulary for Every Prescription You Fill</h2>
+
+        <section>
+            <p>Formulary tier changes are the single most common cause of "my premium looked fine but now my drug costs $300" complaints in February. Insurers reprice tier placement every year, and specialty drugs in particular can move from tier 3 to tier 4 or tier 5 at renewal. Prior authorization and step therapy requirements can also be added at renewal without changing the formulary status itself.</p>
+
+            <h3>What to look up for each regular prescription</h3>
+            <ul>
+                <li><strong>Formulary tier</strong> for 2027 (not 2026). Tier 1 is generic preferred, tier 2 is generic non-preferred or brand preferred, tier 3 is brand non-preferred, tier 4 is specialty, tier 5 is highest-cost specialty. Different plans use slightly different tier structures &mdash; look at the plan's own documentation.</li>
+                <li><strong>Prior authorization</strong> required or not. If PA is new for 2027, your pharmacy will reject the fill until your prescriber submits the form.</li>
+                <li><strong>Step therapy</strong> required or not. If step therapy is new, you may need to document that you have already failed the preferred alternative.</li>
+                <li><strong>Quantity limits</strong>. 30-day versus 90-day fill allowances can shift at renewal.</li>
+                <li><strong>Mail-order mandate</strong>. Some maintenance drugs can only be filled through the plan's mail-order pharmacy after a certain number of retail fills.</li>
+            </ul>
+
+            <p>If a drug you depend on moves to a higher tier or adds a utilization restriction, you have options: shop a different 2027 plan that keeps the drug on a lower tier, request a formulary exception, apply for the manufacturer's patient assistance program, or combine a lower-premium plan with a direct manufacturer or 340B pharmacy source. The time to figure that out is in October, not after your January refill is rejected.</p>
+
+            <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+            <a href="blog-how-to-lower-prescription-drug-costs-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to lower prescription drug costs in 2026 &rarr;</a>
+        </section>
+
+        <h2>Step 6: Decide Actively &mdash; Even if You Keep the Same Plan</h2>
+
+        <section>
+            <p>HealthCare.gov and most state exchanges will auto-reenroll you if you do nothing. The auto-renewal algorithm picks your current plan if it is still being offered, or a similar plan from the same issuer if it is not. The algorithm then applies whatever subsidy it computes from the income you reported on your 2026 application.</p>
+
+            <p>Three things go wrong with auto-renewal in a 2027 price-shock year.</p>
+
+            <ol>
+                <li><strong>The subsidy formula changed.</strong> The benchmark plan in your rating area almost certainly moved. Your "advance" subsidy may be dramatically different from what it was last year, and if your income verification is stale the marketplace may apply the wrong number altogether.</li>
+                <li><strong>Your plan's cheapest-silver status moved.</strong> The benchmark used to compute your tax credit is the second-cheapest silver plan in your rating area &mdash; which usually changes identity at renewal. The plan that was benchmark in 2026 may not be benchmark in 2027.</li>
+                <li><strong>The algorithm does not re-verify your 2027 income.</strong> If your income rose or fell in 2026, auto-renewal will apply the old projection and you will get a surprise APTC reconciliation at tax time.</li>
+            </ol>
+
+            <p>Logging in once between November 1 and December 15 and actively re-selecting a plan takes about 20 minutes and prevents the three failures above. Even if you end up re-selecting the same plan, the act of updating your income projection and the plan selection resets the subsidy for 2027 correctly.</p>
+
+            <a href="blog-how-to-estimate-income-aca-subsidy-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to estimate income for an ACA subsidy &rarr;</a>
+            <a href="blog-how-to-avoid-paying-back-aca-subsidy-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: How to avoid paying back an ACA subsidy &rarr;</a>
+        </section>
+
+        <h2>If the Subsidy Cliff Catches You: Four Realistic Options</h2>
+
+        <section>
+            <p>The households hit hardest by 2027 are those just above the 400 percent FPL line and older enrollees whose age-rated premiums have climbed fastest. If you project MAGI just over the threshold and no amount of MAGI engineering closes the gap, four options are worth running the numbers on.</p>
+
+            <h3>Option 1: Drop a metal tier (or two)</h3>
+            <p>Switch from silver or gold to bronze or expanded bronze. The premium drops meaningfully, but the deductible climbs and some services (like non-preventive office visits) are often subject to the deductible before any copay applies. Pair the plan with an HSA if the plan is HSA-eligible; the triple-tax-advantaged HSA offsets some of the higher cost-sharing.</p>
+
+            <h3>Option 2: Catastrophic coverage (if eligible)</h3>
+            <p>Catastrophic plans are available to enrollees under 30 and to those who qualify for an affordability or hardship exemption. Premiums are the lowest on the marketplace, but the deductible equals the ACA out-of-pocket maximum &mdash; you pay 100% until you hit the ceiling. Three primary-care visits are covered before the deductible.</p>
+
+            <a href="blog-catastrophic-health-plan-hardship-exemption-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: Catastrophic plans and the hardship exemption in 2026 &rarr;</a>
+
+            <h3>Option 3: Direct primary care plus a cheaper high-deductible plan</h3>
+            <p>Direct primary care (DPC) subscriptions typically run $75-$125 per month and cover unlimited office visits, basic lab work at wholesale pricing, and generic prescriptions at pass-through cost. Pair DPC with a bronze or catastrophic plan for emergencies and specialist access. For households that rarely need specialist care, this combination often outperforms unsubsidized silver on total 2027 cost.</p>
+
+            <a href="blog-how-to-pair-direct-primary-care-with-hsa-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: Pairing direct primary care with an HSA &rarr;</a>
+
+            <h3>Option 4: COBRA, employer coverage, or ICHRA if available</h3>
+            <p>If you lost employer coverage recently, run the 2027 unsubsidized marketplace premium against the full COBRA premium. In some high-cost rating areas and family configurations, COBRA (which was previously almost always worse than subsidized marketplace) is now actually cheaper. If your spouse or household member has access to employer coverage, that plan may now be the better option even if historically you preferred the marketplace. If an employer is offering an ICHRA (individual coverage health reimbursement arrangement), the pre-tax dollars can bring unsubsidized marketplace premium down significantly.</p>
+
+            <a href="blog-is-cobra-worth-it-2026-cobra-vs-marketplace.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: Is COBRA worth it versus the marketplace &rarr;</a>
+            <a href="blog-what-to-do-if-employer-offered-ichra-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Related: What to do if your employer offered an ICHRA &rarr;</a>
+        </section>
+
+        <h2>Open Enrollment Timeline at a Glance</h2>
+
+        <section>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>What happens</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>October 1 - October 31, 2026</td>
+                            <td>Pre-OE window. Plan previews are generally available in late October. Pull SBCs, run the three-number math, verify networks and formularies.</td>
+                        </tr>
+                        <tr>
+                            <td>November 1, 2026</td>
+                            <td>2027 federal marketplace open enrollment begins. State-based exchanges may start the same day.</td>
+                        </tr>
+                        <tr>
+                            <td>December 15, 2026</td>
+                            <td>Deadline to select a plan for January 1, 2027 effective date on the federal marketplace. First premium payment typically due before coverage starts.</td>
+                        </tr>
+                        <tr>
+                            <td>December 31, 2026</td>
+                            <td>Last day of 2026 coverage (for enrollees not re-upping).</td>
+                        </tr>
+                        <tr>
+                            <td>January 1, 2027</td>
+                            <td>2027 coverage begins for enrollments completed by December 15.</td>
+                        </tr>
+                        <tr>
+                            <td>January 15, 2027</td>
+                            <td>Final deadline for federal marketplace open enrollment. Selections between December 16 and January 15 take effect February 1.</td>
+                        </tr>
+                        <tr>
+                            <td>After January 15, 2027</td>
+                            <td>Enrollment possible only through a Special Enrollment Period triggered by a qualifying life event.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-sm text-gray-600">State-based exchanges in California, New York, New Jersey, Washington DC, Massachusetts, and several other states have longer windows. Check your state exchange for the specific deadlines.</p>
+        </section>
+
+        <h2>The Short Version</h2>
+
+        <section>
+            <p>2027 is the first ACA open enrollment without the enhanced premium tax credits, and the compounded effect of 2026's record 25.5 percent average increase plus 2027's median 14 percent filed increase will show up on net premiums for anyone whose subsidy fell or ended. Six moves before November 1 fix most of it: lock down your 2027 projected MAGI with the 400% FPL cliff in mind, re-pull the SBC and rebuild total-cost-of-care math across typical and bad-year columns, check whether CSR-silver still beats bronze-plus-HSA for your household, verify every provider and every prescription against the 2027 network and formulary, and actively re-select &mdash; even if the end answer is the same plan &mdash; rather than letting auto-renewal apply a stale subsidy. If the cliff catches you, drop a metal tier, use a catastrophic plan if eligible, combine direct primary care with a cheaper high-deductible plan, or compare COBRA and employer options that used to be worse. The spreadsheet work is tedious. The reward is that your January premium is the number you planned for, not the number that shows up in your email on December 20.</p>
+
+            <a href="aca-subsidy-calculator.html" class="calculator-link">ACA Subsidy Calculator</a>
+            <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+        </section>
+
+        <div class="mt-8 p-4 bg-gray-100 text-center text-sm text-gray-600 rounded">
+            <p><strong>Privacy Note:</strong> All calculations happen in your browser. We never collect your data.</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-teal-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-white text-teal-dark w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                        <span class="font-bold text-xl">HealthCalc</span>
+                    </div>
+                    <p class="text-teal-light text-sm">Free health insurance calculators designed to help you understand costs and make smarter healthcare decisions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="plan-cost-calculator.html" class="hover:text-white transition-colors">Plan Cost Calculator</a></li>
+                        <li><a href="aca-subsidy-calculator.html" class="hover:text-white transition-colors">ACA Subsidy Estimator</a></li>
+                        <li><a href="procedure-cost.html" class="hover:text-white transition-colors">Procedure Cost Finder</a></li>
+                        <li><a href="drug-cost-finder.html" class="hover:text-white transition-colors">Drug Cost Finder</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Disclaimer</h4>
+                    <p class="text-teal-light text-sm">HealthCalc provides educational information only and is not a substitute for professional medical or financial advice. Always consult with qualified professionals for your specific situation.</p>
+                </div>
+            </div>
+            <div class="border-t border-teal-light pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-teal-light">
+                <p>&copy; 2026 HealthCalc. All rights reserved.</p>
+                <p>Last updated October 1, 2026. All our calculators are 100% private &mdash; calculations happen in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
