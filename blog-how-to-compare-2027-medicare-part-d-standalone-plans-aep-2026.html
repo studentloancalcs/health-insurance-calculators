@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5586HWYPB0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5586HWYPB0');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AEP 2026 opens October 15. Here's how to audit your 2027 Medicare Part D stand-alone plan before December 7: run the IRA-negotiated drug check for all 10 drugs, confirm the preserved out-of-pocket cap and $2,100 Prescription Payment Plan, read the formulary tier changes most seniors miss, and avoid the 'auto-renew into a bigger premium' trap.">
+    <meta name="keywords" content="2027 Medicare Part D, Medicare AEP 2026, Part D stand-alone plan 2027, IRA negotiated drugs 2027, Medicare Prescription Payment Plan 2027, Part D formulary audit, Medicare Plan Finder 2027, Part D premium 2027, OOP cap 2027">
+    <title>How to Compare 2027 Medicare Part D Stand-Alone Plans During AEP 2026: The IRA-Negotiated Drugs, the Preserved OOP Cap, and the Formulary Changes Most Seniors Miss</title>
+    <link rel="canonical" href="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-compare-2027-medicare-part-d-standalone-plans-aep-2026.html">
+    <meta property="og:title" content="How to Compare 2027 Medicare Part D Stand-Alone Plans During AEP 2026">
+    <meta property="og:description" content="AEP 2026 starts October 15. Here's how to compare 2027 Part D stand-alone plans drug by drug, use the IRA-negotiated prices on the first 10 drugs, keep M3P working for you, and avoid the auto-renewal trap that quietly moves seniors into higher-premium plans.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-compare-2027-medicare-part-d-standalone-plans-aep-2026.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Compare 2027 Medicare Part D Stand-Alone Plans During AEP 2026">
+    <meta name="twitter:description" content="A step-by-step AEP 2026 audit for seniors on stand-alone Part D: negotiated drugs, the preserved OOP cap, M3P opt-in math, and the formulary tier changes that quietly inflate your 2027 costs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        .nav-link {
+            color: #4B5563;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #0D9488;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        article h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #134E4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        article h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0D9488;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        article p {
+            line-height: 1.75;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+        article ul, article ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        article li {
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background-color: #F0FDFA;
+            border-left: 4px solid #0D9488;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background-color: #FEF3C7;
+            border-left: 4px solid #F97316;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .comparison-table {
+            margin: 1.5rem 0;
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #D1D5DB;
+        }
+        .comparison-table th {
+            background-color: #F0FDFA;
+            color: #134E4A;
+            font-weight: 600;
+        }
+        .calculator-link {
+            display: inline-block;
+            background-color: #0D9488;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        .calculator-link:hover {
+            background-color: #134E4A;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Compare 2027 Medicare Part D Stand-Alone Plans During AEP 2026: The IRA-Negotiated Drugs, the Preserved OOP Cap, and the Formulary Changes Most Seniors Miss",
+      "description": "A step-by-step AEP 2026 audit for seniors on stand-alone Part D: the 10 IRA-negotiated drug prices, the preserved $2,000-tier out-of-pocket cap, the Medicare Prescription Payment Plan opt-in math, and the formulary tier changes that quietly inflate 2027 costs.",
+      "datePublished": "2026-10-04",
+      "dateModified": "2026-10-04",
+      "author": {
+        "@type": "Organization",
+        "name": "HealthCalc Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HealthCalc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://studentloancalcs.github.io/health-insurance-calculators/logo.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Medicare Part D out-of-pocket cap for 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Part D annual out-of-pocket (OOP) cap continues under the Inflation Reduction Act in 2027, with the dollar amount adjusted upward each year based on the annual percentage increase in average Part D expenditures per enrollee. The 2026 cap is $2,100; CMS publishes the 2027 cap in the final Call Letter for 2027. The structural rules do not change: once your TrOOP (true out-of-pocket) spending for Part D-covered drugs reaches the annual cap, you pay $0 for covered drugs for the rest of the plan year. The coverage gap (donut hole) remains eliminated."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which 10 drugs have IRA-negotiated prices in 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first 10 drugs with CMS-negotiated Maximum Fair Prices (MFPs) take effect January 1, 2026 and continue in 2027: Eliquis (apixaban), Jardiance (empagliflozin), Xarelto (rivaroxaban), Januvia (sitagliptin), Farxiga (dapagliflozin), Entresto (sacubitril/valsartan), Enbrel (etanercept), Imbruvica (ibrutinib), Stelara (ustekinumab), and the Fiasp/NovoLog insulin aspart product line. A second group of 15 negotiated drugs takes effect January 1, 2027 (announced in January 2025 and finalized in late 2025). Verify current pricing on each Part D plan's 2027 formulary before you re-enroll."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Medicare Prescription Payment Plan (M3P) and should I opt in for 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "M3P lets you spread your Part D cost-sharing over the plan year in equal monthly installments instead of paying full price at the pharmacy counter. It is helpful if you expect a large bill early in the year (for example, a high-cost specialty drug in January that would otherwise front-load your spending). M3P does not reduce your total cost; the annual sum is identical. You can opt in before the plan year starts (through your 2027 plan during AEP) or any month during the year. There is no late-enrollment penalty for not opting in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I don't change my Part D plan during AEP 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you take no action, Medicare auto-renews you into the same plan under its 2027 terms. That almost never means the same price. Premiums, deductible, tier placements, prior authorization requirements, and pharmacy network often shift from year to year. The Annual Notice of Change (ANOC) that your plan mails each September details every change for the next plan year. Reading it is the single most effective AEP step for stand-alone Part D enrollees. If a drug you take has moved to a higher tier or is no longer covered, you have until December 7 to switch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch Part D plans after AEP ends on December 7, 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in several limited circumstances. The Medicare Advantage Open Enrollment Period (MA OEP), January 1 through March 31, 2027, lets MA-PD enrollees make one plan change but does not apply to stand-alone PDP enrollees. The 5-Star SEP (December 8, 2026 through November 30, 2027) lets you move into a plan with a CMS 5-star overall rating, one time per year. Other SEPs exist for life changes such as moving out of your plan's service area, losing creditable coverage, qualifying for Extra Help/LIS, or your plan being non-renewed by CMS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I check whether a 2027 Part D plan covers my drugs at a fair price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use Medicare Plan Finder at medicare.gov. Enter each prescription (name, strength, quantity, days supply). Plan Finder returns a side-by-side comparison showing each plan's premium, deductible, tier placement for your drugs, estimated annual cost at your preferred pharmacy, prior authorization and step-therapy flags, and the plan's star rating. The 2027 data loads on October 1, 2026. Compare at least three plans and confirm each drug line-by-line — one high-cost drug on a non-preferred tier can erase the premium savings from the cheapest plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do IRA-negotiated prices apply to every Part D plan the same way?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the Maximum Fair Price (MFP) is a ceiling that applies across all Part D plans for the negotiated drugs, but each plan still sets its own cost-sharing within that ceiling. Two plans can list Eliquis at the same MFP yet place it on different tiers with different copay or coinsurance structures. The negotiated price primarily lowers the plan's cost of acquiring the drug; some of that savings flows to the enrollee, and some flows into lower overall premiums. Plan Finder shows your estimated out-of-pocket cost, which is what matters for the comparison."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-primary text-white w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                    <span class="font-bold text-xl text-teal-dark">HealthCalc</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="plan-cost-calculator.html" class="nav-link text-sm font-medium">Plan Cost</a>
+                    <a href="aca-subsidy-calculator.html" class="nav-link text-sm font-medium">ACA Subsidy</a>
+                    <a href="procedure-cost.html" class="nav-link text-sm font-medium">Procedures</a>
+                    <a href="drug-cost-finder.html" class="nav-link text-sm font-medium">Drugs</a>
+                    <a href="blog.html" class="text-teal-primary text-sm font-medium">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block nav-link text-sm font-medium py-2">Home</a>
+                <a href="plan-cost-calculator.html" class="block nav-link text-sm font-medium py-2">Plan Cost</a>
+                <a href="aca-subsidy-calculator.html" class="block nav-link text-sm font-medium py-2">ACA Subsidy</a>
+                <a href="procedure-cost.html" class="block nav-link text-sm font-medium py-2">Procedures</a>
+                <a href="drug-cost-finder.html" class="block nav-link text-sm font-medium py-2">Drugs</a>
+                <a href="blog.html" class="block text-teal-primary text-sm font-medium py-2">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-sm text-gray-600">
+                <a href="index.html" class="text-teal-primary hover:text-teal-dark">Home</a>
+                <span class="mx-2">/</span>
+                <a href="blog.html" class="text-teal-primary hover:text-teal-dark">Blog</a>
+                <span class="mx-2">/</span>
+                <span>Compare 2027 Medicare Part D Stand-Alone Plans AEP 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-teal-dark mb-4">How to Compare 2027 Medicare Part D Stand-Alone Plans During AEP 2026: The IRA-Negotiated Drugs, the Preserved OOP Cap, and the Formulary Changes Most Seniors Miss</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-600">
+                <div>
+                    <p><strong>By HealthCalc Team</strong></p>
+                    <p>Published October 4, 2026</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p><strong>11 min read</strong></p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <p>Every October, roughly 23 million people on stand-alone Medicare Part D plans receive an Annual Notice of Change (ANOC) in the mail, glance at the first page, see "your premium is going up by $4 a month," and quietly accept the renewal. Then January 1 arrives, a familiar prescription rings up at the pharmacy for triple what it did in December, and the conversation with the pharmacist starts with "but I was told it was covered."</p>
+
+            <p>The Annual Enrollment Period that opens October 15, 2026 and closes December 7, 2026 is the one yearly window to prevent that scene. For 2027, three things make the audit especially worth doing: the first 10 Inflation Reduction Act (IRA) negotiated prices continue to apply, a second negotiation group reshapes several more drug classes starting January 1, 2027, and the Medicare Prescription Payment Plan (M3P) that debuted in 2025 is maturing with better plan interfaces for opt-in. This walkthrough is for people on <strong>stand-alone PDP</strong> plans paired with Original Medicare &mdash; the mechanics for Medicare Advantage drug coverage overlap but have their own quirks.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: after intro section -->
+
+        <h2>Step 1: Read the ANOC Before You Compare Anything</h2>
+
+        <section>
+            <p>The Annual Notice of Change is a federally required document your current plan must mail by September 30 each year. It is boring. Read it anyway. The pages that matter in a stand-alone PDP ANOC are five:</p>
+
+            <ol>
+                <li><strong>Monthly premium.</strong> The headline number is the one most seniors see. A premium increase of a few dollars often masks much larger copay or tier changes elsewhere.</li>
+                <li><strong>Annual deductible.</strong> For 2027, CMS sets the maximum allowable Part D deductible each year; many plans use a lower figure, and some use $0. If your plan's deductible jumped, that is often a signal of a larger cost shift.</li>
+                <li><strong>Formulary changes.</strong> This section lists drugs added, removed, or moved between tiers. The language is terse: "moved from Tier 2 to Tier 3" can mean a monthly copay going from $10 to $47.</li>
+                <li><strong>Pharmacy network changes.</strong> Preferred pharmacy status drives your actual out-of-pocket cost on many plans. A chain dropping from "preferred" to "standard" network can double a copay even when the formulary tier does not change.</li>
+                <li><strong>Prior authorization and step-therapy additions.</strong> New utilization management applied to a drug you have been taking for years is one of the most common January-1 surprises.</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Thirty-minute rule:</strong> If reading the ANOC generates any one of these flags &mdash; a drug moved up a tier, a pharmacy dropped out of the preferred tier, or a prior authorization now applied to one of your maintenance drugs &mdash; stop reading and go to Plan Finder. The thirty minutes you spend comparing will almost always be worth more than the time you spend trying to parse the ANOC further.
+            </div>
+        </section>
+
+        <h2>Step 2: Run Plan Finder With Every Drug on Your List</h2>
+
+        <section>
+            <p>Medicare Plan Finder at medicare.gov is the only comparison tool that produces a line-item 2027 cost estimate using your actual prescriptions. The tool refreshes with 2027 plan data on October 1, 2026, which means it is ready before AEP opens on October 15.</p>
+
+            <p>To run a clean comparison:</p>
+            <ol>
+                <li>Sign in with your Medicare account (optional but useful &mdash; it pre-loads your current drugs).</li>
+                <li>Enter your ZIP code and confirm your county.</li>
+                <li>Add each prescription one at a time. Include name, strength (10 mg, 25 mg), form (tablet, capsule, injection), quantity per fill, and days supply.</li>
+                <li>Add your preferred pharmacies &mdash; up to five. Mail order and retail can differ by hundreds of dollars annually.</li>
+                <li>Review the sorted plan list. The default sort is "lowest drug + premium cost." Compare at least the top three plans line by line, not just by headline annual cost.</li>
+            </ol>
+
+            <p>The number that matters is Plan Finder's "estimated annual drug + premium cost" column. That number includes the premium, the deductible, and your projected copay or coinsurance for each prescription at each pharmacy. It does not include the Part D late-enrollment penalty, which continues separately if it applies to you.</p>
+
+            <p>Our <a href="drug-cost-finder.html" class="text-teal-primary hover:text-teal-dark font-semibold">Drug Cost Finder</a> is useful as a second opinion &mdash; it lets you see how an individual drug compares across the standard Part D structure, which can help you understand why Plan Finder's totals look the way they do.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: mid-article -->
+
+        <h2>Step 3: Check the IRA-Negotiated Drug List Against Your Prescriptions</h2>
+
+        <section>
+            <p>The Inflation Reduction Act's Drug Price Negotiation Program began delivering Maximum Fair Prices (MFPs) on January 1, 2026, for the first 10 selected drugs. If you take any of these, every Part D plan is required to apply the negotiated ceiling in 2027:</p>
+
+            <ul>
+                <li><strong>Eliquis</strong> (apixaban) &mdash; blood thinner</li>
+                <li><strong>Jardiance</strong> (empagliflozin) &mdash; type 2 diabetes and heart failure</li>
+                <li><strong>Xarelto</strong> (rivaroxaban) &mdash; blood thinner</li>
+                <li><strong>Januvia</strong> (sitagliptin) &mdash; type 2 diabetes</li>
+                <li><strong>Farxiga</strong> (dapagliflozin) &mdash; type 2 diabetes, heart failure, chronic kidney disease</li>
+                <li><strong>Entresto</strong> (sacubitril/valsartan) &mdash; heart failure</li>
+                <li><strong>Enbrel</strong> (etanercept) &mdash; rheumatoid arthritis, psoriasis</li>
+                <li><strong>Imbruvica</strong> (ibrutinib) &mdash; certain blood cancers</li>
+                <li><strong>Stelara</strong> (ustekinumab) &mdash; psoriasis, Crohn's disease</li>
+                <li><strong>Fiasp / NovoLog</strong> (insulin aspart) &mdash; insulin</li>
+            </ul>
+
+            <p>A second group of 15 drugs, announced in January 2025 and finalized through late 2025, takes effect January 1, 2027. If a drug in that second group matters to you, confirm its 2027 placement on each plan's formulary during this AEP. Negotiated price is a ceiling &mdash; plans still set tier and copay structure within it. The practical result for most enrollees is a smaller copay or coinsurance, not zero.</p>
+
+            <div class="warning-box">
+                <strong>The $35 insulin rule still applies independently.</strong> The $35 monthly cap on each covered insulin product under Part D continues in 2027. If you take an insulin that is not on the IRA negotiation list, you still pay no more than $35 for a month's supply at a network pharmacy.
+            </div>
+        </section>
+
+        <h2>Step 4: Confirm the Out-of-Pocket Cap Still Protects You</h2>
+
+        <section>
+            <p>The Part D annual out-of-pocket cap &mdash; the one that eliminated the donut hole and set a hard ceiling on what Medicare beneficiaries pay for covered drugs &mdash; is one of the IRA changes that stays in place for 2027. The 2026 cap is $2,100 (the figure we use in our calculators). CMS publishes the 2027 figure in the final Call Letter; it is indexed to the annual percentage increase in average Part D expenditures per enrollee, so it rises modestly year over year.</p>
+
+            <p>What that means operationally: once your TrOOP (true out-of-pocket) spending for Part D-covered drugs reaches the cap in 2027, you pay $0 for covered Part D drugs for the rest of the plan year. The cap does <em>not</em> cover drugs that are not on your plan's formulary, drugs purchased out of network when the plan does not pay, or drugs covered under Part B (such as physician-administered infusions). Those sit outside the Part D envelope entirely.</p>
+
+            <p>If your prescription spending in 2026 reached the cap and your drug list for 2027 looks similar, use that history to project. Our <a href="plan-cost-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">Plan Cost Calculator</a> helps model drug spending against each plan's cost structure, which is especially useful when you are deciding whether a higher-premium plan with better specialty-tier coverage is worth it.</p>
+        </section>
+
+        <h2>Step 5: Decide Whether to Opt In to the Medicare Prescription Payment Plan (M3P)</h2>
+
+        <section>
+            <p>M3P began in 2025 and continues in 2027. It is not a discount; it is a payment smoother. If you opt in, instead of paying your Part D cost-sharing at the pharmacy counter each time, your plan bills you monthly for your year-to-date cost-sharing spread across the remaining months of the plan year.</p>
+
+            <p>M3P is useful when a large prescription cost would otherwise hit early in the year &mdash; for example, a specialty drug filled in January that eats most of your OOP cap in a single transaction. By smoothing that over 11 or 12 months, your January pharmacy out-of-pocket is lower, your February and later months are higher by a predictable amount, and the annual total is identical.</p>
+
+            <p>You can opt in through your plan during AEP (the plan is required to make the enrollment path easy to find on its member portal and by phone) or at any point during the plan year. The 2026 experience exposed a few plan-side friction points &mdash; delayed billing, confusion when the enrollee did not have a mail-order history &mdash; and most plans have cleaned those up for 2027. If you tried M3P in 2026 and had a billing error, try again under the 2027 updated process.</p>
+
+            <h3>When M3P does <em>not</em> help</h3>
+            <ul>
+                <li>You take only low-cost generics and your annual OOP is well below the cap. The administrative effort does not pay off.</li>
+                <li>You expect your drug spending to drop sharply during the year (for example, finishing a course of therapy in Q1). Monthly bills continue even after the pharmacy spending stops.</li>
+                <li>You find predictable monthly bills harder to budget than paying at the counter. M3P is optional.</li>
+            </ul>
+        </section>
+
+        <h2>Step 6: Check Pharmacy Network and Mail-Order Price</h2>
+
+        <section>
+            <p>Pharmacy network is where many AEP comparisons quietly fall apart. Plan Finder lets you add up to five pharmacies; use that slot. Compare preferred retail, standard retail, and mail-order prices on the same list of drugs. For maintenance medications &mdash; blood pressure, cholesterol, diabetes drugs taken daily &mdash; mail-order is often significantly cheaper per fill.</p>
+
+            <p>Two patterns are common in 2027 plan filings:</p>
+            <ol>
+                <li>A plan's premium is low but its only preferred pharmacies are a national chain that is not near you. Standard-network cost-sharing at your local pharmacy wipes out the premium savings.</li>
+                <li>A plan's premium is moderate but it uses a tightly priced mail-order network and offers 90-day supplies at the two-month retail copay. If your maintenance drug list is stable, this is the structure that most often produces the lowest total annual cost.</li>
+            </ol>
+        </section>
+
+        <h2>Step 7: Enroll (or Switch) by December 7</h2>
+
+        <section>
+            <p>Once you have identified the 2027 plan with the lowest annual projected cost that covers all your drugs with manageable prior authorization, enroll. You can enroll three ways: through Plan Finder's "Enroll" button, by calling 1-800-MEDICARE, or by calling the plan directly. All three produce the same confirmation.</p>
+
+            <p>Enrollments made between October 15 and December 7, 2026 take effect January 1, 2027. If you enroll in a new plan, your old plan is automatically terminated; you do not need to call them to cancel. Watch for the new plan's welcome packet, membership card, and the first premium bill, which typically arrives in late December or January.</p>
+
+            <div class="info-box">
+                <strong>Keep your old card.</strong> You will occasionally need to show it in January if you fill a prescription before your new card arrives. Pharmacies can usually process the new plan with just the group ID and member number, which the plan will send by email on enrollment if you give them an address.
+            </div>
+        </section>
+
+        <h2>Step 8: Set a Mid-Year Check Date</h2>
+
+        <section>
+            <p>Mark July 1, 2027 on your calendar. By mid-year you will know whether your plan's actual costs matched your AEP projection, whether any of your drugs had a prior-authorization or step-therapy issue, and whether a formulary change surprised you. You cannot switch stand-alone PDP plans mid-year except under a Special Enrollment Period, but the mid-year check gives you a head start on AEP 2027 and lets you line up any appeals or exception requests you need.</p>
+
+            <p>If you are considering coordinating Original Medicare with employer coverage or exploring Medigap options alongside your Part D selection, our <a href="medicare-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">Medicare Cost Calculator</a> can help you see the full picture.</p>
+        </section>
+
+        <h2>The Three Most Common Mistakes in a Part D AEP Audit</h2>
+
+        <section>
+            <h3>1. Comparing by premium instead of total cost</h3>
+            <p>A $12 monthly premium plan with high copays can cost $600 more over a year than a $38 monthly premium plan with low copays, depending on your drug list. Always sort Plan Finder by "estimated annual drug + premium cost."</p>
+
+            <h3>2. Missing a drug on the comparison</h3>
+            <p>A drug you take infrequently &mdash; one or two refills a year &mdash; still has to be entered. Specialty drugs in particular can single-handedly change which plan is cheapest.</p>
+
+            <h3>3. Trusting last year's star ratings</h3>
+            <p>CMS releases updated plan star ratings every October. A plan that was 4-star last year may be 3.5-star this year, which can affect your 5-Star SEP eligibility for next year. Pull the current ratings on Plan Finder, not from memory.</p>
+        </section>
+
+        <h2>The Bottom Line</h2>
+
+        <section>
+            <p>AEP 2026 is a thirty-minute project that is worth doing even when nothing in your life has changed, because the Part D market changes under you every year. The IRA negotiations are reshaping tier placement for the first 10 drugs now and 15 more starting January 1, 2027. The out-of-pocket cap and $35 insulin rule continue to protect against the worst-case bills. M3P smooths out the timing. And Plan Finder will tell you, in a single screen, which 2027 plan actually costs you the least for the drugs you actually take.</p>
+
+            <p>Read the ANOC when it arrives in September. Run Plan Finder as soon as October 1 data loads. Compare the top three plans drug by drug. And re-enroll by December 7, 2026 &mdash; not because the plan you have is bad, but because the only way to know is to check.</p>
+
+            <p><em>All HealthCalc calculations happen in your browser. We never collect your prescription data or your Medicare information.</em></p>
+
+            <div class="info-box">
+                <strong>Related calculators:</strong>
+                <div class="mt-3">
+                    <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+                    <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+                    <a href="medicare-calculator.html" class="calculator-link">Medicare Cost Calculator</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: end of article -->
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-teal-dark text-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-white text-teal-dark w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                        <span class="font-bold text-xl">HealthCalc</span>
+                    </div>
+                    <p class="text-teal-light text-sm">Free health insurance calculators designed to help you understand costs and make smarter healthcare decisions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="plan-cost-calculator.html" class="hover:text-white transition-colors">Plan Cost Calculator</a></li>
+                        <li><a href="aca-subsidy-calculator.html" class="hover:text-white transition-colors">ACA Subsidy Estimator</a></li>
+                        <li><a href="procedure-cost.html" class="hover:text-white transition-colors">Procedure Cost Finder</a></li>
+                        <li><a href="drug-cost-finder.html" class="hover:text-white transition-colors">Drug Cost Finder</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Disclaimer</h4>
+                    <p class="text-teal-light text-sm">HealthCalc provides educational information only and is not a substitute for professional medical or financial advice. Always consult with qualified professionals for your specific situation.</p>
+                </div>
+            </div>
+            <div class="border-t border-teal-light pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-teal-light">
+                <p>&copy; 2026 HealthCalc. All rights reserved.</p>
+                <p>Last updated October 4, 2026. All our calculators are 100% private &mdash; calculations happen in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
