@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5586HWYPB0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5586HWYPB0');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="If you ignore the ACA Open Enrollment window that closes Dec 15, 2026 for coverage starting Jan 1, 2027, the marketplace will auto-reenroll you — often into a different plan than the one you have today. Here is how crosswalk rules, the subsidy recalculation, and the hierarchy of auto-reenrollment actually work in 2026, and the exact steps to prevent a surprise premium or lost doctor on January 1.">
+    <meta name="keywords" content="ACA auto-reenrollment 2027, how to stop ACA auto renewal 2027, crosswalked ACA plan 2027, ACA December 15 deadline 2026, active plan selection ACA 2027, APTC recalculation 2027, ACA plan discontinued 2027">
+    <title>How to Prevent an Unwanted 2027 ACA Auto-Reenrollment: The Dec 15 Deadline, Crosswalked Plans, and the Subsidy Recalculation Trap</title>
+    <link rel="canonical" href="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-stop-unwanted-aca-auto-reenrollment-2027-plan.html">
+    <meta property="og:title" content="How to Prevent an Unwanted 2027 ACA Auto-Reenrollment">
+    <meta property="og:description" content="The marketplace will auto-reenroll you if you do nothing by Dec 15, 2026 — often into a different plan. Here is how crosswalk rules and the APTC recalculation actually work, and how to take back control.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-stop-unwanted-aca-auto-reenrollment-2027-plan.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Prevent an Unwanted 2027 ACA Auto-Reenrollment">
+    <meta name="twitter:description" content="Dec 15, 2026 is the active-selection deadline. Here is the crosswalk hierarchy, the APTC recalculation, and the exact steps to stop a surprise premium or lost doctor on Jan 1.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        .nav-link { color: #4B5563; transition: color 0.3s ease; }
+        .nav-link:hover { color: #0D9488; }
+        article { max-width: 800px; margin: 0 auto; }
+        article h2 { font-size: 1.875rem; font-weight: bold; color: #134E4A; margin-top: 2rem; margin-bottom: 1rem; }
+        article h3 { font-size: 1.25rem; font-weight: 600; color: #0D9488; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        article p { line-height: 1.75; color: #374151; margin-bottom: 1rem; }
+        article ul, article ol { margin: 1.5rem 0 1.5rem 2rem; line-height: 1.75; color: #374151; }
+        article li { margin-bottom: 0.5rem; }
+        .info-box { background-color: #F0FDFA; border-left: 4px solid #0D9488; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0.5rem; }
+        .warning-box { background-color: #FEF3C7; border-left: 4px solid #F97316; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0.5rem; }
+        .comparison-table { margin: 1.5rem 0; }
+        .comparison-table table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.95rem; }
+        .comparison-table th, .comparison-table td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #D1D5DB; }
+        .comparison-table th { background-color: #F0FDFA; color: #134E4A; font-weight: 600; }
+        .calculator-link { display: inline-block; background-color: #0D9488; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; margin: 0.5rem 0.5rem 0.5rem 0; }
+        .calculator-link:hover { background-color: #134E4A; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Prevent an Unwanted 2027 ACA Auto-Reenrollment: The Dec 15 Deadline, Crosswalked Plans, and the Subsidy Recalculation Trap",
+      "description": "A 2026 Open Enrollment guide to the ACA auto-reenrollment hierarchy, crosswalk rules when a plan is discontinued, the APTC recalculation, and the steps to actively select a 2027 plan before Dec 15, 2026.",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "author": { "@type": "Organization", "name": "HealthCalc Team" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HealthCalc",
+        "logo": { "@type": "ImageObject", "url": "https://studentloancalcs.github.io/health-insurance-calculators/logo.png" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is ACA auto-reenrollment and when does it happen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you have a marketplace plan on December 15, 2026 and have not actively selected a 2027 plan by that date, the marketplace will automatically reenroll you into coverage effective January 1, 2027. If your current plan is still offered, you are placed in the same plan. If it is discontinued, you are moved to a crosswalked plan selected by the issuer or, if no crosswalk is available, by the marketplace using a hierarchy based on metal tier and premium. Advance premium tax credits are recalculated using the most recent income and household information on file, which is often outdated by the time January arrives."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is auto-reenrollment risky in 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three risks stack. First, the APTC recalculation uses your prior-year income estimate, so if your 2027 income will differ from what you reported, your January subsidy will be wrong and you will owe or be owed money at tax time. Second, if your plan is discontinued, the crosswalked plan can have a different provider network, different drug formulary, and a different deductible, meaning your doctor or medication may be out of network starting January 1. Third, benchmark Silver premiums are shifting again in 2027, so the dollar amount of your subsidy will change even if your tax credit percentage stays the same."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a crosswalked ACA plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A crosswalk is the issuer's or marketplace's choice of a replacement plan when a 2026 plan is being discontinued for 2027. The issuer first proposes a successor plan at the same metal tier with similar benefits; the marketplace then validates the crosswalk. If no acceptable crosswalk exists from the same issuer, the marketplace steps through a published hierarchy: same metal tier from another issuer, then adjacent metal tiers, then the lowest-cost plan in the same tier. Crosswalked plans share a tier but almost never share the exact network, formulary, and cost sharing of the original."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is the deadline to prevent ACA auto-reenrollment for 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open Enrollment runs November 1, 2026 through January 15, 2027 on HealthCare.gov. The deadline to actively select or change your 2027 plan with coverage starting January 1 is December 15, 2026. Selections made December 16 through January 15 take effect February 1. Auto-reenrollment runs on December 15, so to stop it you must complete an active plan selection on or before that date. Some state-based marketplaces run slightly different windows, so if your state operates its own exchange, check the exact dates on your state portal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the APTC subsidy recalculated at auto-reenrollment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The marketplace pulls the most recent household income on file, applies the current year's federal poverty level and benchmark premium, and recalculates your advance premium tax credit for the new plan year. In 2026 the FPL used for 2027 plan year calculations is $15,650 for a single filer plus $5,580 per additional household member. The applicable-percentage table and benchmark Silver premium then determine the dollar subsidy. If your income has changed, if household size changed, or if the benchmark Silver plan in your area changed, the amount you pay in January will not match what you paid in December."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I check in my 2027 ACA plan Notice before December 15?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Five lines in the renewal notice decide whether to actively re-select. First, is your plan being discontinued, and if so what plan has been crosswalked? Second, what is the new monthly premium before subsidy? Third, what APTC does the marketplace have on file, and does it match a reasonable 2027 income projection? Fourth, is your deductible, out-of-pocket maximum, or primary care copay changing? Fifth, is your provider or hospital still in-network for the 2027 plan year, which must be verified on the issuer's 2027 directory, not the 2026 one. If any of those answers is wrong, do an active plan selection instead of letting auto-reenrollment run."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I undo an ACA auto-reenrollment after January 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, during the remaining Open Enrollment window. You can change plans at any time between January 1 and January 15, 2027, with the new plan effective February 1. After January 15 you need a Special Enrollment Period event to switch. Note that even if you change plans in January, you still owe premiums for January coverage on the auto-reenrolled plan, so the fastest path is to actively select by December 15 and avoid the issue entirely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my income went up in 2026 and I did not report it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The marketplace reconciles advance subsidies against actual income at tax time using Form 8962. If you received more APTC than you were entitled to because your actual income was higher than reported, you repay the excess on your federal return, subject to repayment caps that scale with income relative to the federal poverty level. If your income is above 400 percent of FPL, there is no repayment cap. Update your 2027 income estimate during active plan selection to right-size the subsidy going forward and reduce the reconciliation bill."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-primary text-white w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                    <span class="font-bold text-xl text-teal-dark">HealthCalc</span>
+                </div>
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="plan-cost-calculator.html" class="nav-link text-sm font-medium">Plan Cost</a>
+                    <a href="aca-subsidy-calculator.html" class="nav-link text-sm font-medium">ACA Subsidy</a>
+                    <a href="procedure-cost.html" class="nav-link text-sm font-medium">Procedures</a>
+                    <a href="drug-cost-finder.html" class="nav-link text-sm font-medium">Drugs</a>
+                    <a href="blog.html" class="text-teal-primary text-sm font-medium">Blog</a>
+                </div>
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block nav-link text-sm font-medium py-2">Home</a>
+                <a href="plan-cost-calculator.html" class="block nav-link text-sm font-medium py-2">Plan Cost</a>
+                <a href="aca-subsidy-calculator.html" class="block nav-link text-sm font-medium py-2">ACA Subsidy</a>
+                <a href="procedure-cost.html" class="block nav-link text-sm font-medium py-2">Procedures</a>
+                <a href="drug-cost-finder.html" class="block nav-link text-sm font-medium py-2">Drugs</a>
+                <a href="blog.html" class="block text-teal-primary text-sm font-medium py-2">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-sm text-gray-600">
+                <a href="index.html" class="text-teal-primary hover:text-teal-dark">Home</a>
+                <span class="mx-2">/</span>
+                <a href="blog.html" class="text-teal-primary hover:text-teal-dark">Blog</a>
+                <span class="mx-2">/</span>
+                <span>Stop Unwanted 2027 ACA Auto-Reenrollment</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-teal-dark mb-4">How to Prevent an Unwanted 2027 ACA Auto-Reenrollment: The Dec 15 Deadline, Crosswalked Plans, and the Subsidy Recalculation Trap</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-600">
+                <div>
+                    <p><strong>By HealthCalc Team</strong></p>
+                    <p>Published October 14, 2026</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p><strong>9 min read</strong></p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <p>Open Enrollment for the 2027 ACA plan year opens November 1, 2026 and the single most important date on the calendar is December 15. That is when the marketplace runs auto-reenrollment. If you have a 2026 marketplace plan and you have not completed an active plan selection by midnight on December 15, 2026, HealthCare.gov (or your state exchange) picks a 2027 plan for you, applies a recalculated advance premium tax credit, and starts billing you for coverage on January 1. In some cases that works out fine. In many cases — a plan that got discontinued, a benchmark Silver premium that shifted, an income estimate that stale — the January 1 invoice is a surprise, and the first appointment of the year reveals that the previously in-network doctor is suddenly out of network.</p>
+
+            <p>Auto-reenrollment exists to make sure nobody loses coverage simply because they forgot to log in. It is a safety net, not a strategy. In 2026, with the benchmark Silver crosswalk churn and the ongoing adjustments to the applicable-percentage table, the probability that the auto-selected plan is the right plan is lower than it has been in several years.</p>
+
+            <p>Here is the actual mechanism — the crosswalk hierarchy, the subsidy recalculation, the deadline — plus the five lines in the renewal notice that decide whether to actively re-select, and the paperwork for doing it.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: after intro section -->
+
+        <h2>The Auto-Reenrollment Hierarchy, in the Order the Marketplace Actually Runs It</h2>
+
+        <section>
+            <p>On the morning of December 16, 2026 the marketplace examines every active 2026 enrollee who did not make a 2027 selection. For each enrollee it runs through a hierarchy. The hierarchy is public and documented, and knowing it is how you predict what you will be auto-enrolled into if you do nothing.</p>
+
+            <ol>
+                <li><strong>Same plan, same issuer.</strong> If your 2026 plan is being offered again for 2027 by the same issuer, you stay in it. New premium, new cost sharing, new formulary, same plan number. This is the most common outcome and the lowest-friction result — but note that "same plan" can still have a materially different premium and a 20 to 40 percent reshaped drug formulary.</li>
+                <li><strong>Crosswalked plan from the same issuer.</strong> If your 2026 plan is being discontinued but the issuer still offers plans in your area, the issuer proposes a successor plan at the same metal tier with "comparable" benefits. The marketplace validates the crosswalk. This is where surprises happen: the crosswalk is a product decision, not an actuarial twin.</li>
+                <li><strong>Lowest-cost plan in the same metal tier, same issuer.</strong> If the issuer leaves the market entirely in your rating area but still participates nearby, the marketplace maps you to its lowest-cost plan in the same metal tier.</li>
+                <li><strong>Same metal tier, different issuer.</strong> If your issuer leaves your rating area completely, the marketplace selects the lowest-cost plan in the same metal tier from any participating issuer in your area. This is the most disruptive outcome: new network, new formulary, new member services number, new app.</li>
+                <li><strong>Adjacent metal tier.</strong> If no plan is available at your current metal tier at all (rare, but possible in thin rural rating areas), the marketplace steps to the nearest adjacent tier and selects the lowest-cost plan there.</li>
+            </ol>
+
+            <p>Through every rung of the hierarchy, the marketplace recalculates APTC using the most recent income and household data in your account. If you have not updated your estimated income since you first enrolled in 2026, that is the number the system will use for 2027.</p>
+
+            <a href="aca-subsidy-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">Estimate your 2027 ACA subsidy with current income &rarr;</a>
+        </section>
+
+        <h2>Why 2027 Is a Higher-Risk Year for Doing Nothing</h2>
+
+        <section>
+            <p>Three things are shifting under the hood for the 2027 plan year that make a passive auto-reenrollment more likely to land in the wrong place.</p>
+
+            <h3>1. Benchmark Silver reshuffles</h3>
+
+            <p>Your APTC is anchored to the second-lowest-cost Silver plan in your rating area, the benchmark. When a new issuer enters your area with an aggressive Silver, or an incumbent re-prices, the benchmark can move to a different plan — and your subsidy follows the new benchmark, not the plan you are enrolled in. Enrollees who stay in a non-benchmark Silver can see premium changes in either direction without any change to their actual chosen plan.</p>
+
+            <h3>2. Formulary rework around GLP-1s and the new negotiated-price drugs</h3>
+
+            <p>Issuers rebuild their 2027 formularies around the second group of Medicare-negotiated drugs taking effect January 1, 2027, and around aggressive utilization management on GLP-1 agonists. Commercial ACA formularies are not bound by Medicare's negotiated list, but issuers often rework tiering across the entire book of business at once. A plan that covered your Mounjaro, Zepbound, or Ozempic on Tier 2 in 2026 may move it to Tier 4 or exclude it entirely in 2027.</p>
+
+            <h3>3. 2027 FPL used in the subsidy calculation</h3>
+
+            <p>Plan-year 2027 subsidies are calculated using the 2026 federal poverty guidelines: $15,650 for a single-person household plus $5,580 for each additional person. If your household size changed in 2026 (new baby, child moved out, divorce, a dependent dropped) and you did not update your account, the marketplace uses the old number and the APTC is wrong.</p>
+
+            <div class="warning-box">
+                <strong>The reconciliation bill.</strong> Any APTC paid in advance that exceeds what you were entitled to based on actual 2027 income is reconciled on Form 8962 with your 2027 federal return. Repayment is capped on a sliding scale for households under 400 percent of FPL, but above 400 percent of FPL there is no cap. A single filer at $62,000 projected but $78,000 actual can owe several thousand dollars of excess APTC back at tax time if the subsidy was not right-sized during Open Enrollment.
+            </div>
+        </section>
+
+        <!-- AdSense placeholder -->
+        <!-- Ad placement: mid-article -->
+
+        <h2>The Five Lines in Your Renewal Notice That Decide Whether to Re-select</h2>
+
+        <section>
+            <p>The marketplace mails a Marketplace Open Enrollment Notice and the issuer mails a plan-specific renewal notice. Together they contain almost everything you need. Read for these five lines.</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Line to check</th>
+                            <th>What good looks like</th>
+                            <th>What means re-select actively</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Plan continuation status</td>
+                            <td>"Your plan is being offered again for 2027"</td>
+                            <td>"Your plan is being discontinued" with a crosswalk</td>
+                        </tr>
+                        <tr>
+                            <td>2027 premium before subsidy</td>
+                            <td>Within 10% of your 2026 premium</td>
+                            <td>Up more than 15% (benchmark probably shifted)</td>
+                        </tr>
+                        <tr>
+                            <td>APTC on file</td>
+                            <td>Matches a reasonable 2027 income projection</td>
+                            <td>Based on a 2024 or old-2025 income number</td>
+                        </tr>
+                        <tr>
+                            <td>Deductible and OOP max</td>
+                            <td>Same tier, modest annual change</td>
+                            <td>Deductible jumped more than $500</td>
+                        </tr>
+                        <tr>
+                            <td>Provider and formulary status</td>
+                            <td>Doctor and prescriptions confirmed on 2027 directory</td>
+                            <td>Any uncertainty — verify on 2027 directory, not 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>If any one of those five lines flags re-select, log in to HealthCare.gov (or your state exchange) and complete an active plan selection by December 15, 2026. The portal walks you through updating income and household, then displays all plans available in your area with the recalculated APTC already applied. You do not have to leave the issuer you have today; you can choose the same plan actively, which produces a cleaner audit trail than letting the system assume for you.</p>
+
+            <a href="plan-cost-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">Compare 2027 plan costs with your real numbers &rarr;</a>
+        </section>
+
+        <h2>The Active Re-Selection Workflow</h2>
+
+        <section>
+            <p>From the moment Open Enrollment opens on November 1, you can actively select a 2027 plan. The entire workflow runs about 30 minutes if you have your paperwork in front of you.</p>
+
+            <ol>
+                <li><strong>Log in to HealthCare.gov (or your state exchange).</strong> Confirm the account is tied to the right 2027 application year. If the portal still shows your 2026 application as current, start the renewal application; do not create a new one.</li>
+                <li><strong>Update household and income.</strong> List everyone who will be on your 2027 tax return and your realistic 2027 modified adjusted gross income. Err slightly high on income if you are uncertain — it reduces the chance of a reconciliation payback. You can update income again mid-year if circumstances change.</li>
+                <li><strong>Report life changes.</strong> Marriage, divorce, new baby, child aging off, change in immigration status, change in employer coverage offer. The marketplace uses these to validate eligibility, not just subsidy size.</li>
+                <li><strong>Review all plans at your preferred tier.</strong> Filter by metal tier (Silver, Gold, Bronze) and sort by premium after subsidy. The lowest post-subsidy premium is not always the best deal — a $0 Bronze with a $9,200 deductible is wrong for a household with chronic conditions, while a $45 Silver with cost-sharing reductions is often the right answer under 250 percent of FPL.</li>
+                <li><strong>Check CSR eligibility if your income is at or below 250% of FPL.</strong> Cost-sharing reductions are only available on Silver plans and only apply if you actively select Silver. Letting the system auto-renew you into a Gold or Bronze forfeits them.</li>
+                <li><strong>Verify your doctor on the 2027 provider directory.</strong> Use the directory linked from inside HealthCare.gov for the specific plan year, not the issuer's general provider lookup. 2026 directory and 2027 directory are different documents.</li>
+                <li><strong>Verify prescriptions on the 2027 formulary.</strong> Pull the specific 2027 formulary PDF or searchable tool. Confirm tier and any prior authorization or step therapy requirements. A one-tier shift (Tier 2 to Tier 3) can change a copay by $20 to $60 a month on a chronic medication.</li>
+                <li><strong>Submit.</strong> You get a confirmation number. Save it. The issuer will send a separate welcome packet in late December or early January.</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Order matters:</strong> Update income first, then look at plans. The portal only recalculates APTC after you save the income update, so if you shop plans with stale income the premiums shown on screen will be wrong.
+            </div>
+        </section>
+
+        <h2>Special Cases That Need Extra Attention</h2>
+
+        <section>
+            <h3>Your plan is being discontinued and the crosswalk is wrong</h3>
+
+            <p>If the renewal notice says your plan is being discontinued and the crosswalked plan has a different network, go into active selection and pick a plan whose network actually includes your doctor. The crosswalk is a default, not a decision — you are free to pick anything available in your rating area.</p>
+
+            <h3>You got married, divorced, or had a baby in 2026</h3>
+
+            <p>Household size changes the FPL calculation and often changes the applicable-percentage table result. Any household event that was not reported during the year must be reported during Open Enrollment, or auto-reenrollment uses stale household data.</p>
+
+            <h3>Your income went up significantly</h3>
+
+            <p>If your 2027 projected income will exceed 400 percent of FPL and the subsidy cliff has restored for your situation, the entire APTC may disappear. Model the number before Open Enrollment ends so you are not surprised by a full-price January premium.</p>
+
+            <h3>You gained employer coverage mid-year</h3>
+
+            <p>Enrollment in an affordable employer plan (as defined by the ACA affordability rules for 2027) ends your eligibility for marketplace APTC. If you let auto-reenrollment run, you will owe back the January APTC at tax time. Terminate the marketplace plan with an effective date on the day employer coverage starts.</p>
+
+            <h3>You are turning 65 in 2027</h3>
+
+            <p>If your 65th birthday falls in 2027, you have a Medicare Initial Enrollment Period that begins three months before the birth month. Coordinate the end of the ACA plan with the start of Medicare to avoid a double-premium month. Do not let auto-reenrollment carry you past the Medicare start date.</p>
+        </section>
+
+        <h2>What If You Miss December 15?</h2>
+
+        <section>
+            <p>Open Enrollment keeps going through January 15, 2027. Changes made December 16 through January 15 take effect February 1, not January 1. The January 1 coverage you were auto-enrolled into stays in force (and bills) for the month of January; a change you make in early January takes effect the following month. The practical consequences:</p>
+
+            <ul>
+                <li><strong>You still owe January premium at the auto-reenrolled rate.</strong> Non-payment of the first month triggers a grace period and eventual termination, but if you want continuous coverage you pay the January invoice even if you plan to switch for February.</li>
+                <li><strong>Your January deductible accumulation starts on the auto-enrolled plan.</strong> If you switch for February, the deductible generally restarts under the new plan. In practice this matters only if you had a January medical event; otherwise the lost accumulation is small.</li>
+                <li><strong>CSR eligibility only kicks in when you actively select Silver.</strong> If auto-reenrollment moved you off Silver, you forfeit CSR for January even if you move back to Silver for February.</li>
+            </ul>
+
+            <p>After January 15, 2027 the Open Enrollment Period closes. To change plans you need a Special Enrollment Period event (job loss, marriage, birth, move, loss of other coverage, income change crossing a key threshold). The low-income monthly SEP for households under 150 percent of FPL remains in effect in 2026-27 and does not require a life event, but it only applies at those income levels.</p>
+
+            <a href="aca-subsidy-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">Run the subsidy math on your 2027 income &rarr;</a>
+        </section>
+
+        <h2>The Bottom Line</h2>
+
+        <section>
+            <p>Auto-reenrollment is useful when nothing has changed and the plan is still well-matched to your household. In 2026 — with benchmark Silver churn, formulary rework around GLP-1s and newly negotiated drugs, and a continued reshaping of the applicable-percentage table — the odds that doing nothing produces the right 2027 outcome are lower than usual. The fix is a 30-minute active selection in the HealthCare.gov portal (or your state exchange) by December 15, 2026, with current income, current household, and a quick verification of your doctor and prescriptions against the 2027 directory and formulary.</p>
+
+            <p>The deadline is unforgiving. Twelve-oh-one on December 16 is already auto-reenrollment time. Set a reminder for the first week of December so there is still buffer to re-check the numbers and submit a clean application.</p>
+
+            <div class="info-box">
+                <strong>Run your specific numbers:</strong>
+                <a href="aca-subsidy-calculator.html" class="calculator-link">ACA Subsidy Calculator</a>
+                <a href="plan-cost-calculator.html" class="calculator-link">Plan Cost Calculator</a>
+                <a href="drug-cost-finder.html" class="calculator-link">Drug Cost Finder</a>
+            </div>
+        </section>
+
+        <div class="mt-8 p-4 bg-gray-100 text-center text-sm text-gray-600 rounded">
+            <p><strong>Privacy Note:</strong> All calculations happen in your browser. We never collect your data.</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-teal-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-white text-teal-dark w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                        <span class="font-bold text-xl">HealthCalc</span>
+                    </div>
+                    <p class="text-teal-light text-sm">Free health insurance calculators designed to help you understand costs and make smarter healthcare decisions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="plan-cost-calculator.html" class="hover:text-white transition-colors">Plan Cost Calculator</a></li>
+                        <li><a href="aca-subsidy-calculator.html" class="hover:text-white transition-colors">ACA Subsidy Estimator</a></li>
+                        <li><a href="procedure-cost.html" class="hover:text-white transition-colors">Procedure Cost Finder</a></li>
+                        <li><a href="drug-cost-finder.html" class="hover:text-white transition-colors">Drug Cost Finder</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Disclaimer</h4>
+                    <p class="text-teal-light text-sm">HealthCalc provides educational information only and is not a substitute for professional medical or financial advice. Always consult with qualified professionals for your specific situation.</p>
+                </div>
+            </div>
+            <div class="border-t border-teal-light pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-teal-light">
+                <p>&copy; 2026 HealthCalc. All rights reserved.</p>
+                <p>All our calculators are 100% private — calculations happen in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
