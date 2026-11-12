@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5586HWYPB0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5586HWYPB0');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open enrollment week 2 (November 12, 2026): 2027 ACA family plans use two completely different out-of-pocket maximum structures &mdash; embedded and aggregate &mdash; that can swing a single-family-member hospital bill by $9,000 or more. Here is how to tell which type you are buying and why it matters before the December 15 deadline.">
+    <meta name="keywords" content="2027 ACA family out of pocket max, embedded vs aggregate OOPM 2027, family HDHP deductible 2027, family oopm trap, how to pick family ACA plan 2027, embedded deductible 2027 HDHP, aggregate family out of pocket max">
+    <title>How to Compare Family Out-of-Pocket Maximum Rules on 2027 ACA Plans Before December 15 &mdash; The Embedded vs Aggregate Trap</title>
+    <link rel="canonical" href="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-compare-2027-aca-family-oop-max-embedded-aggregate-november-12-2026.html">
+    <meta property="og:title" content="How to Compare Family Out-of-Pocket Maximum Rules on 2027 ACA Plans &mdash; The Embedded vs Aggregate Trap">
+    <meta property="og:description" content="On an aggregate family OOPM, no single family member's cost-sharing stops until the FULL family limit ($19,050 for 2027) is met; on an embedded plan, each person stops at the ACA individual cap ($9,525 for 2027). The difference can be $9,000+ on one family member's hospital bill.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studentloancalcs.github.io/health-insurance-calculators/blog-how-to-compare-2027-aca-family-oop-max-embedded-aggregate-november-12-2026.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Embedded vs Aggregate Family OOPM on 2027 ACA Plans">
+    <meta name="twitter:description" content="A 2027 HDHP family plan can have one member rack up $19,050 in out-of-pocket costs before the plan pays a dollar if the OOP max is aggregate. Here is how to spot the structure on the SBC before you lock in.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .bg-teal-primary { background-color: #0D9488; }
+        .bg-teal-dark { background-color: #134E4A; }
+        .bg-teal-light { background-color: #F0FDFA; }
+        .text-teal-primary { color: #0D9488; }
+        .text-teal-dark { color: #134E4A; }
+        .text-coral { color: #F97316; }
+        .nav-link { color: #4B5563; transition: color 0.3s ease; }
+        .nav-link:hover { color: #0D9488; }
+        article { max-width: 800px; margin: 0 auto; }
+        article h2 { font-size: 1.875rem; font-weight: bold; color: #134E4A; margin-top: 2rem; margin-bottom: 1rem; }
+        article h3 { font-size: 1.25rem; font-weight: 600; color: #0D9488; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        article p { line-height: 1.75; color: #374151; margin-bottom: 1rem; }
+        article ul, article ol { margin: 1.5rem 0 1.5rem 2rem; line-height: 1.75; color: #374151; }
+        article li { margin-bottom: 0.5rem; }
+        .info-box { background-color: #F0FDFA; border-left: 4px solid #0D9488; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0.5rem; }
+        .warning-box { background-color: #FEF3C7; border-left: 4px solid #F97316; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0.5rem; }
+        .alert-box { background-color: #FEE2E2; border-left: 4px solid #DC2626; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0.5rem; }
+        .step-box { background-color: #F0FDFA; border: 1px solid #0D9488; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0.5rem; }
+        .step-box .step-number { display: inline-block; background-color: #0D9488; color: white; width: 2rem; height: 2rem; border-radius: 50%; text-align: center; line-height: 2rem; font-weight: bold; margin-right: 0.75rem; }
+        .calculator-link { display: inline-block; background-color: #0D9488; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; margin: 0.5rem 0.5rem 0.5rem 0; }
+        .calculator-link:hover { background-color: #134E4A; }
+        .comparison-table table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem 0; font-size: 0.95rem; }
+        .comparison-table th, .comparison-table td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #D1D5DB; }
+        .comparison-table th { background-color: #F0FDFA; color: #134E4A; font-weight: 600; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Compare Family Out-of-Pocket Maximum Rules on 2027 ACA Plans Before December 15 — The Embedded vs Aggregate Trap",
+      "description": "On 2027 ACA family plans, embedded and aggregate out-of-pocket maximums produce dramatically different outcomes when one member has a big medical year. Here is how to identify the structure on the SBC and pick the right one for your family before December 15.",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": { "@type": "Organization", "name": "HealthCalc Team" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HealthCalc",
+        "logo": { "@type": "ImageObject", "url": "https://studentloancalcs.github.io/health-insurance-calculators/favicon.svg" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between embedded and aggregate family out-of-pocket maximum on a 2027 ACA plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An embedded family OOPM means each individual family member has their own out-of-pocket cap (the ACA individual cost-sharing limit, $9,525 for 2027). Once any one member hits $9,525, the plan pays 100% of covered in-network services for that person, even if the rest of the family has not met the family limit. An aggregate family OOPM has no individual sub-cap: one family member can accumulate the entire family out-of-pocket maximum ($19,050 for 2027) themselves before the plan pays a dollar in 100% coverage. Since 2016, the ACA has required embedded individual OOPMs on most family plans, but HSA-qualified family HDHPs are exempt below a certain deductible threshold and can still be purely aggregate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 2027 ACA out-of-pocket maximum limits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For plan year 2027 (per the HHS final Notice of Benefit and Payment Parameters), the ACA cost-sharing maximums are $9,525 for self-only coverage and $19,050 for family coverage, up from $9,200 and $18,400 in 2026. The ACA requires that no individual in any family plan have cost-sharing exceeding $9,525 in 2027 — this is the individual embedded cap. For HSA-qualified HDHPs, the IRS sets separate (lower) maximums: $8,600 self-only / $17,200 family for 2027. The HSA-eligible plan can still have an aggregate family deductible, but the HHS individual OOPM cap of $9,525 is layered on top after the deductible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an HSA-qualified family HDHP have a purely aggregate family deductible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, for the deductible. IRS rules permit an HSA-qualified family HDHP to have a single aggregate family deductible of at least $3,400 for 2027, meaning no benefits are paid for any family member (other than preventive care) until the full family deductible is met. However, once past the deductible, the ACA still requires that no single individual have cost-sharing above $9,525 in 2027. So on an HSA family HDHP with a $6,000 aggregate deductible and a $17,200 aggregate family OOPM, one sick family member can still accumulate up to $9,525 in out-of-pocket costs, after which the plan pays 100% for that individual even if the rest of the family has barely used the plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I tell from the SBC whether my 2027 family plan is embedded or aggregate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Summary of Benefits and Coverage lists the deductible and out-of-pocket maximum in the first section. Look for two numbers for each: an individual amount and a family amount. If the SBC explicitly shows both (e.g., 'Deductible: $3,000 individual / $6,000 family' and notes it is 'embedded') the plan uses an embedded structure. If the SBC shows only a family number for an HDHP, or notes that 'the entire family deductible must be met before plan benefits begin for any family member,' that is an aggregate deductible. The language 'per individual, up to the family maximum' indicates embedded. On 2027 Marketplace plans, click the 'Plan Details' link, then download the SBC PDF; the structure is always disclosed on page 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which family OOPM structure is better for my 2027 ACA plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your expected utilization pattern. If one family member has a known high-cost year (planned surgery, pregnancy, chronic condition, child with complex needs), an embedded OOPM is dramatically better because the $9,525 individual cap stops that person's out-of-pocket spending while the rest of the family has barely used the plan. If medical costs are spread evenly across the family and none is likely to hit $9,525 individually, an aggregate plan can be slightly cheaper in premium because it is a worse deal for high-utilizers. For the majority of families with any chronic condition or anticipated big-ticket care, embedded is worth the premium premium."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I enroll in a family ACA plan with the wrong OOPM structure, can I switch during open enrollment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can change plans an unlimited number of times on HealthCare.gov or your state exchange until the Open Enrollment deadline for your coverage date. The December 15, 2026 deadline locks in January 1, 2027 coverage; the January 15, 2027 deadline locks in February 1 coverage in most states. If you enroll in a plan on November 12 and realize on November 20 that the aggregate structure is wrong for your family, go back to the Marketplace, pick a different plan, and the system will replace your prior selection. After January 15, 2027 (or your state's final OEP date), you can only switch outside OEP with a qualifying Special Enrollment Period. Dissatisfaction with the OOPM structure is not a qualifying SEP."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-primary text-white w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                    <span class="font-bold text-xl text-teal-dark">HealthCalc</span>
+                </div>
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="plan-cost-calculator.html" class="nav-link text-sm font-medium">Plan Cost</a>
+                    <a href="aca-subsidy-calculator.html" class="nav-link text-sm font-medium">ACA Subsidy</a>
+                    <a href="procedure-cost.html" class="nav-link text-sm font-medium">Procedures</a>
+                    <a href="drug-cost-finder.html" class="nav-link text-sm font-medium">Drugs</a>
+                    <a href="blog.html" class="text-teal-primary text-sm font-medium">Blog</a>
+                </div>
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block nav-link text-sm font-medium py-2">Home</a>
+                <a href="plan-cost-calculator.html" class="block nav-link text-sm font-medium py-2">Plan Cost</a>
+                <a href="aca-subsidy-calculator.html" class="block nav-link text-sm font-medium py-2">ACA Subsidy</a>
+                <a href="procedure-cost.html" class="block nav-link text-sm font-medium py-2">Procedures</a>
+                <a href="drug-cost-finder.html" class="block nav-link text-sm font-medium py-2">Drugs</a>
+                <a href="blog.html" class="block text-teal-primary text-sm font-medium py-2">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-sm text-gray-600">
+                <a href="index.html" class="text-teal-primary hover:text-teal-dark">Home</a>
+                <span class="mx-2">/</span>
+                <a href="blog.html" class="text-teal-primary hover:text-teal-dark">Blog</a>
+                <span class="mx-2">/</span>
+                <span>Embedded vs Aggregate Family OOPM 2027</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-teal-dark mb-4">How to Compare Family Out-of-Pocket Maximum Rules on 2027 ACA Plans Before December 15 &mdash; The Embedded vs Aggregate Trap</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-600">
+                <div>
+                    <p><strong>By HealthCalc Team</strong></p>
+                    <p>Published November 12, 2026</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p><strong>11 min read</strong></p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <p>Open enrollment is now in its second week, and the shopping variable most likely to burn a family in 2027 is not the premium, not the deductible, and not even the network &mdash; it is the structure of the out-of-pocket maximum. Two family plans can advertise an identical $19,050 family out-of-pocket max and produce a $9,525 difference in what you actually pay when one family member has a hospital stay in March. The reason is a quiet distinction almost nobody reads on the Summary of Benefits and Coverage: whether the family OOPM is <em>embedded</em> (each person has an individual sub-cap) or <em>aggregate</em> (no individual sub-cap on the deductible; one person can accumulate the full family amount alone).</p>
+
+            <p>The ACA since 2016 has required that no individual in a family plan have cost-sharing above the self-only out-of-pocket maximum &mdash; $9,525 for 2027. But HSA-qualified high-deductible health plans are allowed to have a purely aggregate <em>deductible</em>, meaning no plan benefits begin for anybody in the family until the full family deductible is met. That exception is what creates the trap. If you enroll your family of four in a 2027 HDHP with a $6,000 aggregate deductible thinking it works the way your old PPO did, and your spouse needs a $12,000 outpatient surgery in February, you will discover in March that the plan paid zero toward the first $6,000 and that none of the standard &ldquo;individual deductible&rdquo; language you remember from employer coverage applies.</p>
+
+            <p>This guide walks through the five things you need to verify on any 2027 ACA family plan before you click Enroll by the December 15, 2026 deadline for January 1 coverage. It applies to on-exchange and off-exchange individual family plans and to small-group ACA-compliant family plans that renew January 1.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+
+        <h2>The 2027 numbers you need to anchor to</h2>
+
+        <section>
+            <p>Three sets of regulatory limits apply to every 2027 family ACA plan. Keep them straight because plans will mix and match within these boundaries:</p>
+
+            <ul>
+                <li><strong>HHS ACA cost-sharing maximum (2027):</strong> $9,525 self-only / $19,050 family. This is the ceiling every ACA-compliant plan must live under for in-network essential health benefits.</li>
+                <li><strong>HHS individual embedded cap (2027):</strong> $9,525. No single person in a family plan can be exposed to more than $9,525 in in-network cost-sharing in a year, by law. This applies even if the family OOPM is $19,050.</li>
+                <li><strong>IRS HSA-qualified HDHP minimums and maximums (2027):</strong> Minimum deductible $1,700 self-only / $3,400 family. Maximum OOPM $8,600 self-only / $17,200 family. HSA contribution limit $4,400 self-only / $8,750 family, with $1,000 catch-up at age 55+.</li>
+            </ul>
+
+            <p>Here is the critical detail: an HDHP family plan can be purely aggregate on the deductible but must still honor the $9,525 individual cap on cost-sharing (the HHS rule overlays the IRS rule). So the worst-case exposure for one family member on an HSA family HDHP in 2027 is not $17,200 &mdash; it is $9,525 after they personally pay enough deductible and coinsurance to hit that number, even if the rest of the family uses zero medical care.</p>
+
+            <div class="info-box">
+                <strong>Quick math:</strong> On an aggregate HDHP family plan with a $6,000 family deductible, one family member who incurs $9,525 in cost-sharing effectively pays all $6,000 of the family deductible herself (because aggregate = no individual sub-cap) plus $3,525 in coinsurance. From that point forward, the plan pays 100% for her, but the family is still exposed up to $19,050 if anyone else gets sick.
+            </div>
+        </section>
+
+        <!-- AdSense placeholder -->
+
+        <h2>The five-minute family OOPM verification checklist</h2>
+
+        <section>
+            <p>Run this on every 2027 family plan you are seriously considering. The plan's Summary of Benefits and Coverage, available from the plan details page on HealthCare.gov or your state exchange, has every number you need. You do not need to call the carrier for most of this; the SBC is a federally standardized document.</p>
+        </section>
+
+        <div class="step-box">
+            <h3><span class="step-number">1</span>Find the deductible row and check whether it shows two numbers</h3>
+            <p>Scroll to the first page of the SBC, the table labeled <em>Important Questions / Why This Matters</em>. The row <strong>&ldquo;What is the overall deductible?&rdquo;</strong> will show one of three formats:</p>
+            <ul>
+                <li><strong>Embedded:</strong> &ldquo;$3,000 per individual, $6,000 per family.&rdquo; Any one person stops accumulating deductible at $3,000; the family stops at $6,000. Benefits begin for an individual as soon as their personal $3,000 is met.</li>
+                <li><strong>Aggregate (common on HSA HDHPs):</strong> &ldquo;$6,000 family. The entire family deductible must be met before benefits begin.&rdquo; No individual sub-cap. One person can pay the entire $6,000 themselves.</li>
+                <li><strong>Hybrid:</strong> &ldquo;$6,000 family deductible, $3,400 minimum per individual required before any family member's claims begin counting toward the family deductible.&rdquo; This is rare but exists on some 2027 Silver plans. It operates as aggregate for the family but with an HSA-minimum embedded floor.</li>
+            </ul>
+            <p>If you cannot tell the structure from the deductible row alone, read the footnote that almost always follows: it will explicitly say &ldquo;embedded&rdquo; or &ldquo;non-embedded.&rdquo; If still unclear, the SBC's <em>Common Medical Event</em> table on page 2 reveals it: look at how a primary care copay applies. If it applies &ldquo;after deductible&rdquo; on an aggregate plan, nobody can see a doctor with cost-sharing until the full family deductible is met.</p>
+        </div>
+
+        <div class="step-box">
+            <h3><span class="step-number">2</span>Find the out-of-pocket max row and apply the same test</h3>
+            <p>The row <strong>&ldquo;What is the out-of-pocket limit for this plan?&rdquo;</strong> should also show individual and family numbers. In 2027, the individual number cannot exceed $9,525 (ACA rule) and the family number cannot exceed $19,050. An HSA HDHP may show a lower family OOPM (up to $17,200), but the individual embedded cap is still $9,525 by ACA overlay.</p>
+            <p>The failure mode to watch: some HSA family HDHPs quietly show only a family OOPM number and call the plan &ldquo;aggregate.&rdquo; As of 2027, this is only legal for the <em>deductible</em>, not the out-of-pocket maximum. If an SBC shows only a family OOPM with no individual figure and no footnote referencing the $9,525 individual cap, call the carrier and get a written confirmation that the individual cap applies anyway. It is required by federal rule, but SBCs have been wrong before.</p>
+        </div>
+
+        <div class="step-box">
+            <h3><span class="step-number">3</span>Simulate your worst-case scenario</h3>
+            <p>Pick the family member most likely to have a big medical year (pregnancy, chronic condition, pending surgery, child with ongoing specialty care) and run this calculation for each plan you are comparing:</p>
+            <ol>
+                <li>Expected in-network cost-sharing for that person's care in 2027 (use last year's spend as a floor; add 10% for medical inflation).</li>
+                <li>If an embedded plan: their cost-sharing is capped at individual OOPM ($9,525 or lower).</li>
+                <li>If an aggregate HDHP: their deductible contribution continues until either (a) the full family deductible is met, or (b) they personally hit the $9,525 individual OOPM.</li>
+                <li>Add premium (post-subsidy if applicable) &times; 12 to the deductible/coinsurance figure.</li>
+            </ol>
+            <p>Run the numbers through our <a href="plan-cost-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">Plan Cost Calculator</a> &mdash; it has a specific family-OOPM-structure toggle built in. If you qualify for a subsidy, estimate the after-subsidy premium first with the <a href="aca-subsidy-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">ACA Subsidy Calculator</a>, because the plan ranking almost always flips once subsidy is applied.</p>
+        </div>
+
+        <div class="step-box">
+            <h3><span class="step-number">4</span>Check the coinsurance side of the aggregate exposure</h3>
+            <p>Even if the OOPM structure is embedded, the <em>coinsurance</em> structure after deductible can matter. A family plan with 30% coinsurance after a $6,000 aggregate deductible will drive the sick family member to their $9,525 individual OOPM much faster than a plan with 20% coinsurance after a $3,000 embedded deductible, even though both have the same $19,050 family OOPM.</p>
+            <p>On the SBC, look at the <em>Common Medical Event</em> table for &ldquo;If you have a hospital stay&rdquo; and &ldquo;If you need drugs to treat your illness or condition.&rdquo; Hospital coinsurance of 30%+ on an aggregate HDHP almost always lands the enrollee at the $9,525 individual cap after one admission. 10&ndash;20% coinsurance on an embedded Silver or Gold plan rarely does unless the admission is catastrophic.</p>
+        </div>
+
+        <div class="step-box">
+            <h3><span class="step-number">5</span>Verify CSR tier if you qualify for Silver cost-sharing reductions</h3>
+            <p>If your projected 2027 household income is under 250% of the Federal Poverty Level ($40,125 for a household of one, $81,675 for a household of four in 2026 for 2027-plan-year purposes), a Silver plan triggers cost-sharing reductions that lower the OOPM below $9,525. CSR Silver plans for 2027 cap individual OOPM at $3,250 (under 150% FPL), $3,250 (150&ndash;200% FPL), or $7,725 (200&ndash;250% FPL). These sharply reduce the embedded-vs-aggregate differential because the floor is so much lower &mdash; often making Silver the dominant choice even for families who normally shop Bronze. Our guide to the <a href="blog-aca-cost-sharing-reductions-silver-plan-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Silver plan CSR structure</a> walks through this.</p>
+        </div>
+
+        <!-- AdSense placeholder -->
+
+        <h2>Four 2027 scenarios that show why the structure matters</h2>
+
+        <section>
+            <p>These are realistic family scenarios using 2027 limits. Each assumes in-network care; out-of-network exposure is separate and uncapped on most Marketplace plans.</p>
+        </section>
+
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>Embedded family plan ($3K/$6K ded, $9,525/$19,050 OOPM, 20% co.)</th>
+                        <th>Aggregate HSA HDHP ($6K family ded, $17,200 family OOPM, 30% co.)</th>
+                        <th>Difference</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Family of 4, one spouse has knee surgery ($40,000 in-network cost)</td>
+                        <td>Individual deductible $3,000 + 20% of next $32,625 = $6,525, plus hits individual OOPM at $9,525.</td>
+                        <td>Full $6,000 aggregate deductible absorbed by spouse + 30% of next $11,750 = $3,525. Spouse hits individual OOPM at $9,525. Plan then pays 100% for spouse but family OOPM accumulator sits at $9,525.</td>
+                        <td>Spouse's exposure: $9,525 vs $9,525. Same &mdash; but aggregate plan has exhausted $6,000 of the family deductible before anyone else can see a doctor.</td>
+                    </tr>
+                    <tr>
+                        <td>Family of 4, both parents have moderate medical year ($8,000 each in-network cost)</td>
+                        <td>Each parent: $3,000 ded + 20% of $5,000 = $4,000. Family total: $8,000.</td>
+                        <td>First $6,000 (aggregate) + 30% of remaining $10,000 = $3,000. Family total: $9,000.</td>
+                        <td>Aggregate plan costs $1,000 MORE in cost-sharing. HSA tax deduction (if contributing $8,750) offsets &asymp;$2,500 at a 24% bracket, so HDHP still wins net &mdash; but only if the family contributes.</td>
+                    </tr>
+                    <tr>
+                        <td>Family of 4, pregnancy + delivery ($15,000 in-network cost for the expecting parent)</td>
+                        <td>$3,000 ded + 20% of $12,000 = $5,400. Capped at $9,525 if any more claims. Parent OOPM: $5,400.</td>
+                        <td>$6,000 aggregate ded + 30% of $9,000 = $2,700. Parent OOPM: $8,700.</td>
+                        <td>Embedded plan saves $3,300 for the expecting parent. Pregnancy almost always makes embedded the right choice.</td>
+                    </tr>
+                    <tr>
+                        <td>Family of 4, child with autism needs $25,000 in in-network ABA + therapy</td>
+                        <td>Child's individual OOPM: $9,525 (hits cap after $3,000 ded + 20% of $32,625 is unnecessary &mdash; just the cap applies).</td>
+                        <td>Aggregate ded $6,000 + 30% of $19,000 = $5,700. Child's OOPM: $9,525.</td>
+                        <td>Child's exposure the same. But family deductible fully spent on child &mdash; rest of family has no deductible left for the year to use.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Three family-type patterns and which structure to pick</h2>
+
+        <section>
+            <h3>Single-sick-member family (one person with a known chronic or planned big-ticket year)</h3>
+            <p>Embedded plan, every time. The $9,525 individual OOPM cap kicks in early for the sick member and the rest of the family is not punished. Expect to pay more in monthly premium (typically $30&ndash;$80/month more than the equivalent HDHP) in exchange for a vastly better worst-case outcome.</p>
+
+            <h3>Spread-utilization family (moderate medical spending across multiple members, no catastrophic case)</h3>
+            <p>Aggregate HSA HDHP may win on total-annual-cost once the HSA tax deduction is factored. The embedded protection is less valuable because no single person is likely to hit the individual cap anyway. Run the numbers both ways, including the $8,750 HSA contribution's tax-deductible value at your marginal bracket.</p>
+
+            <h3>Low-utilization family (healthy, under 40, mostly preventive care)</h3>
+            <p>Either structure can work; premium is the main driver. The aggregate HDHP usually has the lowest premium, and the HSA deduction compounds if you hold the money as an investment vehicle. Our guide to <a href="blog-how-to-maximize-hsa-2026-new-rules-investment-strategies.html" class="text-teal-primary hover:text-teal-dark font-semibold">maximizing an HSA</a> covers the long-horizon case.</p>
+        </section>
+
+        <!-- AdSense placeholder -->
+
+        <h2>Three common mistakes we are seeing in 2027 OEP week two</h2>
+
+        <section>
+            <h3>Mistake 1: Assuming the plan works like last year</h3>
+            <p>Some 2027 Marketplace plans quietly switched from embedded to hybrid family deductibles to control premium. The plan name and premium look similar; the family-cost-sharing structure moved. Open the SBC on every plan, including the one you are being auto-renewed into. Our <a href="blog-how-to-handle-aca-auto-reenrollment-2027-plan-year-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">2027 auto-reenrollment guide</a> covers how to intercept this.</p>
+
+            <h3>Mistake 2: Comparing family OOPM numbers at face value</h3>
+            <p>A $19,050 embedded family OOPM is not the same product as a $19,050 aggregate family OOPM. If one family member is expected to drive most of the utilization, the embedded version saves up to $9,525. If utilization is spread evenly, the aggregate version is identical on paper and may be cheaper in premium.</p>
+
+            <h3>Mistake 3: Ignoring the interaction with ACA subsidies</h3>
+            <p>A subsidized Silver plan with CSR is usually the dominant choice for families with household income below 250% FPL, regardless of embedded/aggregate preference, because the CSR drops the OOPM so far that the structural distinction evaporates. Do not compare a Bronze HDHP to a Silver CSR plan on premium alone; the OOPM on the Silver CSR is often less than half the Bronze OOPM.</p>
+        </section>
+
+        <h2>What to do if you already enrolled in the wrong structure</h2>
+
+        <section>
+            <p>You have three options, in order of practicality:</p>
+
+            <ol>
+                <li><strong>Switch plans before December 15, 2026.</strong> If you are in an aggregate HDHP and realize an embedded Silver or Gold plan fits better, go back to HealthCare.gov or your state exchange and pick a different plan. Your prior selection is replaced; no penalty, no SEP needed, as long as it is before the OEP deadline for your effective date.</li>
+                <li><strong>Switch between January 1 and January 15, 2027.</strong> Even after coverage begins, you can change plans once until the final OEP deadline, with a February 1 effective date.</li>
+                <li><strong>Wait for a Qualifying Life Event.</strong> After January 15, 2027, you need a SEP to switch. A qualifying event (marriage, birth, loss of other coverage, income drop) opens a 60-day window. Realizing the OOPM structure is wrong is not a SEP.</li>
+            </ol>
+        </section>
+
+        <h2>Related guides on this site</h2>
+
+        <section>
+            <ul>
+                <li><a href="plan-cost-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">Plan Cost Calculator (family OOPM structure toggle built in) &rarr;</a></li>
+                <li><a href="aca-subsidy-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">ACA Subsidy Calculator (2027 income thresholds) &rarr;</a></li>
+                <li><a href="hsa-fsa-calculator.html" class="text-teal-primary hover:text-teal-dark font-semibold">HSA/FSA Calculator (2027 contribution limits) &rarr;</a></li>
+                <li><a href="deductible-explainer.html" class="text-teal-primary hover:text-teal-dark font-semibold">Deductible Explainer &rarr;</a></li>
+                <li><a href="blog-how-to-compare-2027-aca-marketplace-plans-open-enrollment-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">How to compare 2027 ACA Marketplace plans &rarr;</a></li>
+                <li><a href="blog-how-to-check-2027-aca-plan-telehealth-coverage-november-10-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Verifying 2027 telehealth coverage &rarr;</a></li>
+                <li><a href="blog-how-to-match-prescriptions-2027-aca-plan-formulary-november-2-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">Matching prescriptions to a 2027 ACA formulary &rarr;</a></li>
+                <li><a href="blog-aca-cost-sharing-reductions-silver-plan-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">ACA cost-sharing reductions on Silver plans &rarr;</a></li>
+                <li><a href="blog-hdhp-vs-ppo-how-to-choose-right-health-plan-2026.html" class="text-teal-primary hover:text-teal-dark font-semibold">HDHP vs PPO &mdash; choosing the right structure &rarr;</a></li>
+                <li><a href="blog-how-to-maximize-hsa-2026-new-rules-investment-strategies.html" class="text-teal-primary hover:text-teal-dark font-semibold">Maximizing your HSA &rarr;</a></li>
+            </ul>
+        </section>
+
+        <div class="info-box">
+            <strong>Privacy note:</strong> All calculations on this site happen in your browser. We never collect your data.
+        </div>
+
+        <div class="info-box">
+            <strong>Bottom line:</strong> On 2027 ACA family plans, the number that matters most is not the headline family out-of-pocket maximum &mdash; it is whether that number is embedded or aggregate. The ACA's $9,525 individual embedded cap applies to every family plan, but HSA-qualified HDHPs can still use a purely aggregate family deductible, which is where most families get surprised. Open the SBC on every plan you are considering, look at the deductible row for individual-and-family numbers (embedded) or family-only (aggregate), run your realistic worst-case scenario for the family member most likely to use the plan heavily, and factor in CSR if you qualify. Do this before December 15, 2026 and you will have made a $3,000&ndash;$9,000 decision that most families make by premium alone.
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-teal-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-white text-teal-dark w-8 h-8 rounded flex items-center justify-center font-bold text-lg">$</div>
+                        <span class="font-bold text-xl">HealthCalc</span>
+                    </div>
+                    <p class="text-teal-light text-sm">Free health insurance calculators designed to help you understand costs and make smarter healthcare decisions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="plan-cost-calculator.html" class="hover:text-white transition-colors">Plan Cost Calculator</a></li>
+                        <li><a href="aca-subsidy-calculator.html" class="hover:text-white transition-colors">ACA Subsidy Estimator</a></li>
+                        <li><a href="procedure-cost.html" class="hover:text-white transition-colors">Procedure Cost Finder</a></li>
+                        <li><a href="drug-cost-finder.html" class="hover:text-white transition-colors">Drug Cost Finder</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-teal-light">
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-teal-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-teal-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Disclaimer</h4>
+                    <p class="text-teal-light text-sm">HealthCalc provides educational information only and is not a substitute for professional medical or financial advice. Always consult with qualified professionals for your specific situation.</p>
+                </div>
+            </div>
+            <div class="border-t border-teal-light pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-teal-light">
+                <p>&copy; 2026 HealthCalc. All rights reserved.</p>
+                <p>Last updated November 12, 2026. All our calculators are 100% private &mdash; calculations happen in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
